@@ -880,6 +880,7 @@ section{ position:relative; }
 }
 .exp-gallery a:hover img{ transform:scale(1.06); }
 @media (max-width:780px){ .exp-gallery{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:780px){ .exp-gallery--3 a:first-child{ grid-column:1 / -1; aspect-ratio:16/10; } }
 
 /* ---------- Experience feature rows (editorial layout) ---------- */
 .feature-section{ padding: clamp(70px,9vw,120px) var(--pad); }
@@ -1167,7 +1168,11 @@ section{ position:relative; }
     <h2>Quiosque para churrasco</h2>
     <p>Contamos com uma área de quiosque, mediante consulta de disponibilidade. Não dispomos dos serviços de churrasqueiro ou cozinha — para mais informações, fale com a nossa recepção.</p>
   </div>
-  <div class="photo-placeholder reveal"><span>Fotos de o quiosque — em breve</span></div>
+  <div class="exp-gallery exp-gallery--3">
+    <a href="fotos-experiencia/quiosque/foto-01.jpg" target="_blank" rel="noopener"><img src="fotos-experiencia/quiosque/foto-01.jpg" alt="Quiosque de tijolinho com telhado de madeira à sombra das árvores" loading="lazy"></a>
+    <a href="fotos-experiencia/quiosque/foto-02.jpg" target="_blank" rel="noopener"><img src="fotos-experiencia/quiosque/foto-02.jpg" alt="Interior do quiosque com mesas, churrasqueira e forno a lenha" loading="lazy"></a>
+    <a href="fotos-experiencia/quiosque/foto-03.jpg" target="_blank" rel="noopener"><img src="fotos-experiencia/quiosque/foto-03.jpg" alt="Caminho de pedriscos pelo gramado até a área do quiosque" loading="lazy"></a>
+  </div>
   <div class="suite-section-head reveal" style="margin-top:40px; margin-bottom:0;">
     <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20valores%20do%20quiosque%20para%20churrasco." target="_blank" rel="noopener">Consultar valores</a>
   </div>
