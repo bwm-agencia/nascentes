@@ -853,6 +853,8 @@ section{ position:relative; }
 .package-card ul li{ font-size:0.88rem; color:var(--smoke); display:flex; gap:10px; align-items:flex-start; line-height:1.5; }
 .package-card ul li svg{ flex-shrink:0; width:16px; height:16px; margin-top:3px; stroke:var(--amber); fill:none; stroke-width:2; }
 .package-card .cta-glow{ justify-content:center; width:100%; }
+.package-card--featured{ border-color:rgba(232,168,76,0.45); box-shadow:0 0 0 1px rgba(232,168,76,0.18), 0 18px 50px -20px rgba(232,168,76,0.35); }
+.package-card--featured .eyebrow{ color:var(--amber-soft); }
 @media (max-width:900px){ .package-grid{ grid-template-columns:1fr; } }
 </style>
 </head>
@@ -898,23 +900,61 @@ section{ position:relative; }
     <p>Preparamos excelentes alternativas para curtir Brotas — do jeito de sempre ou em datas especiais. Fale com a gente e complete seu pacote com opcionais.</p>
   </div>
   <div class="package-grid">
-    <div class="package-card reveal">
-      <div class="photo" style="background-image:url('fotos-hero/foto-05.jpg');"></div>
+    <div class="package-card reveal package-card--featured">
+      <div class="photo" style="background-image:url('fotos-hero/ritual-02-ofuro-velas.jpg'); background-position:center 55%;"></div>
       <div class="body">
-        <p class="eyebrow">Pacote do mês</p>
-        <h3>Setembro em Brotas</h3>
+        <p class="eyebrow">Pacote em destaque · 2 diárias</p>
+        <h3>Refúgio Primavera</h3>
         <ul>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>2 diárias em suíte temática para o casal</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>1 mini espumante</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Banheira de hidromassagem ou ofurô cromoterápico</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Sais de banho</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>1 mimo</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo nas duas manhãs</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suíte preparada para a chegada de vocês</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Late check-out até as 17h</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Piscina e sauna à disposição</li>
+        </ul>
+        <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20Ref%C3%BAgio%20Primavera." target="_blank" rel="noopener">Reservar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="package-card reveal">
+      <div class="photo" style="background-image:url('fotos-hero/lua-de-mel-casal-home.jpg'); background-position:center 40%;"></div>
+      <div class="body">
+        <p class="eyebrow">2 diárias + massagem</p>
+        <h3>Escapada a dois</h3>
+        <ul>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>2 diárias para o casal</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suíte temática com hidromassagem ou ofurô cromoterápico</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Massagens para o casal (1 para cada)</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Mimo simples</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo nas duas manhãs</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suíte preparada para a chegada de vocês</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Late check-out até as 17h</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Piscina e sauna à disposição</li>
+        </ul>
+        <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20Escapada%20a%20dois." target="_blank" rel="noopener">Reservar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="package-card reveal">
+      <div class="photo" style="background-image:url('fotos-hero/lua-de-mel-casal-cama.jpg'); background-position:center 40%;"></div>
+      <div class="body">
+        <p class="eyebrow">Fique 3, pague 2 · Outubro</p>
+        <h3>Primavera Romântica</h3>
+        <ul>
+        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Válido para outubro</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Mínimo de duas diárias</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes Temáticas com Hidromassagem</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes com Ofurô Cromoterápico (individual)</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo</li>
         <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Complete seu pacote com opcionais!</li>
         </ul>
-        <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20Setembro%20em%20Brotas." target="_blank" rel="noopener">Reservar no WhatsApp</a>
+        <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20Primavera%20Rom%C3%A2ntica%20%28Fique%203%2C%20pague%202%29." target="_blank" rel="noopener">Reservar no WhatsApp</a>
       </div>
     </div>
     <div class="package-card reveal">
-      <div class="photo" style="background-image:url('fotos-hero/ritual-01-suite-pronta.jpg');"></div>
+      <div class="photo" style="background-image:url('fotos-hero/lua-de-mel-casal-home-v2.jpg'); background-position:center 40%;"></div>
       <div class="body">
         <p class="eyebrow">25% OFF</p>
         <h3>Aniversariante do Mês</h3>
@@ -928,42 +968,7 @@ section{ position:relative; }
       </div>
     </div>
     <div class="package-card reveal">
-      <div class="photo" style="background-image:url('fotos-hero/foto-03.jpg');"></div>
-      <div class="body">
-        <p class="eyebrow">2 diárias</p>
-        <h3>Check-in do Descanso</h3>
-        <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>2 diárias em suíte temática para o casal</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Banheira de hidromassagem ou ofurô cromoterápico</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo nas duas manhãs</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Massagem com pedras quentes — 1 hora para cada um</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Espuma de banho para aproveitar a hidro</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suíte preparada para a chegada de vocês</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Late check-out até as 17h</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Piscina e sauna à disposição</li>
-        </ul>
-        <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20Check-in%20do%20Descanso." target="_blank" rel="noopener">Reservar no WhatsApp</a>
-      </div>
-    </div>
-    <div class="package-card reveal">
-      <div class="photo" style="background-image:url('fotos-hero/ritual-02-ofuro-velas.jpg');"></div>
-      <div class="body">
-        <p class="eyebrow">2 diárias</p>
-        <h3>Refúgio do Silêncio</h3>
-        <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>2 diárias para o casal</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suíte temática com hidromassagem ou ofurô cromoterápico</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo nas duas manhãs</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Mimo de boas-vindas na chegada</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Late check-out até as 17h</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Piscina e sauna à disposição</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Ar-condicionado, frigobar e TV via internet nas suítes</li>
-        </ul>
-        <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20Ref%C3%BAgio%20do%20Sil%C3%AAncio." target="_blank" rel="noopener">Reservar no WhatsApp</a>
-      </div>
-    </div>
-    <div class="package-card reveal">
-      <div class="photo" style="background-image:url('fotos-hero/foto-02.jpg');"></div>
+      <div class="photo" style="background-image:url('fotos-hero/foto-02.jpg'); background-position:center 45%;"></div>
       <div class="body">
         <p class="eyebrow">De 09 a 12/10</p>
         <h3>12 de Outubro</h3>
@@ -977,7 +982,7 @@ section{ position:relative; }
       </div>
     </div>
     <div class="package-card reveal">
-      <div class="photo" style="background-image:url('fotos-hero/ritual-03-fondue.jpg');"></div>
+      <div class="photo" style="background-image:url('fotos-hero/lua-de-mel-casal-quarto.jpg'); background-position:center 45%;"></div>
       <div class="body">
         <p class="eyebrow">De 30/10 a 02/11</p>
         <h3>Feriado 2 de Novembro</h3>
@@ -990,7 +995,7 @@ section{ position:relative; }
       </div>
     </div>
     <div class="package-card reveal">
-      <div class="photo" style="background-image:url('fotos-hero/ritual-04-cafe-colonial.jpg');"></div>
+      <div class="photo" style="background-image:url('fotos-hero/foto-03.jpg'); background-position:center 45%;"></div>
       <div class="body">
         <p class="eyebrow">De 20 a 22/11</p>
         <h3>Consciência Negra</h3>
