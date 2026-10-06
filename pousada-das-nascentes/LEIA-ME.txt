@@ -1,0 +1,28 @@
+POUSADA DAS NASCENTES — Pasta do projeto de site
+====================================================
+
+/html
+  index.html              -> Página inicial
+  lua-de-mel-night.html   -> Página de Lua de Mel
+  suites-night.html       -> Página de Suítes
+
+/logo
+  logo-vertical.png    -> Logo empilhado (usado em telas estreitas/mobile)
+  logo-horizontal.png  -> Logo horizontal (usado no topbar/desktop)
+
+/fotos-hero
+  foto-01.jpg a foto-05.jpg -> Fotos reais da pousada, extraídas de dentro
+  dos arquivos HTML (estavam embutidas em base64: suíte com dossel,
+  ambientes internos etc.)
+
+/fotos-suites
+  18 fotos das suítes temáticas, enviadas pelo usuário:
+  Água, Amarula, Amazonas, Bartira, Bronze/Lenda, Buriti, Fogo,
+  Indiana, Irati, Maria Bonita, Orquídia da Terra, Romântica,
+  Safari, Safari II, Savana, Simba Safari, Terra, Vanilla.
+
+fotos-externas-no-site-atual.txt
+  Lista completa das 24 URLs de fotos que os HTMLs referenciam
+  diretamente do site atual (pousadadasnascentes.com.br) — a maioria
+  já está em /fotos-suites; mantido aqui apenas como referência das
+  URLs originais.
