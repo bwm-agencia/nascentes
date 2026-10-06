@@ -1,0 +1,104 @@
+{
+  "redirects": [
+    {
+      "source": "/descubra-os-encantos-de-brotas-na-baixa-temporada",
+      "destination": "/blog/descubra-os-encantos-de-brotas-na-baixa-temporada.html",
+      "permanent": true
+    },
+    {
+      "source": "/festival-brotas-gourmet",
+      "destination": "/blog/festival-brotas-gourmet.html",
+      "permanent": true
+    },
+    {
+      "source": "/massagem-na-pousada-das-nascentes",
+      "destination": "/blog/massagem-na-pousada-das-nascentes.html",
+      "permanent": true
+    },
+    {
+      "source": "/degustacao-cafe",
+      "destination": "/blog/degustacao-cafe.html",
+      "permanent": true
+    },
+    {
+      "source": "/sauna-vidro-integrada-piscina",
+      "destination": "/blog/sauna-vidro-integrada-piscina.html",
+      "permanent": true
+    },
+    {
+      "source": "/temporada-de-outono-inverno",
+      "destination": "/blog/temporada-de-outono-inverno.html",
+      "permanent": true
+    },
+    {
+      "source": "/viagem-a-dois-acima-de-60-pode-ser-apaixonante",
+      "destination": "/blog/viagem-a-dois-acima-de-60-pode-ser-apaixonante.html",
+      "permanent": true
+    },
+    {
+      "source": "/pousada-das-nascentes-preferida-casais",
+      "destination": "/blog/pousada-das-nascentes-preferida-casais.html",
+      "permanent": true
+    },
+    {
+      "source": "/fim-de-semana-perfeito-brotas-casais",
+      "destination": "/blog/fim-de-semana-perfeito-brotas-casais.html",
+      "permanent": true
+    },
+    {
+      "source": "/descubra-os-encantos-de-brotas-na-baixa-temporada/",
+      "destination": "/blog/descubra-os-encantos-de-brotas-na-baixa-temporada.html",
+      "permanent": true
+    },
+    {
+      "source": "/festival-brotas-gourmet/",
+      "destination": "/blog/festival-brotas-gourmet.html",
+      "permanent": true
+    },
+    {
+      "source": "/massagem-na-pousada-das-nascentes/",
+      "destination": "/blog/massagem-na-pousada-das-nascentes.html",
+      "permanent": true
+    },
+    {
+      "source": "/degustacao-cafe/",
+      "destination": "/blog/degustacao-cafe.html",
+      "permanent": true
+    },
+    {
+      "source": "/sauna-vidro-integrada-piscina/",
+      "destination": "/blog/sauna-vidro-integrada-piscina.html",
+      "permanent": true
+    },
+    {
+      "source": "/temporada-de-outono-inverno/",
+      "destination": "/blog/temporada-de-outono-inverno.html",
+      "permanent": true
+    },
+    {
+      "source": "/viagem-a-dois-acima-de-60-pode-ser-apaixonante/",
+      "destination": "/blog/viagem-a-dois-acima-de-60-pode-ser-apaixonante.html",
+      "permanent": true
+    },
+    {
+      "source": "/pousada-das-nascentes-preferida-casais/",
+      "destination": "/blog/pousada-das-nascentes-preferida-casais.html",
+      "permanent": true
+    },
+    {
+      "source": "/fim-de-semana-perfeito-brotas-casais/",
+      "destination": "/blog/fim-de-semana-perfeito-brotas-casais.html",
+      "permanent": true
+    },
+    {
+      "source": "/novidades",
+      "destination": "/blog.html",
+      "permanent": true
+    },
+    {
+      "source": "/novidades/(.*)",
+      "destination": "/blog.html",
+      "permanent": true
+    }
+  ]
+}

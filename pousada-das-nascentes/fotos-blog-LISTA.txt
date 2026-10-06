@@ -1,0 +1,44 @@
+Imagens do blog que ainda vêm do site antigo.
+Salve cada uma em fotos-blog/ mantendo o mesmo caminho depois de /wp-content/uploads/
+(ex.: fotos-blog/2022/04/parque-dos-saltos.jpg)
+
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2015/07/Brotas-Pousada-das-Nascentes-11-4.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2015/07/Brotas-Pousada-das-Nascentes-26.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2015/07/Fotografia-Pousada-Nascentes-00004.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2015/07/rafting-corporativo.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2015/08/parque-dos-saltos-brotas.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2015/08/pousada-brotas-terra.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2017/05/Bolinho-de-copa-lombo-e-requeijao-de-corte_Brotas-Zen.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2018/04/Pousada-em-Brotas-17.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2018/12/sala-de-massagem-pousada-das-nascentes-brotas-10.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2019/05/inverno-em-brotas.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2019/06/arvorismo-brotas.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2019/07/Pousada-das-Nascentes-Brotas-1.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2019/07/brotas-gourmet-2022.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2020/10/Pousada-das-Nascentes-44.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2020/10/Pousada-das-Nascentes-61.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2020/10/Pousada-das-Nascentes-88.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2020/12/Cachoeira-3-Quedas-8.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2021/08/Pousada-das-Nascentes-nomadismo-digital-2.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2021/10/massagem-na-pousada-das-nascentes-brotas-3-1.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2021/10/massagem-na-pousada-das-nascentes-brotas.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2021/12/brotas-bar.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/04/parque-dos-saltos.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-areia-que-canta-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-brotas-eco-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-burguer-do-fernando-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-camillo-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-catharina-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-dona-xica-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-espaco-do-pastel-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-nikkey-sushi-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-pocao-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-quatro-estacoes-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-sissi-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-sushi-arts-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2022/08/brotas-gourmet-2024-world-burguer-1024x745.png
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2023/06/sauna-vidro-integrada-pousada-das-nascentes-1.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2023/06/sauna-vidro-integrada-pousada-das-nascentes-3.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2023/06/sauna-vidro-integrada-pousada-das-nascentes-4.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2023/06/sauna-vidro-integrada-pousada-das-nascentes-5.jpg
+https://www.pousadadasnascentes.com.br/wp-content/uploads/2024/02/Cafe-Sao-Francisco-do-Gramado.jpg
