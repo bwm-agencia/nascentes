@@ -154,7 +154,6 @@ section{ position:relative; }
   .topbar .logo-vertical{ height:78px; max-width:64vw; width:auto; }
   .topbar .logo-horizontal{ height:46px; max-width:64vw; width:auto; }
   .hc-card .hc-photo{ background-position: 68% 38%; }
-  .avail-fields .avail-field{ height:88px !important; }
   .menu-btn{
     width:36px; height:36px;
     border-radius:50%;
@@ -794,6 +793,43 @@ section{ position:relative; }
 
 .reel{ scroll-padding-inline: var(--pad); }
 .reel::after{ content:""; flex:0 0 1px; }
+
+/* ===== Calendário de disponibilidade ===== */
+.availability-card{ position:relative; }
+.avail-field{ font:inherit; color:inherit; text-align:left; cursor:pointer; height:58px; transition:border-color .3s var(--ease), box-shadow .3s var(--ease); }
+.avail-field.active{ border-color:var(--amber); box-shadow:0 0 0 3px rgba(232,168,76,.15); }
+.avail-text{ display:flex; flex-direction:column; line-height:1.15; }
+.avail-text small{ font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--amber-soft); opacity:.85; margin-bottom:3px; }
+.cal-pop{ position:absolute; left:50%; transform:translateX(-50%); top:auto; margin-top:12px; z-index:30; width:min(680px, calc(100% - 40px)); background:var(--ink); border:1px solid rgba(232,168,76,.3); border-radius:22px; padding:20px 22px 18px; box-shadow:0 30px 70px -20px rgba(0,0,0,.8); text-align:left; }
+.cal-pop[hidden]{ display:none; }
+.cal-head{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.cal-hint{ font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; color:var(--amber-soft); font-weight:600; text-align:center; }
+.cal-nav{ width:38px; height:38px; border-radius:50%; border:1px solid rgba(243,237,226,.18); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cal-nav:hover:not(:disabled){ border-color:var(--amber); }
+.cal-nav:disabled{ opacity:.3; cursor:default; }
+.cal-nav svg{ width:16px; height:16px; stroke:var(--mist); fill:none; stroke-width:1.8; }
+.cal-months{ display:grid; grid-template-columns:repeat(2,1fr); gap:28px; }
+.cal-title{ font-family:var(--display); font-size:1.1rem; text-align:center; margin-bottom:10px; color:var(--mist); }
+.cal-grid{ display:grid; grid-template-columns:repeat(7,1fr); gap:3px; }
+.cal-dow{ font-size:.68rem; color:var(--smoke); text-align:center; padding:4px 0; }
+.cal-day{ aspect-ratio:1; border-radius:50%; font-size:.86rem; color:var(--mist); display:flex; align-items:center; justify-content:center; transition:background .2s; }
+.cal-day:hover:not(:disabled){ background:rgba(232,168,76,.18); }
+.cal-day:disabled{ color:rgba(243,237,226,.22); cursor:default; }
+.cal-day.today{ box-shadow:inset 0 0 0 1px rgba(232,168,76,.5); }
+.cal-day.range{ background:rgba(232,168,76,.14); border-radius:6px; }
+.cal-day.start, .cal-day.end{ background:linear-gradient(135deg, var(--amber), var(--ember)); color:#1A1008; font-weight:700; }
+.cal-foot{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-top:14px; padding-top:14px; border-top:1px solid rgba(243,237,226,.1); font-size:.86rem; color:var(--smoke); }
+.cal-foot div{ display:flex; gap:10px; margin-left:auto; }
+.cal-clear{ font-size:.78rem; color:var(--smoke); padding:9px 14px; }
+.cal-clear:hover{ color:var(--mist); }
+.cal-ok{ font-size:.78rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:10px 20px; border-radius:999px; background:linear-gradient(135deg, var(--amber), var(--ember)); color:#1A1008; }
+.avail-msg{ margin-top:14px; font-size:.86rem; color:var(--amber-soft); }
+@media (max-width:780px){
+  .avail-fields .avail-field{ flex:0 0 auto; height:58px !important; min-width:0; width:100%; }
+  .avail-submit{ height:58px; }
+  .cal-pop{ position:relative; left:auto; transform:none; top:auto; width:100%; margin-top:16px; padding:16px 14px; }
+}
+@media (max-width:759px){ .cal-months{ grid-template-columns:1fr; } }
 /* ===== Ajustes finais: chamada final lateral + menu mobile ===== */
 .final-cta{ background:var(--ink); }
 .final-cta::after{ display:none; }
@@ -835,7 +871,7 @@ section{ position:relative; }
       <li><a href="blog.html">Blog</a></li>
       <li><a href="localizacao.html">Localização</a></li>
     </ul>
-    <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
+    <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
     <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -850,7 +886,7 @@ section{ position:relative; }
   <a href="lua-de-mel.html">Lua de mel</a>
   <a href="blog.html">Blog</a>
   <a href="localizacao.html">Localização</a>
-  <a class="cta-glow" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
+  <a class="cta-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
 </nav>
 
 <section class="hero" id="top">
@@ -861,7 +897,7 @@ section{ position:relative; }
     <h1 class="reveal in">Onde a <em class="glow">água nasce</em><br>e a noite <em class="rose">desacelera</em></h1>
     <p class="reveal in">Dezoito suítes com hidromassagem ou ofurô cromoterápico, cercadas pelas cachoeiras de Brotas. Chegamos de dia — mas é depois do anoitecer que a Nascentes se revela.</p>
     <div class="hero-actions reveal in">
-      <a class="cta-glow" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar a nossa noite</a>
+      <a class="cta-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar a nossa noite</a>
       <a class="link-glow" href="suites.html">Ver suítes <span class="arrow">→</span></a>
     </div>
   </div>
@@ -873,19 +909,30 @@ section{ position:relative; }
     <p class="avail-title">Verifique disponibilidade</p>
     <div class="avail-row">
       <div class="avail-fields">
-        <label class="avail-field" id="checkin-field">
+        <button type="button" class="avail-field" id="checkin-field" data-target="in" aria-haspopup="dialog" aria-expanded="false">
           <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
-          <span class="avail-label" id="checkin-label">Data de Entrada</span>
-          <input type="date" id="checkin" class="avail-input-hidden" aria-label="Data de Entrada" onchange="updateAvailLabel(this,'checkin-label','checkin-field','Data de Entrada')">
-        </label>
-        <label class="avail-field" id="checkout-field">
+          <span class="avail-text"><small>Check-in</small><span class="avail-label" id="checkin-label">Data de Entrada</span></span>
+        </button>
+        <button type="button" class="avail-field" id="checkout-field" data-target="out" aria-haspopup="dialog" aria-expanded="false">
           <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
-          <span class="avail-label" id="checkout-label">Data de Saída</span>
-          <input type="date" id="checkout" class="avail-input-hidden" aria-label="Data de Saída" onchange="updateAvailLabel(this,'checkout-label','checkout-field','Data de Saída')">
-        </label>
+          <span class="avail-text"><small>Check-out</small><span class="avail-label" id="checkout-label">Data de Saída</span></span>
+        </button>
       </div>
-      <button class="avail-submit" onclick="checkAvailability()">Continuar</button>
+      <button type="button" class="avail-submit" id="avail-submit">Continuar</button>
     </div>
+    <div class="cal-pop" id="cal-pop" role="dialog" aria-label="Escolha as datas" hidden>
+      <div class="cal-head">
+        <button type="button" class="cal-nav" id="cal-prev" aria-label="Mês anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <p class="cal-hint" id="cal-hint">Escolha a data de entrada</p>
+        <button type="button" class="cal-nav" id="cal-next" aria-label="Próximo mês"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="cal-months" id="cal-months"></div>
+      <div class="cal-foot">
+        <span id="cal-summary"></span>
+        <div><button type="button" class="cal-clear" id="cal-clear">Limpar</button><button type="button" class="cal-ok" id="cal-ok">Confirmar</button></div>
+      </div>
+    </div>
+    <p class="avail-msg" id="avail-msg" hidden></p>
     <p class="avail-footer">Atendimento via WhatsApp · (14) 99179-7722</p>
   </div>
 </section>
@@ -1043,7 +1090,7 @@ section{ position:relative; }
         <li>Hidromassagem ou ofurô cromoterápico</li>
         <li>Late check-out até 17h</li>
       </ul>
-      <a class="link-glow" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Quero saber mais sobre o pacote Refúgio Primavera." target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
+      <a class="link-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Quero saber mais sobre o pacote Refúgio Primavera." target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
       </div>
     </div>
     <div class="pkg-card reveal">
@@ -1057,7 +1104,7 @@ section{ position:relative; }
         <li>Piscina e sauna à disposição</li>
         <li>Late check-out até 17h</li>
       </ul>
-      <a class="link-glow" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Quero saber mais sobre o pacote Escapada a dois." target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
+      <a class="link-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Quero saber mais sobre o pacote Escapada a dois." target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
       </div>
     </div>
     <div class="pkg-card reveal">
@@ -1071,7 +1118,7 @@ section{ position:relative; }
         <li>Café da manhã completo</li>
         <li>Opcionais para completar o pacote</li>
       </ul>
-      <a class="link-glow" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Quero saber mais sobre o pacote Primavera Romântica (Fique 3, pague 2)." target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
+      <a class="link-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Quero saber mais sobre o pacote Primavera Romântica (Fique 3, pague 2)." target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
       </div>
     </div>
   </div>
@@ -1107,7 +1154,7 @@ section{ position:relative; }
         <dt>Nas proximidades</dt>
         <dd>Cachoeira das Três Quedas a 800m</dd>
       </dl>
-      <a class="link-glow" style="margin-top:30px;" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá!" target="_blank" rel="noopener">Falar no WhatsApp <span class="arrow">→</span></a>
+      <a class="link-glow" style="margin-top:30px;" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá!" target="_blank" rel="noopener">Falar no WhatsApp <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -1195,7 +1242,7 @@ section{ position:relative; }
     <h2>Falta só um passo<br><span class="accent">para você estar aqui</span></h2>
     <p class="sub">Fale com a gente pelo WhatsApp. A gente verifica a disponibilidade, tira todas as dúvidas e garante que sua estadia vai ser exatamente o que você imaginou.</p>
     <div class="actions">
-      <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20Pousada%20das%20Nascentes." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>Falar no WhatsApp</a>
+      <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20Pousada%20das%20Nascentes." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>Falar no WhatsApp</a>
     </div>
   </div>
 </section>
@@ -1238,25 +1285,87 @@ section{ position:relative; }
 <script>
 // Topbar solid state
 // Availability bar
-function updateAvailLabel(input, labelId, fieldId, fallback){
-  const label = document.getElementById(labelId);
-  const field = document.getElementById(fieldId);
-  if (!input.value) { label.textContent = fallback; field.classList.remove('filled'); return; }
-  const [y, m, d] = input.value.split('-');
-  label.textContent = `${d}/${m}/${y}`;
-  field.classList.add('filled');
-}
-function checkAvailability(){
-  const checkin = document.getElementById('checkin').value;
-  const checkout = document.getElementById('checkout').value;
-  let msg = 'Olá! Gostaria de verificar disponibilidade';
-  if (checkin && checkout) {
-    const fmt = (v) => { const [y,m,d] = v.split('-'); return `${d}/${m}/${y}`; };
-    msg += ` de ${fmt(checkin)} a ${fmt(checkout)}`;
+// ---------- Calendário de disponibilidade ----------
+(function(){
+  const MES=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  const MES3=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+  const SEM=['D','S','T','Q','Q','S','S'];
+  const SEM3=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+  const pop=document.getElementById('cal-pop'), months=document.getElementById('cal-months');
+  const fIn=document.getElementById('checkin-field'), fOut=document.getElementById('checkout-field');
+  const hint=document.getElementById('cal-hint'), sum=document.getElementById('cal-summary'), msg=document.getElementById('avail-msg');
+  const today=new Date(); today.setHours(0,0,0,0);
+  let ci=null, co=null, view=new Date(today.getFullYear(), today.getMonth(), 1), picking='in';
+  const same=(a,b)=>a&&b&&a.getTime()===b.getTime();
+  const nights=()=>ci&&co?Math.round((co-ci)/864e5):0;
+  const longF=d=>`${SEM3[d.getDay()]}, ${String(d.getDate()).padStart(2,'0')} ${MES3[d.getMonth()]} ${d.getFullYear()}`;
+  const brF=d=>`${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}`;
+  const nMonths=()=>window.innerWidth>=760?2:1;
+  function labels(){
+    document.getElementById('checkin-label').textContent=ci?longF(ci):'Data de Entrada';
+    document.getElementById('checkout-label').textContent=co?longF(co):'Data de Saída';
+    fIn.classList.toggle('filled',!!ci); fOut.classList.toggle('filled',!!co);
+    fIn.classList.toggle('active',!pop.hidden&&picking==='in'); fOut.classList.toggle('active',!pop.hidden&&picking==='out');
+    hint.textContent=picking==='in'?'Escolha a data de entrada':'Agora, a data de saída';
+    sum.textContent=ci&&co?`${nights()} ${nights()>1?'noites':'noite'} · ${brF(ci)} a ${brF(co)}`:(ci?`Entrada ${brF(ci)}`:'');
   }
-  msg += '.';
-  window.open(`https://api.whatsapp.com/send?phone=14991797722&text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
-}
+  function render(){
+    months.innerHTML='';
+    for(let k=0;k<nMonths();k++){
+      const first=new Date(view.getFullYear(), view.getMonth()+k, 1);
+      const m=document.createElement('div'); m.className='cal-month';
+      let h=`<p class="cal-title">${MES[first.getMonth()]} ${first.getFullYear()}</p><div class="cal-grid">`+SEM.map(s=>`<span class="cal-dow">${s}</span>`).join('');
+      for(let i=0;i<first.getDay();i++) h+='<span></span>';
+      const dim=new Date(first.getFullYear(), first.getMonth()+1, 0).getDate();
+      for(let d=1; d<=dim; d++){
+        const dt=new Date(first.getFullYear(), first.getMonth(), d);
+        let cls='cal-day', dis=dt<today || (picking==='out'&&ci&&dt<=ci);
+        if(same(dt,today)) cls+=' today';
+        if(same(dt,ci)) cls+=' start';
+        if(same(dt,co)) cls+=' end';
+        if(ci&&co&&dt>ci&&dt<co) cls+=' range';
+        h+=`<button type="button" class="${cls}" data-t="${dt.getTime()}" ${dis?'disabled':''} aria-label="${longF(dt)}">${d}</button>`;
+      }
+      m.innerHTML=h+'</div>'; months.appendChild(m);
+    }
+    const prevDisabled=view.getFullYear()===today.getFullYear()&&view.getMonth()===today.getMonth();
+    document.getElementById('cal-prev').disabled=prevDisabled;
+    labels();
+  }
+  function open(which){
+    picking=which==='out'&&ci?'out':'in';
+    const base=picking==='out'&&ci?ci:(ci||today);
+    view=new Date(base.getFullYear(), base.getMonth(), 1);
+    pop.hidden=false; fIn.setAttribute('aria-expanded','true'); fOut.setAttribute('aria-expanded','true');
+    msg.hidden=true; render();
+    if(window.innerWidth<760) pop.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function close(){ pop.hidden=true; fIn.setAttribute('aria-expanded','false'); fOut.setAttribute('aria-expanded','false'); labels(); }
+  fIn.addEventListener('click',e=>{ e.stopPropagation(); open('in'); });
+  fOut.addEventListener('click',e=>{ e.stopPropagation(); open('out'); });
+  months.addEventListener('click',e=>{
+    const b=e.target.closest('.cal-day'); if(!b||b.disabled) return; e.stopPropagation();
+    const dt=new Date(+b.dataset.t);
+    if(picking==='in'){ ci=dt; if(co&&co<=ci) co=null; picking='out'; render(); }
+    else { co=dt; render(); setTimeout(close,250); }
+  });
+  document.getElementById('cal-prev').addEventListener('click',e=>{ e.stopPropagation(); view=new Date(view.getFullYear(), view.getMonth()-1, 1); render(); });
+  document.getElementById('cal-next').addEventListener('click',e=>{ e.stopPropagation(); view=new Date(view.getFullYear(), view.getMonth()+1, 1); render(); });
+  document.getElementById('cal-clear').addEventListener('click',e=>{ e.stopPropagation(); ci=co=null; picking='in'; render(); });
+  document.getElementById('cal-ok').addEventListener('click',e=>{ e.stopPropagation(); close(); });
+  pop.addEventListener('click',e=>e.stopPropagation());
+  document.addEventListener('click',()=>{ if(!pop.hidden) close(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!pop.hidden) close(); });
+  window.addEventListener('resize',()=>{ if(!pop.hidden) render(); });
+  document.getElementById('avail-submit').addEventListener('click',e=>{
+    e.stopPropagation();
+    if(!ci||!co){ msg.textContent=!ci?'Escolha a data de entrada para continuar.':'Escolha a data de saída para continuar.'; msg.hidden=false; open(!ci?'in':'out'); return; }
+    const n=nights();
+    const text=`Olá! Gostaria de verificar a disponibilidade para:\n\n• Check-in: ${longF(ci)}\n• Check-out: ${longF(co)}\n• ${n} ${n>1?'noites':'noite'}\n\nPodem me ajudar?`;
+    window.open('https://api.whatsapp.com/send?phone=5514991797722&text='+encodeURIComponent(text),'_blank','noopener');
+  });
+  labels();
+})();
 
 const topbar = document.querySelector('.topbar');
 const onScroll = () => { topbar.classList.toggle('solid', window.scrollY > 60); };
