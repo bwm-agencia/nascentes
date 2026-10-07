@@ -839,6 +839,32 @@ section{ position:relative; }
 .footer-links a{ font-size:.8rem; letter-spacing:.06em; color:var(--smoke); transition:color .3s var(--ease); }
 .footer-links a:hover{ color:var(--amber-soft); }
 .nav-links a{ white-space:nowrap; }
+
+/* ===== Ajustes finais: chamada final lateral + menu mobile ===== */
+.final-cta{ background:var(--ink); }
+.final-cta::after{ display:none; }
+.final-cta .photo::after{ content:''; position:absolute; inset:0; }
+@media (min-width:901px){
+  .final-cta{ text-align:left; padding: clamp(100px,11vw,150px) var(--pad); }
+  .final-cta .photo{ left:42%; }
+  .final-cta .photo::after{ background: linear-gradient(90deg, var(--ink) 0%, rgba(11,6,7,.55) 18%, rgba(11,6,7,.08) 45%, rgba(11,6,7,.05) 100%), linear-gradient(0deg, rgba(11,6,7,.45), transparent 40%); }
+  .final-cta-inner{ max-width:var(--max); margin:0 auto; }
+  .final-cta-inner > *{ max-width:500px; }
+  .final-cta h2{ font-size:clamp(2.2rem,3.6vw,3.2rem); }
+  .final-cta .sub{ margin:0 0 36px; }
+  .final-cta .actions{ justify-content:flex-start; }
+}
+@media (max-width:900px){
+  .final-cta{ padding: 0 var(--pad) 72px; }
+  .final-cta .photo{ position:relative; inset:auto; height:62vw; min-height:260px; max-height:460px; margin:0 calc(var(--pad) * -1) 8px; }
+  .final-cta .photo::after{ background: linear-gradient(180deg, rgba(11,6,7,.15) 0%, rgba(11,6,7,.05) 45%, var(--ink) 100%); }
+}
+.fullnav{ justify-content:flex-start; overflow-y:auto; padding:110px 24px 40px; gap:22px; }
+.fullnav > :first-child{ margin-top:auto; }
+.fullnav > :last-child{ margin-bottom:auto; }
+.topbar:has(~ .fullnav.open){ background:var(--ink); }
+.topbar:has(~ .fullnav.open) .logo-vertical{ display:none; }
+.topbar:has(~ .fullnav.open) .logo-horizontal{ display:block; }
 </style>
 </head>
 <body>
@@ -868,8 +894,8 @@ section{ position:relative; }
   <a href="cafe-da-manha.html">Café da manhã</a>
   <a href="pacotes.html">Pacotes</a>
   <a href="lua-de-mel.html">Lua de mel</a>
-  <a href="localizacao.html">Localização</a>
   <a href="blog.html">Blog</a>
+  <a href="localizacao.html">Localização</a>
   <a class="cta-glow" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
 </nav>
 
