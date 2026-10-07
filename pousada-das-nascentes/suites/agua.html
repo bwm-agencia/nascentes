@@ -967,7 +967,38 @@ section{ position:relative; }
   .final-cta .btn-whatsapp, .final-cta .btn-outline{ justify-content:center; }
 }
 @media (max-width:780px){ .suite-gallery-grid a:last-child:nth-child(odd){ grid-column:span 2; aspect-ratio:16/9; } }
-@media (min-width:901px) and (max-width:1200px){ .nav-links{ gap:18px; } .nav-links a{ font-size:0.72rem; letter-spacing:0.06em; } .topbar-right{ gap:18px; } }
+@media (min-width:1101px) and (max-width:1340px){ .nav-links{ gap:18px; } .nav-links a{ font-size:0.72rem; letter-spacing:0.06em; } .topbar-right{ gap:16px; } }
+@media (max-width:1100px){ .nav-links, .topbar-right .cta-glow{ display:none; } .menu-btn{ display:block; } }
+.footer-links{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px 26px; max-width:var(--max); margin:0 auto; padding:26px var(--pad) 0; border-top:1px solid rgba(243,237,226,.08); }
+.footer-links a{ font-size:.8rem; letter-spacing:.06em; color:var(--smoke); transition:color .3s var(--ease); }
+.footer-links a:hover{ color:var(--amber-soft); }
+.nav-links a{ white-space:nowrap; }
+
+/* ===== Ajustes finais: chamada final lateral + menu mobile ===== */
+.final-cta{ background:var(--ink); }
+.final-cta::after{ display:none; }
+.final-cta .photo::after{ content:''; position:absolute; inset:0; }
+@media (min-width:901px){
+  .final-cta{ text-align:left; padding: clamp(100px,11vw,150px) var(--pad); }
+  .final-cta .photo{ left:42%; }
+  .final-cta .photo::after{ background: linear-gradient(90deg, var(--ink) 0%, rgba(11,6,7,.55) 18%, rgba(11,6,7,.08) 45%, rgba(11,6,7,.05) 100%), linear-gradient(0deg, rgba(11,6,7,.45), transparent 40%); }
+  .final-cta-inner{ max-width:var(--max); margin:0 auto; }
+  .final-cta-inner > *{ max-width:500px; }
+  .final-cta h2{ font-size:clamp(2.2rem,3.6vw,3.2rem); }
+  .final-cta .sub{ margin:0 0 36px; }
+  .final-cta .actions{ justify-content:flex-start; }
+}
+@media (max-width:900px){
+  .final-cta{ padding: 0 var(--pad) 72px; }
+  .final-cta .photo{ position:relative; inset:auto; height:62vw; min-height:260px; max-height:460px; margin:0 calc(var(--pad) * -1) 8px; }
+  .final-cta .photo::after{ background: linear-gradient(180deg, rgba(11,6,7,.15) 0%, rgba(11,6,7,.05) 45%, var(--ink) 100%); }
+}
+.fullnav{ justify-content:flex-start; overflow-y:auto; padding:110px 24px 40px; gap:22px; }
+.fullnav > :first-child{ margin-top:auto; }
+.fullnav > :last-child{ margin-bottom:auto; }
+.topbar:has(~ .fullnav.open){ background:var(--ink); }
+.topbar:has(~ .fullnav.open) .logo-vertical{ display:none; }
+.topbar:has(~ .fullnav.open) .logo-horizontal{ display:block; }
 </style>
 </head>
 <body>
@@ -981,9 +1012,10 @@ section{ position:relative; }
       <li><a href="../cafe-da-manha.html">Café da manhã</a></li>
       <li><a href="../pacotes.html">Pacotes</a></li>
       <li><a href="../lua-de-mel.html">Lua de mel</a></li>
+      <li><a href="../blog.html">Blog</a></li>
       <li><a href="../localizacao.html">Localização</a></li>
     </ul>
-    <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
+    <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
     <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -996,8 +1028,9 @@ section{ position:relative; }
   <a href="../cafe-da-manha.html">Café da manhã</a>
   <a href="../pacotes.html">Pacotes</a>
   <a href="../lua-de-mel.html">Lua de mel</a>
+  <a href="../blog.html">Blog</a>
   <a href="../localizacao.html">Localização</a>
-  <a class="cta-glow" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
+  <a class="cta-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
 </nav>
 
 <section class="suite-detail-hero" id="top">
@@ -1007,7 +1040,7 @@ section{ position:relative; }
     <h1>Água</h1>
     <span class="slogan">Fluidez azul, alma marinha</span>
     <div class="actions">
-      <a class="btn-primary" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20a%20Su%C3%ADte%20%C3%81gua." target="_blank" rel="noopener">Reservar no WhatsApp</a>
+      <a class="btn-primary" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20a%20Su%C3%ADte%20%C3%81gua." target="_blank" rel="noopener">Reservar no WhatsApp</a>
       <a class="btn-secondary" href="../suites.html">Ver outras suítes</a>
     </div>
   </div>
@@ -1069,7 +1102,7 @@ section{ position:relative; }
   <div class="subpage-cta-inner reveal">
     <p class="eyebrow">Disponibilidade</p>
     <h2>Vamos reservar a sua Suíte Água?</h2>
-    <a class="cta-glow" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20a%20Su%C3%ADte%20%C3%81gua." target="_blank" rel="noopener">Reservar no WhatsApp</a>
+    <a class="cta-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20a%20Su%C3%ADte%20%C3%81gua." target="_blank" rel="noopener">Reservar no WhatsApp</a>
   </div>
 </section>
 
@@ -1101,7 +1134,7 @@ section{ position:relative; }
     <h2>Falta só um passo<br><span class="accent">para você estar lá</span></h2>
     <p class="sub">Fale com a gente pelo WhatsApp. A gente verifica a disponibilidade, tira todas as dúvidas e garante que sua estadia na Suíte Água vai ser exatamente o que você imaginou.</p>
     <div class="actions">
-      <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=14991797722&text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20a%20Su%C3%ADte%20%C3%81gua." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>Falar no WhatsApp</a>
+      <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20a%20Su%C3%ADte%20%C3%81gua." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>Falar no WhatsApp</a>
       <a class="btn-outline" href="../suites.html">Ver outras suítes</a>
     </div>
   </div>
@@ -1169,6 +1202,7 @@ section{ position:relative; }
     </div>
   </div>
 
+  <nav class="footer-links" aria-label="Links do rodapé"><a href="../suites.html">Suítes</a><a href="../pacotes.html">Pacotes</a><a href="../lua-de-mel.html">Lua de mel</a><a href="../cafe-da-manha.html">Café da manhã</a><a href="../experiencia.html">A experiência</a><a href="../blog.html">Blog</a><a href="../localizacao.html">Localização</a></nav>
   <div class="footer-bottom">
     © 2026 Pousada das Nascentes — Todos os direitos reservados - Desenvolvido por <a href="https://www.agenciabwm.com.br" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline; text-underline-offset:2px;">Agência BWM</a>
   </div>
@@ -1256,7 +1290,7 @@ document.querySelectorAll('.btn-details').forEach(btn => {
     suiteModalName.textContent = tile.dataset.name;
     suiteModalSlogan.textContent = tile.dataset.slogan;
     suiteModalDesc.textContent = tile.dataset.desc;
-    suiteModalBook.href = 'https://api.whatsapp.com/send?phone=14991797722&text=' + encodeURIComponent('Olá! Gostaria de reservar a Suíte ' + tile.dataset.name + '.');
+    suiteModalBook.href = 'https://api.whatsapp.com/send?phone=5514991797722&text=' + encodeURIComponent('Olá! Gostaria de reservar a Suíte ' + tile.dataset.name + '.');
     suiteModalOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   });
