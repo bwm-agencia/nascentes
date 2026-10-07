@@ -408,6 +408,7 @@ section{ position:relative; }
 }
 .reel::-webkit-scrollbar{ display:none; }
 .reel-card{
+  display:block; color:inherit;
   flex:0 0 auto;
   width:min(78vw,330px);
   aspect-ratio:3/4;
@@ -790,6 +791,34 @@ section{ position:relative; }
 .footer-links a{ font-size:.8rem; letter-spacing:.06em; color:var(--smoke); transition:color .3s var(--ease); }
 .footer-links a:hover{ color:var(--amber-soft); }
 .nav-links a{ white-space:nowrap; }
+
+.reel{ scroll-padding-inline: var(--pad); }
+.reel::after{ content:""; flex:0 0 1px; }
+/* ===== Ajustes finais: chamada final lateral + menu mobile ===== */
+.final-cta{ background:var(--ink); }
+.final-cta::after{ display:none; }
+.final-cta .photo::after{ content:''; position:absolute; inset:0; }
+@media (min-width:901px){
+  .final-cta{ text-align:left; padding: clamp(100px,11vw,150px) var(--pad); }
+  .final-cta .photo{ left:42%; }
+  .final-cta .photo::after{ background: linear-gradient(90deg, var(--ink) 0%, rgba(11,6,7,.55) 18%, rgba(11,6,7,.08) 45%, rgba(11,6,7,.05) 100%), linear-gradient(0deg, rgba(11,6,7,.45), transparent 40%); }
+  .final-cta-inner{ max-width:var(--max); margin:0 auto; }
+  .final-cta-inner > *{ max-width:500px; }
+  .final-cta h2{ font-size:clamp(2.2rem,3.6vw,3.2rem); }
+  .final-cta .sub{ margin:0 0 36px; }
+  .final-cta .actions{ justify-content:flex-start; }
+}
+@media (max-width:900px){
+  .final-cta{ padding: 0 var(--pad) 72px; }
+  .final-cta .photo{ position:relative; inset:auto; height:62vw; min-height:260px; max-height:460px; margin:0 calc(var(--pad) * -1) 8px; }
+  .final-cta .photo::after{ background: linear-gradient(180deg, rgba(11,6,7,.15) 0%, rgba(11,6,7,.05) 45%, var(--ink) 100%); }
+}
+.fullnav{ justify-content:flex-start; overflow-y:auto; padding:110px 24px 40px; gap:22px; }
+.fullnav > :first-child{ margin-top:auto; }
+.fullnav > :last-child{ margin-bottom:auto; }
+.topbar:has(~ .fullnav.open){ background:var(--ink); }
+.topbar:has(~ .fullnav.open) .logo-vertical{ display:none; }
+.topbar:has(~ .fullnav.open) .logo-horizontal{ display:block; }
 </style>
 </head>
 <body>
@@ -819,8 +848,8 @@ section{ position:relative; }
   <a href="cafe-da-manha.html">Café da manhã</a>
   <a href="pacotes.html">Pacotes</a>
   <a href="lua-de-mel.html">Lua de mel</a>
-  <a href="localizacao.html">Localização</a>
   <a href="blog.html">Blog</a>
+  <a href="localizacao.html">Localização</a>
   <a class="cta-glow" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
 </nav>
 
@@ -912,38 +941,31 @@ section{ position:relative; }
     </div>
   </div>
   <div class="reel">
-    <div class="reel-card reveal">
+    <a class="reel-card reveal" href="suites/romantica.html" aria-label="Ver a Suíte Romântica">
       <img src="fotos-suites/romantica/capa.jpg" alt="Suíte Romântica">
-      <div class="cap"><p class="eyebrow">Temática</p><h3>Romântica</h3><span class="slogan">Aconchego a dois, à luz de velas</span><span class="amenity">Hidromassagem para casal</span></div>
-    </div>
-    <div class="reel-card reveal">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Romântica</h3><span class="slogan">Aconchego a dois, à luz de velas</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="suites/amarula.html" aria-label="Ver a Suíte Amarula">
       <img src="fotos-suites/amarula/capa.jpg" alt="Suíte Amarula">
-      <div class="cap"><p class="eyebrow">Temática</p><h3>Amarula</h3><span class="slogan">Elegância selvagem em tons dourados</span><span class="amenity">Hidromassagem para casal</span></div>
-    </div>
-    <div class="reel-card reveal">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Amarula</h3><span class="slogan">Elegância selvagem em tons dourados</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="suites/savana.html" aria-label="Ver a Suíte Savana">
       <img src="fotos-suites/savana/capa.jpg" alt="Suíte Savana">
-      <div class="cap"><p class="eyebrow">Temática</p><h3>Savana</h3><span class="slogan">O espírito livre da savana africana</span><span class="amenity">Hidromassagem para casal</span></div>
-    </div>
-    <div class="reel-card reveal">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Savana</h3><span class="slogan">O espírito livre da savana africana</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="suites/irati.html" aria-label="Ver a Suíte Irati">
       <img src="fotos-suites/irati/capa.jpg" alt="Suíte Irati">
-      <div class="cap"><p class="eyebrow">Temática</p><h3>Irati</h3><span class="slogan">Conforto dourado, ritmo lento</span><span class="amenity">Hidromassagem para casal</span></div>
-    </div>
-    <div class="reel-card reveal">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Irati</h3><span class="slogan">Conforto dourado, ritmo lento</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="suites/vanilla.html" aria-label="Ver a Suíte Vanilla">
       <img src="fotos-suites/vanilla/capa.jpg" alt="Suíte Vanilla">
-      <div class="cap"><p class="eyebrow">Temática</p><h3>Vanilla</h3><span class="slogan">Doçura floral em cada detalhe</span><span class="amenity">Hidromassagem para casal</span></div>
-    </div>
-    <div class="reel-card reveal">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Vanilla</h3><span class="slogan">Doçura floral em cada detalhe</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="suites/terra.html" aria-label="Ver a Suíte Terra">
       <img src="fotos-suites/terra/capa.jpg" alt="Suíte Terra">
-      <div class="cap"><p class="eyebrow">Temática</p><h3>Terra</h3><span class="slogan">Calor terroso, raízes brasileiras</span><span class="amenity">Ofurô cromoterápico individual</span></div>
-    </div>
-    <div class="reel-card reveal">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Terra</h3><span class="slogan">Calor terroso, raízes brasileiras</span><span class="amenity">Ofurô cromoterápico individual</span></div></a>
+    <a class="reel-card reveal" href="suites/agua.html" aria-label="Ver a Suíte Água">
       <img src="fotos-suites/agua/capa.jpg" alt="Suíte Água">
-      <div class="cap"><p class="eyebrow">Temática</p><h3>Água</h3><span class="slogan">Fluidez azul, alma marinha</span><span class="amenity">Ofurô cromoterápico individual</span></div>
-    </div>
-    <div class="reel-card reel-card--more reveal">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Água</h3><span class="slogan">Fluidez azul, alma marinha</span><span class="amenity">Ofurô cromoterápico individual</span></div></a>
+    <a class="reel-card reel-card--more reveal" href="suites.html">
       <h3>Ver as dezoito suítes</h3>
-      <a class="link-glow" href="suites.html">Abrir catálogo <span class="arrow">→</span></a>
-    </div>
+      <span class="link-glow">Abrir catálogo <span class="arrow">→</span></span>
+    </a>
   </div>
 </section>
 
