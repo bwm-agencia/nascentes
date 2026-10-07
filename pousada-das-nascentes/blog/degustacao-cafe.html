@@ -870,6 +870,12 @@ section{ position:relative; }
 @media (max-width:900px){ .package-grid{ grid-template-columns:1fr; } }
 
 
+.footer-links{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px 26px; max-width:var(--max); margin:0 auto; padding:26px var(--pad) 0; border-top:1px solid rgba(243,237,226,.08); }
+.footer-links a{ font-size:.8rem; letter-spacing:.06em; color:var(--smoke); transition:color .3s var(--ease); }
+.footer-links a:hover{ color:var(--amber-soft); }
+.nav-links a{ white-space:nowrap; }
+@media (min-width:1101px) and (max-width:1340px){ .nav-links{ gap:18px; } .nav-links a{ font-size:0.72rem; letter-spacing:0.06em; } .topbar-right{ gap:16px; } }
+@media (max-width:1100px){ .nav-links, .topbar-right .cta-glow{ display:none; } .menu-btn{ display:block; } }
 /* ===== Blog ===== */
 .bl-hero{ position:relative; padding:170px var(--pad) clamp(50px,7vw,80px); background:var(--ink); overflow:hidden; }
 .bl-hero .glow-orb{ width:520px; height:520px; right:-140px; top:-120px; }
@@ -926,6 +932,14 @@ section{ position:relative; }
 .post-note{ font-size:.92rem !important; padding:16px 20px; border-left:2px solid var(--amber); background:rgba(232,168,76,.07); border-radius:0 12px 12px 0; color:var(--smoke) !important; }
 .post-gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:2em 0 !important; }
 .post-gallery img{ width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+
+.post-suites{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:2em 0 !important; }
+.post-suites a{ position:relative; border-radius:12px; overflow:hidden; aspect-ratio:4/3; border:none !important; display:block; }
+.post-suites img{ width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease); }
+.post-suites a:hover img{ transform:scale(1.06); }
+.post-suites a::after{ content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(11,6,7,.8), transparent 60%); }
+.post-suites span{ position:absolute; left:12px; bottom:10px; z-index:2; font-family:var(--display); font-size:1rem; color:var(--mist); }
+@media (max-width:620px){ .post-suites{ grid-template-columns:1fr 1fr; } }
 .post-menu{ list-style:none; padding:0 !important; border-top:1px solid rgba(243,237,226,.1); }
 .post-menu li{ display:flex; justify-content:space-between; gap:18px; padding:16px 0; border-bottom:1px solid rgba(243,237,226,.1); margin:0 !important; }
 .post-menu strong{ display:block; color:var(--mist); font-weight:600; font-size:1rem; }
@@ -938,9 +952,6 @@ section{ position:relative; }
 .ar-more{ background:var(--wine); padding:clamp(70px,9vw,110px) var(--pad); }
 .ar-more .suite-section-head h2{ line-height:1.15; }
 @media (max-width:620px){ .post-gallery{ grid-template-columns:1fr 1fr; } .post-menu li{ flex-direction:column; gap:6px; } }
-.footer-links{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px 26px; max-width:var(--max); margin:0 auto; padding:26px var(--pad) 0; border-top:1px solid rgba(243,237,226,.08); }
-.footer-links a{ font-size:.8rem; letter-spacing:.06em; color:var(--smoke); transition:color .3s var(--ease); }
-.footer-links a:hover{ color:var(--amber-soft); }
 </style>
 </head>
 <body>
@@ -953,6 +964,7 @@ section{ position:relative; }
       <li><a href="../cafe-da-manha.html">Café da manhã</a></li>
       <li><a href="../pacotes.html">Pacotes</a></li>
       <li><a href="../lua-de-mel.html">Lua de mel</a></li>
+      <li><a href="../blog.html" style="color:var(--amber-soft);">Blog</a></li>
       <li><a href="../localizacao.html">Localização</a></li>
     </ul>
     <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
@@ -977,7 +989,7 @@ section{ position:relative; }
   <div class="photo" style="background-image:url('https://www.pousadadasnascentes.com.br/wp-content/uploads/2024/02/Cafe-Sao-Francisco-do-Gramado.jpg');" role="img" aria-label="Descubra os segredos do café na Pousada das Nascentes em Brotas!"></div>
   <div class="inner">
     <a class="back" href="../blog.html">← Voltar para o blog</a>
-    <div class="bl-meta"><span class="cat">Gastronomia</span><span>2 de fevereiro de 2024</span></div>
+    <div class="bl-meta"><span class="cat">Gastronomia</span></div>
     <h1>Descubra os segredos do café na Pousada das Nascentes em Brotas!</h1>
   </div>
 </section>
@@ -1000,15 +1012,15 @@ section{ position:relative; }
   <div class="bl-grid">
     <a class="bl-card reveal" href="sauna-vidro-integrada-piscina.html" data-cat="novidades-da-pousada">
       <div class="thumb"><img src="https://www.pousadadasnascentes.com.br/wp-content/uploads/2023/06/sauna-vidro-integrada-pousada-das-nascentes-5.jpg" alt="Sauna de Vidro integrada com a Piscina" loading="lazy"></div>
-      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span><span>13 de junho de 2023</span></div><h2>Sauna de Vidro integrada com a Piscina</h2><p>Oferecemos uma novidade para nossos hóspedes que procuram momentos de relaxamento: uma sauna integrada com nossa piscina que pode atingir até 50º!</p><span class="more">Ler artigo →</span></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Sauna de Vidro integrada com a Piscina</h2><p>Oferecemos uma novidade para nossos hóspedes que procuram momentos de relaxamento: uma sauna integrada com nossa piscina que pode atingir até 50º!</p><span class="more">Ler artigo →</span></div>
     </a>
     <a class="bl-card reveal" href="temporada-de-outono-inverno.html" data-cat="pacotes-e-feriados">
       <div class="thumb"><img src="https://www.pousadadasnascentes.com.br/wp-content/uploads/2019/05/inverno-em-brotas.jpg" alt="O charme de Brotas na temporada de outono/inverno" loading="lazy"></div>
-      <div class="body"><div class="bl-meta"><span class="cat">Pacotes e Feriados</span><span>3 de maio de 2022</span></div><h2>O charme de Brotas na temporada de outono/inverno</h2><p>Com as estações mais charmosas do ano se aproximando, Brotas começa a ganhar destaque, já imaginou uma viagem a dois para desfrutar deste clima?</p><span class="more">Ler artigo →</span></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Pacotes e Feriados</span></div><h2>O charme de Brotas na temporada de outono/inverno</h2><p>Com as estações mais charmosas do ano se aproximando, Brotas começa a ganhar destaque, já imaginou uma viagem a dois para desfrutar deste clima?</p><span class="more">Ler artigo →</span></div>
     </a>
     <a class="bl-card reveal" href="viagem-a-dois-acima-de-60-pode-ser-apaixonante.html" data-cat="destaques-de-brotas">
       <div class="thumb"><img src="https://www.pousadadasnascentes.com.br/wp-content/uploads/2020/10/Pousada-das-Nascentes-88.jpg" alt="Viagem a dois acima de 60 pode ser apaixonante" loading="lazy"></div>
-      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span><span>29 de abril de 2022</span></div><h2>Viagem a dois acima de 60 pode ser apaixonante</h2><p>Que tal começar a pensar em viagens e resignificá-las? Está na hora de investir em viagens a dois e fazer descobertas juntos.</p><span class="more">Ler artigo →</span></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Viagem a dois acima de 60 pode ser apaixonante</h2><p>Que tal começar a pensar em viagens e resignificá-las? Está na hora de investir em viagens a dois e fazer descobertas juntos.</p><span class="more">Ler artigo →</span></div>
     </a>
   </div>
 </section>

@@ -46,6 +46,96 @@
       "permanent": true
     },
     {
+      "source": "/cachoeiras-em-brotas",
+      "destination": "/blog/cachoeiras-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/o-melhor-carnaval-do-interior-paulista",
+      "destination": "/blog/o-melhor-carnaval-do-interior-paulista.html",
+      "permanent": true
+    },
+    {
+      "source": "/aniversario-de-sao-paulo-aproveite-o-25-de-janeiro-aqui",
+      "destination": "/blog/aniversario-de-sao-paulo-aproveite-o-25-de-janeiro-aqui.html",
+      "permanent": true
+    },
+    {
+      "source": "/por-que-viajar-para-o-interior-de-sp",
+      "destination": "/blog/por-que-viajar-para-o-interior-de-sp.html",
+      "permanent": true
+    },
+    {
+      "source": "/ferias-em-brotas",
+      "destination": "/blog/ferias-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/feriado-da-consciencia-negra-em-brotas",
+      "destination": "/blog/feriado-da-consciencia-negra-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/festas-de-final-de-ano-na-pousada-das-nascentes",
+      "destination": "/blog/festas-de-final-de-ano-na-pousada-das-nascentes.html",
+      "permanent": true
+    },
+    {
+      "source": "/primavera-em-brotas",
+      "destination": "/blog/primavera-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/sugestoes-para-um-fim-de-semana-a-dois",
+      "destination": "/blog/sugestoes-para-um-fim-de-semana-a-dois.html",
+      "permanent": true
+    },
+    {
+      "source": "/2-dias-em-brotas-saiba-o-que-fazer",
+      "destination": "/blog/2-dias-em-brotas-saiba-o-que-fazer.html",
+      "permanent": true
+    },
+    {
+      "source": "/aniversario-de-casamento",
+      "destination": "/blog/aniversario-de-casamento.html",
+      "permanent": true
+    },
+    {
+      "source": "/uma-viagem-romantica",
+      "destination": "/blog/uma-viagem-romantica.html",
+      "permanent": true
+    },
+    {
+      "source": "/cafe-da-manha-perfeito-em-brotas",
+      "destination": "/blog/cafe-da-manha-perfeito-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/o-que-fazer-pertinho-da-pousada",
+      "destination": "/blog/o-que-fazer-pertinho-da-pousada.html",
+      "permanent": true
+    },
+    {
+      "source": "/restaurantes-em-brotas-para-um-jantar-romantico",
+      "destination": "/blog/restaurantes-em-brotas-para-um-jantar-romantico.html",
+      "permanent": true
+    },
+    {
+      "source": "/jantar-romantico",
+      "destination": "/blog/jantar-romantico.html",
+      "permanent": true
+    },
+    {
+      "source": "/hidromassagem-e-ofuro-o-diferencial-da-pousada-das-nascentes",
+      "destination": "/blog/hidromassagem-e-ofuro-o-diferencial-da-pousada-das-nascentes.html",
+      "permanent": true
+    },
+    {
+      "source": "/noite-romantica",
+      "destination": "/blog/noite-romantica.html",
+      "permanent": true
+    },
+    {
       "source": "/descubra-os-encantos-de-brotas-na-baixa-temporada/",
       "destination": "/blog/descubra-os-encantos-de-brotas-na-baixa-temporada.html",
       "permanent": true
@@ -88,6 +178,96 @@
     {
       "source": "/fim-de-semana-perfeito-brotas-casais/",
       "destination": "/blog/fim-de-semana-perfeito-brotas-casais.html",
+      "permanent": true
+    },
+    {
+      "source": "/cachoeiras-em-brotas/",
+      "destination": "/blog/cachoeiras-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/o-melhor-carnaval-do-interior-paulista/",
+      "destination": "/blog/o-melhor-carnaval-do-interior-paulista.html",
+      "permanent": true
+    },
+    {
+      "source": "/aniversario-de-sao-paulo-aproveite-o-25-de-janeiro-aqui/",
+      "destination": "/blog/aniversario-de-sao-paulo-aproveite-o-25-de-janeiro-aqui.html",
+      "permanent": true
+    },
+    {
+      "source": "/por-que-viajar-para-o-interior-de-sp/",
+      "destination": "/blog/por-que-viajar-para-o-interior-de-sp.html",
+      "permanent": true
+    },
+    {
+      "source": "/ferias-em-brotas/",
+      "destination": "/blog/ferias-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/feriado-da-consciencia-negra-em-brotas/",
+      "destination": "/blog/feriado-da-consciencia-negra-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/festas-de-final-de-ano-na-pousada-das-nascentes/",
+      "destination": "/blog/festas-de-final-de-ano-na-pousada-das-nascentes.html",
+      "permanent": true
+    },
+    {
+      "source": "/primavera-em-brotas/",
+      "destination": "/blog/primavera-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/sugestoes-para-um-fim-de-semana-a-dois/",
+      "destination": "/blog/sugestoes-para-um-fim-de-semana-a-dois.html",
+      "permanent": true
+    },
+    {
+      "source": "/2-dias-em-brotas-saiba-o-que-fazer/",
+      "destination": "/blog/2-dias-em-brotas-saiba-o-que-fazer.html",
+      "permanent": true
+    },
+    {
+      "source": "/aniversario-de-casamento/",
+      "destination": "/blog/aniversario-de-casamento.html",
+      "permanent": true
+    },
+    {
+      "source": "/uma-viagem-romantica/",
+      "destination": "/blog/uma-viagem-romantica.html",
+      "permanent": true
+    },
+    {
+      "source": "/cafe-da-manha-perfeito-em-brotas/",
+      "destination": "/blog/cafe-da-manha-perfeito-em-brotas.html",
+      "permanent": true
+    },
+    {
+      "source": "/o-que-fazer-pertinho-da-pousada/",
+      "destination": "/blog/o-que-fazer-pertinho-da-pousada.html",
+      "permanent": true
+    },
+    {
+      "source": "/restaurantes-em-brotas-para-um-jantar-romantico/",
+      "destination": "/blog/restaurantes-em-brotas-para-um-jantar-romantico.html",
+      "permanent": true
+    },
+    {
+      "source": "/jantar-romantico/",
+      "destination": "/blog/jantar-romantico.html",
+      "permanent": true
+    },
+    {
+      "source": "/hidromassagem-e-ofuro-o-diferencial-da-pousada-das-nascentes/",
+      "destination": "/blog/hidromassagem-e-ofuro-o-diferencial-da-pousada-das-nascentes.html",
+      "permanent": true
+    },
+    {
+      "source": "/noite-romantica/",
+      "destination": "/blog/noite-romantica.html",
       "permanent": true
     },
     {
