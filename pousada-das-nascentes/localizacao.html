@@ -938,6 +938,9 @@ section{ position:relative; }
 .footer-links{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px 26px; max-width:var(--max); margin:0 auto; padding:26px var(--pad) 0; border-top:1px solid rgba(243,237,226,.08); }
 .footer-links a{ font-size:.8rem; letter-spacing:.06em; color:var(--smoke); transition:color .3s var(--ease); }
 .footer-links a:hover{ color:var(--amber-soft); }
+@media (min-width:1101px) and (max-width:1340px){ .nav-links{ gap:18px; } .nav-links a{ font-size:0.72rem; letter-spacing:0.06em; } .topbar-right{ gap:16px; } }
+@media (max-width:1100px){ .nav-links, .topbar-right .cta-glow{ display:none; } .menu-btn{ display:block; } }
+.nav-links a{ white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -950,6 +953,7 @@ section{ position:relative; }
       <li><a href="cafe-da-manha.html">Café da manhã</a></li>
       <li><a href="pacotes.html">Pacotes</a></li>
       <li><a href="lua-de-mel.html">Lua de mel</a></li>
+      <li><a href="blog.html">Blog</a></li>
       <li><a href="localizacao.html" style="color:var(--amber-soft);">Localização</a></li>
     </ul>
     <a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=14991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar</a>
