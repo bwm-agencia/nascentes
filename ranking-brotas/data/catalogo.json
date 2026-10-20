@@ -1,0 +1,351 @@
+{
+ "_comentario": "Hospedagens conhecidas de Brotas. 'apelidos' juntam grafias diferentes do mesmo negócio. Nomes citados pelas IAs que não estão aqui aparecem em data/coletas/<mes>/nao-mapeados.txt para revisão. 'ignorar' lista termos genéricos que não são nome de hospedagem.",
+ "ignorar": [
+  "Pousada Brotas",
+  "Pousadas Brotas",
+  "Hotel Brotas",
+  "Hotéis Brotas",
+  "Hotel Fazenda Brotas",
+  "Hospedagem Brotas"
+ ],
+ "hospedagens": [
+  {
+   "nome": "Belo Quinto Styles",
+   "apelidos": [
+    "Belo Quinto"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d25169326-Reviews-Belo_Quinto_Styles-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 2,
+   "lat": -22.278148,
+   "lng": -48.125745
+  },
+  {
+   "nome": "Biomas Hotel",
+   "apelidos": [
+    "Hotel Biomas"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d23867628-Reviews-Biomas_Hotel-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 7,
+   "lat": -22.272644,
+   "lng": -48.135985
+  },
+  {
+   "nome": "Brotas Eco Hotel Fazenda",
+   "apelidos": [
+    "Brotas Eco Hotel",
+    "Brotas Eco Resort",
+    "Brotas Eco"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2437136-Reviews-Brotas_Eco_Hotel_Fazenda-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 1370,
+   "lat": -22.27157,
+   "lng": -48.118481
+  },
+  {
+   "nome": "Casarao Hotel",
+   "apelidos": [
+    "Hotel Casarão",
+    "Casarão Hotel"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2514558-Reviews-Casarao_Hotel-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 178,
+   "lat": -22.282629,
+   "lng": -48.127413
+  },
+  {
+   "nome": "Cassorova Hotel Boutique",
+   "apelidos": [
+    "Cassorova Hotel",
+    "Cassorova"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d21389571-Reviews-Cassorova_Hotel_Boutique-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 274,
+   "lat": -22.414634,
+   "lng": -47.990043
+  },
+  {
+   "nome": "Charm Hostel",
+   "apelidos": [],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d12405074-Reviews-Charm_Hostel-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 47,
+   "lat": -22.274761,
+   "lng": -48.127087
+  },
+  {
+   "nome": "Frangipani Hotel Boutique",
+   "apelidos": [
+    "Frangipani"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2093585-Reviews-Frangipani_Hotel_Boutique-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 929,
+   "lat": -22.380989,
+   "lng": -48.049465
+  },
+  {
+   "nome": "Gaia Hospedagem Holistica",
+   "apelidos": [
+    "Gaia Pousada Holística",
+    "Gaia Pousada",
+    "Gaia Hospedagem"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d23022799-Reviews-Gaia_Hospedagem_Holistica-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 71,
+   "lat": -22.266667,
+   "lng": -48.127484
+  },
+  {
+   "nome": "Hospedagem Fazenda Nova America",
+   "apelidos": [
+    "Fazenda Nova América"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d25407158-Reviews-Hospedagem_Fazenda_Nova_America-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 0,
+   "lat": -22.278311,
+   "lng": -47.981289
+  },
+  {
+   "nome": "Hospedaria Brotas",
+   "apelidos": [],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d15243289-Reviews-Hospedaria_Brotas-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 1,
+   "lat": -22.289766,
+   "lng": -48.114274
+  },
+  {
+   "nome": "Hotel Cachoeiras de Brotas",
+   "apelidos": [
+    "Cachoeiras de Brotas Hotel"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2633710-Reviews-Hotel_Cachoeiras_de_Brotas-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 459,
+   "lat": -22.27324,
+   "lng": -48.126297
+  },
+  {
+   "nome": "Hotel Fazenda Areia que Canta",
+   "apelidos": [
+    "Areia que Canta"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2521550-Reviews-Hotel_Fazenda_Areia_que_Canta-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 948,
+   "lat": -22.315853,
+   "lng": -48.049995
+  },
+  {
+   "nome": "Hotel Mosteiro",
+   "apelidos": [],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2514426-Reviews-Hotel_Mosteiro-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 119,
+   "lat": -22.398537,
+   "lng": -48.041354
+  },
+  {
+   "nome": "Hotel Natural SPA & Lazer",
+   "apelidos": [
+    "Hotel Natural Spa",
+    "Hotel Natural"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d1649470-Reviews-Hotel_Natural_SPA_Lazer-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 706,
+   "lat": -22.275923,
+   "lng": -48.127705
+  },
+  {
+   "nome": "Hotel Pousada Alvorada",
+   "apelidos": [
+    "Pousada Alvorada"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2691050-Reviews-Hotel_Pousada_Alvorada-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 84,
+   "lat": -22.28124,
+   "lng": -48.127739
+  },
+  {
+   "nome": "Hotel Vivenda Das Cachoeiras",
+   "apelidos": [
+    "Vivenda das Cachoeiras"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2634053-Reviews-Hotel_Vivenda_Das_Cachoeiras-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 98,
+   "lat": -22.281658,
+   "lng": -48.128569
+  },
+  {
+   "nome": "Pousada Boa Vista",
+   "apelidos": [],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2529841-Reviews-Pousada_Boa_Vista-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 58,
+   "lat": -22.26671,
+   "lng": -48.138474
+  },
+  {
+   "nome": "Pousada Broto D' Agua",
+   "apelidos": [
+    "Broto d'Água",
+    "Broto D Agua",
+    "Broto d'Agua"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d1088554-Reviews-Pousada_Broto_D_Agua-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 167,
+   "lat": -22.27877,
+   "lng": -48.12862
+  },
+  {
+   "nome": "Pousada Caminho Das Aguas",
+   "apelidos": [
+    "Caminho das Águas"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2629591-Reviews-Pousada_Caminho_Das_Aguas-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 333,
+   "lat": -22.281865,
+   "lng": -48.12756
+  },
+  {
+   "nome": "Pousada Dona Emilia",
+   "apelidos": [
+    "Dona Emília"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2512452-Reviews-Pousada_Dona_Emilia-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 190,
+   "lat": -22.281506,
+   "lng": -48.12952
+  },
+  {
+   "nome": "Pousada Estalagem de Brotas",
+   "apelidos": [
+    "Estalagem de Brotas",
+    "Estalagem Brotas"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2104643-Reviews-Pousada_Estalagem_de_Brotas-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 698,
+   "lat": -22.292578,
+   "lng": -48.132541
+  },
+  {
+   "nome": "Pousada Jacare Pepira",
+   "apelidos": [
+    "Jacaré Pepira",
+    "Jacare Pepira"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2649324-Reviews-Pousada_Jacare_Pepira-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 332,
+   "lat": -22.442299,
+   "lng": -48.011898
+  },
+  {
+   "nome": "Pousada Pé Na Terra",
+   "apelidos": [
+    "Pé na Terra"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d4202029-Reviews-Pousada_Pe_Na_Terra-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 1212,
+   "lat": -22.301619,
+   "lng": -48.139282
+  },
+  {
+   "nome": "Pousada Recanto da Vo Ziza",
+   "apelidos": [
+    "Recanto da Vó Ziza",
+    "Vó Ziza"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d12669543-Reviews-Pousada_Recanto_da_Vo_Ziza-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 115,
+   "lat": -22.2734,
+   "lng": -48.122349
+  },
+  {
+   "nome": "Pousada Recanto das Maritacas",
+   "apelidos": [
+    "Recanto das Maritacas"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d8155478-Reviews-Pousada_Recanto_das_Maritacas-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 23,
+   "lat": -22.266163,
+   "lng": -48.138401
+  },
+  {
+   "nome": "Pousada Roda D'água",
+   "apelidos": [
+    "Roda d'Agua"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d24988282-Reviews-Pousada_Roda_D_agua-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 2,
+   "lat": -22.290807,
+   "lng": -48.114779
+  },
+  {
+   "nome": "Pousada Sítio Vovô Jarbas",
+   "apelidos": [
+    "Sítio Vovô Jarbas"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d27101295-Reviews-Pousada_Sitio_Vovo_Jarbas-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 0,
+   "lat": -22.32523,
+   "lng": -48.15192
+  },
+  {
+   "nome": "Pousada da Estação",
+   "apelidos": [],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d23460648-Reviews-Pousada_da_Estacao-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 22,
+   "lat": -22.287371,
+   "lng": -48.112495
+  },
+  {
+   "nome": "Pousada das Nascentes",
+   "apelidos": [
+    "Pousada Nascentes"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2529742-Reviews-Pousada_das_Nascentes-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 308,
+   "lat": -22.443626,
+   "lng": -48.007322
+  },
+  {
+   "nome": "Recanto Dos Passaros",
+   "apelidos": [
+    "Pousada Recanto dos Pássaros"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d2662025-Reviews-Recanto_Dos_Passaros-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 72,
+   "lat": -22.289324,
+   "lng": -48.125831
+  },
+  {
+   "nome": "SR Farm Hotel",
+   "apelidos": [],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d33110297-Reviews-SR_Farm_Hotel-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 9,
+   "lat": -22.282755,
+   "lng": -48.135938
+  },
+  {
+   "nome": "Vila Jacaré",
+   "apelidos": [
+    "Vila Jacare"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d27162310-Reviews-Vila_Jacare-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 6,
+   "lat": -22.28273,
+   "lng": -48.12426
+  },
+  {
+   "nome": "Villa Cassorova",
+   "apelidos": [],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d21390615-Reviews-Villa_Cassorova-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 0,
+   "lat": -22.414292,
+   "lng": -47.989912
+  },
+  {
+   "nome": "Viva Brotas Barbieri",
+   "apelidos": [
+    "Viva Brotas"
+   ],
+   "tripadvisorUrl": "https://www.tripadvisor.com.br/Hotel_Review-g793338-d17633194-Reviews-Viva_Brotas_Barbieri-Brotas_State_of_Sao_Paulo.html",
+   "tripadvisorAvaliacoes": 204,
+   "lat": -22.271564,
+   "lng": -48.245617
+  }
+ ]
+}

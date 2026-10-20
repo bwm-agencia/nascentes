@@ -1,0 +1,24 @@
+{
+  "marca": "RankIA",
+  "cidade": "Brotas",
+  "uf": "SP",
+  "categoria": "Hotéis e pousadas",
+  "slug": "/rank/hoteis-e-pousadas/brotas",
+  "whatsapp": "5514999999999",
+  "email": "contato@seudominio.com.br",
+  "repeticoes": 2,
+  "minimoCitacoes": 2,
+  "perguntas": [
+    "Quais os melhores hotéis e pousadas em Brotas?",
+    "Qual o melhor hotel em Brotas?",
+    "Qual a melhor pousada em Brotas?",
+    "Indique um hotel ou pousada para casal em Brotas",
+    "Hotel ou pousada para viajar com a família em Brotas"
+  ],
+  "ias": {
+    "chatgpt": { "nome": "ChatGPT", "modelo": "gpt-5", "env": "OPENAI_API_KEY" },
+    "gemini": { "nome": "Gemini", "modelo": "gemini-2.5-flash", "env": "GEMINI_API_KEY" },
+    "perplexity": { "nome": "Perplexity", "modelo": "sonar", "env": "PERPLEXITY_API_KEY" }
+  },
+  "plataformas": ["booking", "airbnb", "tripadvisor", "trivago", "decolar", "expedia", "hoteis.com", "hotels.com", "google", "kayak", "agoda"]
+}
