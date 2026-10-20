@@ -33,11 +33,10 @@ MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho",
          "agosto", "setembro", "outubro", "novembro", "dezembro"]
 
 # Nomes próprios de hospedagem que não estão no catálogo: "Pousada Xyz", "Hotel Fazenda Abc"…
+TIPOS = r"(?:Hotel Fazenda|Eco ?Hotel|Pousada|Hotel|Hostel|Resort|Recanto|Chal[ée]s?|Hospedaria|Hospedagem|Camping|Glamping)"
 GENERICO = re.compile(
-    r"\b(?:Hotel Fazenda|Eco ?Hotel|Pousada|Hotel|Hostel|Resort|Recanto|Chal[ée]s?|Hospedaria|Hospedagem|Camping|Glamping)"
-    r"(?:\s+(?:d[aoe]s?|&|e)?\s*[A-ZÁÂÃÉÊÍÓÔÕÚÇ][\wÀ-ÿ'’-]*)+"
+    r"\b" + TIPOS + r"(?:\s+(?:d[aoe]s?\s+|&\s+)?(?!" + TIPOS + r"\b)[A-ZÁÂÃÉÊÍÓÔÕÚÇ][\wÀ-ÿ'’-]*)+"
 )
-CONECTORES_FINAIS = re.compile(r"(\s+(?:d[aoe]s?|&|e))+$")
 
 
 def normaliza(texto):
@@ -80,7 +79,7 @@ class Extrator:
                 i = norm.find(agulha, i + 1)
 
         for m in GENERICO.finditer(texto):
-            nome = CONECTORES_FINAIS.sub("", m.group(0)).strip(" '’-")
+            nome = m.group(0).strip(" '’-")
             k = chave(nome)
             ini = m.start() + 1  # +1 pelo espaço inicial em `norm`
             if (len(k.split()) < 2 or k in self.ignorar or any(ocupado[ini:ini + len(nome)])
