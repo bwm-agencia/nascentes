@@ -1,7 +1,7 @@
 import { config, collection, fields } from '@keystatic/core';
 
 // Em produção (painel hospedado) as alterações viram commits no GitHub. Localmente, gravam direto nos arquivos.
-const useGithub = process.env.KEYSTATIC_STORAGE === 'github';
+const useGithub = import.meta.env.PUBLIC_KEYSTATIC_STORAGE === 'github';
 
 const check = { validation: { isRequired: true } };
 

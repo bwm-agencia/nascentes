@@ -22,7 +22,7 @@ Abrir http://localhost:4321/keystatic. Aqui as alterações gravam direto nos ar
 ## Publicar o painel (uma vez)
 1. Hospedar o painel na Vercel com `npm run build:admin` (modo administrador do projeto).
 2. Criar o GitHub App do Keystatic na organização `bwm-agencia` e guardar nas variáveis da Vercel:
-   `KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`, `KEYSTATIC_SECRET`, `PUBLIC_KEYSTATIC_GITHUB_APP_SLUG`, além de `KEYSTATIC_STORAGE=github`.
+   `KEYSTATIC_GITHUB_CLIENT_ID`, `KEYSTATIC_GITHUB_CLIENT_SECRET`, `KEYSTATIC_SECRET`, `PUBLIC_KEYSTATIC_GITHUB_APP_SLUG`, além de `PUBLIC_KEYSTATIC_STORAGE=github`.
 3. O painel fica protegido pelo login do GitHub: só entra quem tem acesso ao repositório.
 
 ## Fotos
