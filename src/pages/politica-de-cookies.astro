@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/blog.css';
+import '../styles/legal.css';
+import { controller } from '../config/site';
+---
+<Layout title="Política de Cookies — Pousada das Nascentes" headExtra={'<meta name="description" content="Quais cookies o site da Pousada das Nascentes usa, para que servem, por quanto tempo duram e como alterar sua escolha.">'} script="/js/blog.js">
+<Menu logoHref="/" />
+<main class="legal">
+  <h1>Política de Cookies</h1>
+  <p class="upd">Última atualização: {controller.atualizadoEm}</p>
+
+  <p>Cookies são pequenos arquivos guardados no seu navegador. Este site só usa cookies de estatísticas e de marketing <strong>depois que você aceita</strong> no aviso exibido na primeira visita. Mais detalhes sobre o tratamento de dados estão na <a href="/politica-de-privacidade">Política de Privacidade</a>.</p>
+
+  <h2>Cookies que utilizamos</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Nome</th><th>Categoria</th><th>Quem define</th><th>Para que serve</th><th>Duração</th></tr></thead>
+    <tbody>
+      <tr><td><code>nascentes_consent_v1</code></td><td>Necessário</td><td>Este site</td><td>Guarda sua escolha de cookies (armazenamento local do navegador)</td><td>Até você limpar ou alterar</td></tr>
+      <tr><td><code>_ga</code></td><td>Estatísticas</td><td>Google Analytics</td><td>Distingue visitantes para medir o uso do site</td><td>Até 2 anos</td></tr>
+      <tr><td><code>_ga_WL14SVBMC6</code></td><td>Estatísticas</td><td>Google Analytics</td><td>Mantém o estado da sessão de navegação</td><td>Até 2 anos</td></tr>
+      <tr><td><code>_fbp</code></td><td>Marketing</td><td>Meta Pixel</td><td>Identifica o navegador para medir resultados de anúncios</td><td>Até 90 dias</td></tr>
+      <tr><td><code>_fbc</code></td><td>Marketing</td><td>Meta Pixel</td><td>Registra o clique em um anúncio do Facebook ou Instagram que levou ao site</td><td>Até 90 dias</td></tr>
+    </tbody>
+  </table></div>
+  <p>As durações são as padrão informadas pelos fornecedores e podem mudar. O Google Tag Manager é o carregador das ferramentas do Google e só é ativado após o seu consentimento.</p>
+
+  <h2>Como alterar sua escolha</h2>
+  <p>Você pode mudar de ideia a qualquer momento. Ao retirar um consentimento, removemos os cookies correspondentes. Também é possível bloquear ou apagar cookies nas configurações do seu navegador.</p>
+  <p><button type="button" class="linkish" data-open-consent>Alterar minhas preferências de cookies</button></p>
+</main>
+<Footer />
+</Layout>

@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/blog.css';
+import '../styles/legal.css';
+import { business, controller, whatsappUrl } from '../config/site';
+---
+<Layout title="Política de Privacidade — Pousada das Nascentes" headExtra={'<meta name="description" content="Como a Pousada das Nascentes trata dados pessoais no site, conforme a LGPD: quais dados, para quê, com quem compartilhamos e seus direitos.">'} script="/js/blog.js">
+<Menu logoHref="/" />
+<main class="legal">
+  <h1>Política de Privacidade</h1>
+  <p class="upd">Última atualização: {controller.atualizadoEm}</p>
+
+  <p>Esta política explica como a Pousada das Nascentes trata dados pessoais de quem visita este site, em conformidade com a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</p>
+
+  <h2>1. Quem é o controlador</h2>
+  <p>
+    <strong>{controller.razaoSocial || business.name}</strong>{controller.cnpj && <> — CNPJ {controller.cnpj}</>}<br>
+    {business.street}, {business.district}, {business.city}-{business.state}, CEP {business.zip}<br>
+    Telefone: (14) 3653-6133 · WhatsApp: (14) 99179-7722{controller.email && <><br>E-mail: <a href={`mailto:${controller.email}`}>{controller.email}</a></>}
+  </p>
+
+  <h2>2. Quais dados tratamos</h2>
+  <ul>
+    <li><strong>Dados de navegação</strong> (endereço IP, tipo de dispositivo e navegador, páginas visitadas, origem do acesso e identificadores de cookies), coletados somente se você aceitar os cookies de estatísticas ou de marketing.</li>
+    <li><strong>Dados que você nos envia ao falar conosco</strong> por WhatsApp ou telefone, como nome, datas e preferências de viagem. O site não tem formulários: o contato é feito nesses canais.</li>
+    <li><strong>Sua escolha de cookies</strong>, guardada no seu navegador para lembrarmos da sua decisão.</li>
+  </ul>
+
+  <h2>3. Para que usamos e em qual base legal</h2>
+  <div class="tw"><table>
+    <thead><tr><th>Finalidade</th><th>Base legal (art. 7º)</th></tr></thead>
+    <tbody>
+      <tr><td>Responder dúvidas, informar valores e disponibilidade e atender reservas</td><td>Execução de procedimentos preliminares a contrato, a pedido do titular (inciso V)</td></tr>
+      <tr><td>Estatísticas de uso do site (Google Analytics)</td><td>Consentimento (inciso I)</td></tr>
+      <tr><td>Medir e otimizar anúncios (Meta Pixel e Google)</td><td>Consentimento (inciso I)</td></tr>
+      <tr><td>Segurança e funcionamento do site</td><td>Legítimo interesse (inciso IX)</td></tr>
+    </tbody>
+  </table></div>
+  <p>Cookies de estatísticas e de marketing só são ativados depois que você os aceita no aviso exibido no site. Você pode recusar sem perder acesso a nenhuma parte do site.</p>
+
+  <h2>4. Com quem compartilhamos</h2>
+  <ul>
+    <li><strong>Google</strong> (Tag Manager e Analytics), para medição de audiência, se você aceitar os cookies correspondentes.</li>
+    <li><strong>Meta</strong> (Meta Pixel, Facebook e Instagram), para medição e otimização de anúncios, se você aceitar os cookies de marketing.</li>
+    <li><strong>WhatsApp (Meta)</strong>, quando você nos chama por lá; a conversa segue também os termos e a política do WhatsApp.</li>
+    <li><strong>Empresa de hospedagem do site</strong>, que armazena e entrega as páginas e pode registrar logs técnicos de acesso.</li>
+    <li><strong>Agência de marketing</strong> responsável pelo site e pelas campanhas, que atua sob nossas instruções.</li>
+  </ul>
+  <p>Não vendemos dados pessoais.</p>
+
+  <h2>5. Transferência internacional</h2>
+  <p>Google e Meta podem tratar dados em servidores fora do Brasil. Nesses casos, a transferência ocorre com base no art. 33 da LGPD, e só acontece se você tiver aceitado os cookies que acionam essas ferramentas.</p>
+
+  <h2>6. Por quanto tempo guardamos</h2>
+  <p>Dados de atendimento ficam conosco pelo tempo necessário para atender sua solicitação e cumprir obrigações legais. Dados de navegação seguem os prazos das ferramentas descritas na <a href="/politica-de-cookies">Política de Cookies</a>. Sua escolha de cookies fica guardada no navegador até você limpá-la ou alterá-la.</p>
+
+  <h2>7. Seus direitos</h2>
+  <p>Nos termos do art. 18 da LGPD, você pode, a qualquer momento: confirmar se tratamos seus dados; acessá-los; corrigi-los; pedir anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desacordo com a lei; pedir portabilidade; pedir eliminação dos dados tratados com base em consentimento; saber com quem compartilhamos; ser informado sobre a possibilidade de não consentir e suas consequências; e <strong>revogar o consentimento</strong>.</p>
+  <p>Para exercer esses direitos, fale conosco pelo <a href={whatsappUrl} target="_blank" rel="noopener">WhatsApp</a>, pelo telefone (14) 3653-6133{controller.email && <> ou pelo e-mail <a href={`mailto:${controller.email}`}>{controller.email}</a></>}. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+  <p><button type="button" class="linkish" data-open-consent>Alterar minhas preferências de cookies</button></p>
+
+  <h2>8. Alterações nesta política</h2>
+  <p>Podemos atualizar esta política para refletir mudanças legais ou no site. A data da última atualização fica no topo da página.</p>
+</main>
+<Footer />
+</Layout>

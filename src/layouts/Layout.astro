@@ -1,10 +1,97 @@
 ---
+import { siteUrl, siteName, business, defaultDescription, descriptions, tracking } from '../config/site';
+
 interface Props {
   title: string;
   headExtra?: string;
   script?: string;
 }
 const { title, headExtra = '', script } = Astro.props;
+
+// --- caminho limpo (sem .html) ---
+let path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '/');
+if (!path.startsWith('/')) path = '/' + path;
+if (path.length > 1) path = path.replace(/\/$/, '');
+const canonical = siteUrl + (path === '/' ? '/' : path);
+
+// --- extrai o que a página já definiu e remonta de forma única ---
+const pick = (re: RegExp) => headExtra.match(re)?.[1];
+const robots = pick(/<meta name="robots" content="([^"]*)"/);
+const noindex = !!robots && /noindex/i.test(robots);
+const description = pick(/<meta name="description" content="([^"]*)"/) ?? descriptions[path] ?? defaultDescription;
+const ogTitle = pick(/<meta property="og:title" content="([^"]*)"/) ?? title;
+const segs0 = path.split('/').filter(Boolean);
+let image = pick(/<meta property="og:image" content="([^"]*)"/) ?? (segs0[0] === 'suites' && segs0[1] ? `/fotos-suites/${segs0[1]}/hero.jpg` : business.defaultImage);
+if (!/^https?:/.test(image)) image = siteUrl + '/' + image.replace(/^(\.\.\/|\.\/|\/)+/, '');
+const extra = headExtra
+  .replace(/<meta name="description"[^>]*>\s*/g, '')
+  .replace(/<meta property="og:[^>]*>\s*/g, '')
+  .replace(/<meta name="robots"[^>]*>\s*/g, '');
+
+// --- dados estruturados ---
+const hotelId = siteUrl + '/#pousada';
+const addr = {
+  '@type': 'PostalAddress',
+  streetAddress: business.street,
+  addressLocality: business.city,
+  addressRegion: business.state,
+  postalCode: business.zip,
+  addressCountry: 'BR',
+};
+const hotel = {
+  '@type': 'LodgingBusiness',
+  '@id': hotelId,
+  name: business.name,
+  url: siteUrl + '/',
+  image: siteUrl + business.defaultImage,
+  telephone: business.phone,
+  address: addr,
+  sameAs: business.sameAs,
+};
+const shortTitle = title.split(/\s[—–|-]\s/)[0].trim();
+const sections: Record<string, string> = {
+  suites: 'Suítes', pacotes: 'Pacotes', blog: 'Blog',
+};
+const seg = path.split('/').filter(Boolean);
+const crumbs: { name: string; item: string }[] = [{ name: 'Início', item: siteUrl + '/' }];
+if (seg.length >= 1) {
+  const secLabel = sections[seg[0]];
+  if (seg.length === 1) crumbs.push({ name: shortTitle, item: canonical });
+  else {
+    crumbs.push({ name: secLabel ?? seg[0], item: siteUrl + '/' + seg[0] });
+    crumbs.push({ name: shortTitle, item: canonical });
+  }
+}
+const graph: any[] = [hotel];
+if (seg.length >= 1 && !noindex) {
+  graph.push({
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })),
+  });
+}
+if (seg[0] === 'blog' && seg.length === 2) {
+  graph.push({
+    '@type': 'BlogPosting',
+    headline: shortTitle,
+    description,
+    image,
+    mainEntityOfPage: canonical,
+    inLanguage: 'pt-BR',
+    author: { '@id': hotelId },
+    publisher: { '@id': hotelId },
+  });
+}
+if (seg[0] === 'suites' && seg.length === 2) {
+  graph.push({
+    '@type': 'HotelRoom',
+    name: shortTitle,
+    description,
+    image,
+    url: canonical,
+    containedInPlace: { '@id': hotelId },
+  });
+}
+const jsonld = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
 ---
 <!doctype html>
 <html lang="pt-BR">
@@ -12,10 +99,28 @@ const { title, headExtra = '', script } = Astro.props;
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
-<Fragment set:html={headExtra} />
+<meta name="description" content={description}>
+{noindex ? <meta name="robots" content="noindex"> : <link rel="canonical" href={canonical}>}
+<meta property="og:type" content={seg[0] === 'blog' && seg.length === 2 ? 'article' : 'website'}>
+<meta property="og:site_name" content={siteName}>
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content={ogTitle}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={canonical}>
+<meta property="og:image" content={image}>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0607">
+<Fragment set:html={extra} />
+{!noindex && <script type="application/ld+json" set:html={jsonld}></script>}
+<script is:inline>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+try{var c=JSON.parse(localStorage.getItem('nascentes_consent_v1')||'null');if(c){gtag('consent','update',{analytics_storage:c.a?'granted':'denied',ad_storage:c.m?'granted':'denied',ad_user_data:c.m?'granted':'denied',ad_personalization:c.m?'granted':'denied'})}}catch(e){}
+</script>
 </head>
 <body>
 <slot />
+<script is:inline src="/js/consent.js" defer data-gtm={tracking.gtmId} data-pixel={tracking.metaPixelId}></script>
 {script && <script is:inline src={script} defer></script>}
 </body>
 </html>
