@@ -42,6 +42,36 @@ const seoFields = {
 };
 
 
+// ---------- Redirecionamento ao despublicar (pacotes e posts) ----------
+const redirecionar = (colecao: 'pacotes' | 'posts') =>
+  fields.conditional(
+    fields.select({
+      label: 'Ao despublicar, redirecionar para',
+      description: 'Vale só quando "Publicado no site" estiver desmarcado. O site cria um redirecionamento 301, que leva quem tem o link antigo para uma página útil e passa a relevância para o Google. Sem redirecionamento, a página dá erro 404.',
+      options: [
+        { label: 'Não redirecionar (a página dá erro 404)', value: 'nenhum' },
+        { label: 'Lista de pacotes', value: '/pacotes' },
+        { label: 'Suítes', value: '/suites' },
+        { label: 'Blog', value: '/blog' },
+        { label: 'Página inicial (evite: o Google pode ignorar)', value: '/' },
+        { label: colecao === 'pacotes' ? 'Outro pacote' : 'Outro post', value: 'outro' },
+      ],
+      defaultValue: 'nenhum',
+    }),
+    {
+      nenhum: fields.empty(),
+      '/pacotes': fields.empty(),
+      '/suites': fields.empty(),
+      '/blog': fields.empty(),
+      '/': fields.empty(),
+      outro: fields.relationship({
+        label: colecao === 'pacotes' ? 'Qual pacote?' : 'Qual post?',
+        description: 'Escolha uma página que esteja publicada.',
+        collection: colecao,
+      }),
+    },
+  );
+
 export default config({
   storage: useGithub
     ? { kind: 'github', repo: { owner: 'bwm-agencia', name: 'nascentes' } }
@@ -58,6 +88,7 @@ export default config({
         titulo: fields.slug({ name: { label: 'Nome do pacote', description: 'Ex.: Pacote Feriado de Natal. Vira o endereço da página.', validation: { isRequired: true } } }),
         publicado: fields.checkbox({ label: 'Publicado no site', description: 'Desmarque para esconder o pacote sem apagá-lo.', defaultValue: true }),
         destaque: fields.checkbox({ label: 'Mostrar em destaque na lista de pacotes', defaultValue: false }),
+        redirecionar: redirecionar('pacotes'),
         ...seoFields,
         fotoHero: fields.image({ label: 'Foto principal', directory: 'public/uploads/pacotes', publicPath: '/uploads/pacotes/', validation: { isRequired: true } }),
         fotoAlt: fields.text({ label: 'SEO · Descrição da foto principal (alt)', description: 'Descreva o que aparece na foto. Se couber, use a palavra-chave.', validation: { isRequired: true, length: { min: 10, max: 125 } } }),
@@ -123,6 +154,7 @@ export default config({
       schema: {
         titulo: fields.slug({ name: { label: 'Título do post · vira o H1', description: 'É o título principal da página (H1). Só existe um por página. Use a palavra-chave principal.', validation: { isRequired: true } } }),
         publicado: fields.checkbox({ label: 'Publicado no site', defaultValue: true }),
+        redirecionar: redirecionar('posts'),
         data: fields.date({ label: 'Data de publicação', validation: { isRequired: true } }),
         categoria: fields.select({
           label: 'Categoria',

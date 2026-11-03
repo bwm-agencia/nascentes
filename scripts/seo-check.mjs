@@ -22,10 +22,16 @@ function load(dir, ext) {
   });
 }
 
-const items = [
+const all = [
   ...load('src/content/pacotes', '.yaml').map((i) => ({ ...i, tipo: 'pacote' })),
   ...load('src/content/posts', '.mdoc').map((i) => ({ ...i, tipo: 'post' })),
-].filter((i) => i.data && i.data.publicado !== false && !i.data.semIndexar);
+];
+for (const i of all) {
+  const d = i.data;
+  if (d && d.publicado === false && !d.semIndexar && (!d.redirecionar || d.redirecionar.discriminant === 'nenhum'))
+    console.log(`[SEO] ${i.tipo} "${i.slug}" está despublicado sem redirecionamento (a página dará erro 404)`);
+}
+const items = all.filter((i) => i.data && i.data.publicado !== false && !i.data.semIndexar);
 
 let avisos = 0;
 for (const { slug, data: d, body, tipo } of items) {

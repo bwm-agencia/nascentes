@@ -39,3 +39,7 @@ Cada campo do painel mostra no nome onde ele entra na página.
 | **H3** | "Nome da opção" e "Título do bloco" | Subdivisões dentro de um H2 no "Texto do post" |
 
 Regras: o editor do texto do post só oferece H2, H3 e H4 (H1 bloqueado). Não pule níveis (depois do H2 vem o H3). O relatório de SEO do build avisa se o texto tiver H1 ou pular nível.
+
+## Despublicar um pacote ou post sem perder SEO
+
+Ao desmarcar "Publicado no site", escolha em **"Ao despublicar, redirecionar para"** a página de destino (lista de pacotes, suítes, blog, outro pacote/post). O site cria sozinho um redirecionamento 301 na próxima publicação. Sem escolha, a página dá erro 404. Evite mandar tudo para a página inicial (o Google pode tratar como erro). O relatório de SEO do build avisa quando algo é despublicado sem redirecionamento. Pacotes que voltam todo ano: mantenha a página no ar e só atualize datas e preços (por isso não coloque o ano no nome do pacote).
