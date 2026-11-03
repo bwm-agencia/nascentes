@@ -1,10 +1,10 @@
 titulo: Primavera Romântica
-publicado: true
+publicado: false
 destaque: false
 ordem: 3
 redirecionar:
-  discriminant: nenhum
-  value: null
+  discriminant: outro
+  value: fique-3-pague-2
 palavraChave: fique 3, pague 2
 palavrasSecundarias: []
 metaTitulo: 'Primavera Romântica: fique 3, pague 2'
