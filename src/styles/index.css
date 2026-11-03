@@ -147,6 +147,8 @@ section{ position:relative; }
   .topbar a{ min-width:0; }
   .topbar .logo-vertical{ height:78px; max-width:64vw; width:auto; }
   .topbar .logo-horizontal{ height:46px; max-width:64vw; width:auto; }
+  section.hero{ height:auto; min-height:100svh; }
+  section.hero .hero-copy{ padding-top:150px; padding-bottom:72px; }
   .hc-card .hc-photo{ background-position: 68% 38%; }
   .menu-btn{
     width:36px; height:36px;
