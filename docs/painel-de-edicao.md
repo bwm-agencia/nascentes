@@ -47,3 +47,7 @@ Ao desmarcar "Publicado no site", escolha em **"Ao despublicar, redirecionar par
 ## Pacotes que já existiam
 
 Os 7 pacotes que eram páginas fixas agora estão no painel, com os mesmos endereços: Refúgio Primavera, Escapada a dois, Primavera Romântica, Aniversariante do Mês, Consciência Negra (publicados) e 12 de Outubro e Feriado 2 de Novembro (despublicados, redirecionam para a lista de pacotes). Seções que só alguns pacotes têm (texto com agenda riscada, "Como funciona" em passos, caixa "Conheça outro pacote", seção Brotas, extras) são campos opcionais: deixe o título vazio para não mostrar. Para trocar a ordem na lista, use "Ordem na lista de pacotes".
+
+## Pacotes na página inicial
+
+A seção "Pacotes" da página inicial mostra até 3 pacotes publicados que tenham "Mostrar na página inicial" marcado, na ordem da lista. Foto, etiqueta e itens vêm do card da lista de pacotes. Para trocar o que aparece na Home, marque ou desmarque esse campo.

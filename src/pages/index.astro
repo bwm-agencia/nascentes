@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Menu from '../components/Menu.astro';
 import FooterHome from '../components/FooterHome.astro';
 import '../styles/index.css';
+import { listPacotes, img, wa } from '../lib/content';
+const todos = await listPacotes();
+const marcados = todos.filter((x) => x.entry.mostrarNaHome);
+const pacotesHome = (marcados.length ? marcados : todos).slice(0, 3);
 ---
 <Layout title={"Pousada das Nascentes — À beira do rio, depois do anoitecer"} script="/js/index.js">
 <Menu logoHref="#top" />
@@ -197,48 +201,20 @@ import '../styles/index.css';
     <p>Cada pacote reúne diária, banheira, café da manhã e um mimo especial — para chegar sem se preocupar com mais nada.</p>
   </div>
   <div class="pkg-grid">
-    <div class="pkg-card reveal">
-      <div class="pkg-thumb"><img src="/fotos-casais/pousada-das-nascentes-ia-3.webp" alt="Casal brindando na banheira de hidromassagem" loading="lazy"></div>
-      <div class="pkg-body">
-      <p class="eyebrow">Pacote em destaque</p>
-      <h3>Refúgio Primavera</h3>
-      <ul>
-        <li>2 diárias em suíte temática</li>
-        <li>Mini espumante e sais de banho</li>
-        <li>Hidromassagem ou ofurô cromoterápico</li>
-        <li>Late check-out até 17h</li>
-      </ul>
-      <a class="link-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Quero saber mais sobre o pacote Refúgio Primavera." target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
+    {pacotesHome.map((x) => (
+      <div class="pkg-card reveal">
+        <div class="pkg-thumb"><img src={img(x.entry.cardFoto) || img(x.entry.fotoHero)} alt={x.entry.fotoAlt} loading="lazy" /></div>
+        <div class="pkg-body">
+          <p class="eyebrow">{x.entry.cardEtiqueta || x.entry.etiqueta}</p>
+          <h3>{x.entry.titulo}</h3>
+          <ul>
+            {(x.entry.cardItens.length ? x.entry.cardItens : (x.entry.inclui[0]?.itens ?? []).map((it) => it.texto)).slice(0, 4).map((t) => <li>{t}</li>)}
+          </ul>
+          <a class="link-glow" href={`/pacotes/${x.slug}`}>Ver pacote <span class="arrow">→</span></a>
+          {' '}<a class="link-glow" href={wa(`Olá! Quero saber mais sobre o pacote ${x.entry.titulo}.`)} target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
+        </div>
       </div>
-    </div>
-    <div class="pkg-card reveal">
-      <div class="pkg-thumb"><img src="/fotos-casais/pousada-das-nascentes-ia-10.webp" alt="Casal relaxando na cama da suíte" loading="lazy"></div>
-      <div class="pkg-body">
-      <p class="eyebrow">Para casais</p>
-      <h3>Escapada a dois</h3>
-      <ul>
-        <li>2 diárias em suíte temática</li>
-        <li>Massagem para o casal (1 para cada)</li>
-        <li>Piscina e sauna à disposição</li>
-        <li>Late check-out até 17h</li>
-      </ul>
-      <a class="link-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Quero saber mais sobre o pacote Escapada a dois." target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
-      </div>
-    </div>
-    <div class="pkg-card reveal">
-      <div class="pkg-thumb"><img src="/fotos-casais/nascentes-fotos-novas-26-ia-2.webp" alt="Casal relaxando na cama da suíte temática" loading="lazy"></div>
-      <div class="pkg-body">
-      <p class="eyebrow">Fique 3, pague 2 · Outubro</p>
-      <h3>Primavera Romântica</h3>
-      <ul>
-        <li>Mínimo de duas diárias</li>
-        <li>Suíte temática com hidromassagem</li>
-        <li>Café da manhã completo</li>
-        <li>Opcionais para completar o pacote</li>
-      </ul>
-      <a class="link-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Quero saber mais sobre o pacote Primavera Romântica (Fique 3, pague 2)." target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
-      </div>
-    </div>
+    ))}
   </div>
 </section>
 

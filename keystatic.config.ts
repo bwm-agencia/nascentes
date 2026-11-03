@@ -89,6 +89,7 @@ export default config({
         publicado: fields.checkbox({ label: 'Publicado no site', description: 'Desmarque para esconder o pacote sem apagá-lo.', defaultValue: true }),
         destaque: fields.checkbox({ label: 'Mostrar em destaque na lista de pacotes', defaultValue: false }),
         redirecionar: redirecionar('pacotes'),
+        mostrarNaHome: fields.checkbox({ label: 'Mostrar na página inicial', description: 'A página inicial mostra até 3 pacotes marcados, na ordem da lista. A chamada usa a foto, a etiqueta e os itens do card da lista.', defaultValue: false }),
         ...seoFields,
         fotoHero: fields.image({ label: 'Foto principal', directory: 'public/uploads/pacotes', publicPath: '/uploads/pacotes/', validation: { isRequired: true } }),
         fotoAlt: fields.text({ label: 'SEO · Descrição da foto principal (alt)', description: 'Descreva o que aparece na foto. Se couber, use a palavra-chave.', validation: { isRequired: true, length: { min: 10, max: 125 } } }),
