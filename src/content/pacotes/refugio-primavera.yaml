@@ -1,0 +1,135 @@
+titulo: Refúgio Primavera
+publicado: true
+destaque: true
+ordem: 1
+redirecionar:
+  discriminant: nenhum
+  value: null
+palavraChave: refúgio primavera
+palavrasSecundarias: []
+metaTitulo: 'Refúgio Primavera: pacote para casais em Brotas'
+metaDescricao: 2 diárias em suíte temática com hidro ou ofurô, mini espumante, sais de banho, um mimo e late check-out às 17h. R$ 1.270 o casal.
+semIndexar: false
+fotoFoco: 55
+fotoHero: /uploads/pacotes/refugio-primavera-hero.webp
+fotoAlt: Casal brindando na banheira de hidromassagem com pétalas
+etiqueta: Pacote Refúgio Primavera
+tituloAntes: Dois dias sem agenda,
+tituloDestaque: só para vocês dois
+chamada: Um convite para desacelerar, respirar fundo e se reconectar, com o outro e consigo mesmo. A suíte já vai estar pronta quando vocês chegarem.
+dias: []
+precoValor: '1.270'
+precoTermos: 2 diárias para o casal, café da manhã incluso
+mensagemWhatsapp: 'Olá! Vi o pacote *Refúgio Primavera* (2 diárias para o casal, R$ 1.270) no site e quero reservar. Meu nome é '
+opcoes: []
+incluiTitulo: Do primeiro brinde ao último mergulho
+incluiTexto: Tudo o que está no Refúgio Primavera, na ordem em que vocês vão viver.
+inclui:
+- titulo: Na chegada
+  itens:
+  - texto: Suíte preparada para a chegada de vocês
+    detalhe: ''
+  - texto: 1 mini espumante
+    detalhe: para abrir a estadia com um brinde
+  - texto: Sais de banho
+    detalhe: para a primeira noite na banheira
+  - texto: 1 mimo especial
+    detalhe: ''
+- titulo: Durante os dois dias
+  itens:
+  - texto: 2 diárias em suíte temática para o casal
+    detalhe: escolham entre 18 suítes decoradas
+  - texto: Banheira de hidromassagem ou ofurô cromoterápico
+    detalhe: ''
+  - texto: Café da manhã completo nas duas manhãs
+    detalhe: ''
+  - texto: Piscina e sauna à disposição
+    detalhe: cercadas de mata, sem horário para sair
+- titulo: Na despedida
+  itens:
+  - texto: Late check-out até as 17h
+    detalhe: o último dia ainda é de vocês, sem custo extra
+precoResumo: valor total para o casal, não por pessoa
+resumo:
+- rotulo: Estadia
+  valor: 2 diárias
+- rotulo: Suíte
+  valor: Temática, com hidro ou ofurô
+- rotulo: Café da manhã
+  valor: Nas duas manhãs
+- rotulo: Check-out
+  valor: Até as 17h
+validade: Exceto feriados
+legendaCafe: Servido nas duas manhãs
+brotas:
+  etiqueta: Brotas fica aqui do lado
+  titulo: Para quando, e se, der vontade
+  texto: 'Nessa época do ano Brotas está no seu melhor momento: dias claros, noites frescas e trilhas com bem menos movimento do que na alta temporada. A pousada fica a poucos minutos de:'
+  citacao: Mas este pacote não foi feito para preencher o dia de vocês. Foi feito para esvaziar.
+  foto: /uploads/pacotes/refugio-primavera-brotas.webp
+  fotoAlt: Jardim da pousada ao entardecer
+extras:
+  titulo: Torne a noite ainda mais especial
+  texto: Os sais de banho já estão no pacote. Se quiserem completar a estadia, é só combinar com a gente antes da chegada.
+  itens:
+  - fondue
+  - massagem
+  - ambientacao
+manifesto:
+  etiqueta: Por que este pacote existe
+  titulo: A maioria das viagens de casal vira uma segunda agenda
+  texto: Sai cedo, tem trilha marcada, tem restaurante para conseguir mesa, tem foto para tirar. E na segunda-feira vocês voltam precisando de uma folga da folga.
+  agenda:
+  - hora: 7h00
+    tarefa: Acordar cedo para a trilha
+  - hora: 10h30
+    tarefa: Correr para a próxima cachoeira
+  - hora: 13h00
+    tarefa: Fila para conseguir mesa
+  - hora: 17h00
+    tarefa: Achar o pôr do sol para a foto
+  - hora: Seg.
+    tarefa: Voltar mais cansados do que foram
+  viradaFrase: O Refúgio Primavera foi construído no sentido contrário.
+  viradaDestaque: Aqui, o tempo ganha outro ritmo.
+  viradaTexto: Água quente, silêncio, piscina cercada de mata e o check-out só às 17h. Se a resposta para "o que vamos fazer hoje?" for nada, o pacote cumpriu exatamente o que prometeu.
+comparar:
+  etiqueta: Querem massagem para os dois?
+  titulo: Conheçam a Escapada a dois
+  texto: As mesmas 2 diárias e o late check-out às 17h, com uma massagem para cada um já incluída.
+  pacote: escapada-a-dois
+faq:
+- pergunta: O valor de R$ 1.270 é por pessoa?
+  resposta: Não. É o valor total para o casal, com as duas diárias, o café da manhã nas duas manhãs, o mini espumante, os sais de banho, o mimo e o late check-out inclusos.
+- pergunta: Posso escolher a suíte?
+  resposta: Pode. Conta pra gente qual chamou mais atenção no momento da reserva. Sempre que a data permite, a gente separa a de vocês.
+- pergunta: Qual a diferença entre hidromassagem e ofurô?
+  resposta: São 14 suítes com banheira de hidromassagem para o casal e 4 suítes com ofurô cromoterápico individual. As duas opções estão incluídas no pacote, é só escolher o clima que combina mais com vocês.
+- pergunta: O check-out é mesmo às 17h?
+  resposta: É. O late check-out está incluído, sem custo adicional. O último dia ainda é de vocês.
+- pergunta: A massagem está incluída?
+  resposta: Neste pacote, não. Ela pode ser adicionada como diferencial (consulte valores). Se a ideia é já ter massagem para os dois, o pacote Escapada a dois inclui uma sessão para cada um.
+- pergunta: Para quais datas o pacote é válido?
+  resposta: As datas disponíveis são confirmadas na hora pelo WhatsApp. Feriados e datas especiais têm pacotes próprios.
+- pergunta: Dá para ficar mais noites?
+  resposta: Dá. Chame a gente no WhatsApp e montamos a estadia com as datas de vocês.
+- pergunta: Posso levar meu pet?
+  resposta: A pousada é pet friendly para animais de pequeno porte. Avise na reserva para prepararmos tudo.
+- pergunta: Como garanto a reserva?
+  resposta: Todo o processo é feito pelo WhatsApp, direto com a nossa equipe. Vocês escolhem as datas e a gente confirma a disponibilidade na hora.
+ctaFoto: /uploads/pacotes/refugio-primavera-cta.webp
+ctaEtiqueta: Esperamos por vocês
+ctaTitulo: Está tudo pronto aqui
+ctaDestaque: falta escolher a data
+ctaTexto: Dois dias sem obrigação nenhuma, água quente, silêncio e uma tarde inteira sem pensar em absolutamente nada. R$ 1.270 o casal.
+cardItens:
+- 2 diárias em suíte temática para o casal
+- 1 mini espumante
+- Banheira de hidromassagem ou ofurô cromoterápico
+- Sais de banho
+- 1 mimo
+- Café da manhã completo nas duas manhãs
+- Suíte preparada para a chegada de vocês
+- Late check-out até as 17h
+- Piscina e sauna à disposição
+cardEtiqueta: Pacote em destaque · 2 diárias

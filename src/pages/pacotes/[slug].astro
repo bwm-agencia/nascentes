@@ -4,6 +4,7 @@ import Menu from '../../components/Menu.astro';
 import Footer from '../../components/Footer.astro';
 import PacoteLugar from '../../components/PacoteLugar.astro';
 import Depoimentos from '../../components/Depoimentos.astro';
+import PacoteExtras from '../../components/PacoteExtras.astro';
 import '../../styles/pacote-detalhe.css';
 import { listPacotes, reader, img, wa } from '../../lib/content';
 import { suites } from '../../config/suites';
@@ -15,8 +16,15 @@ export async function getStaticPaths() {
 const { slug } = Astro.props;
 const p = (await reader.collections.pacotes.read(slug))!;
 const foto = img(p.fotoHero);
+const foco = p.fotoFoco ?? 55;
+const fotoCta = img(p.ctaFoto) || foto;
+const fotoBrotas = img(p.brotas.foto);
+const refComparar = p.comparar.pacote ? await reader.collections.pacotes.read(p.comparar.pacote) : null;
+const listaSuites = p.suitesFiltro === 'hidro' ? suites.filter((s) => s.tipo === 'h') : suites;
+const lugares = ['Recanto das Cachoeiras', '3 Quedas', 'Sítio Pantanal', 'Cassorova', 'Represa do Patrimônio', 'Parque Jacaré'];
 const ogImg = img(p.imagemCompartilhamento) || foto;
 const msg = p.mensagemWhatsapp;
+const moeda = /^[\d.,]+$/.test(p.precoValor.trim());
 const q = (s: string) => s.replace(/"/g, '&quot;');
 const head =
   `<meta name="description" content="${q(p.metaDescricao)}">\n<meta property="og:image" content="${ogImg}">` +
@@ -32,15 +40,18 @@ const faqLd = JSON.stringify({
 <Layout title={p.metaTitulo} headExtra={head} script="/js/pacote-detalhe.js">
 <Menu active="/pacotes" />
 <section class="lp-hero" id="top">
-  <div class="lp-hero-photo" role="img" aria-label={p.fotoAlt} style={`background-image:url('${foto}'); --pos:center 55%; --mpos:center 55%;`}></div>
+  <div class="lp-hero-photo" role="img" aria-label={p.fotoAlt} style={`background-image:url('${foto}'); --pos:center ${foco}%; --mpos:center ${foco}%;`}></div>
   <div class="glow-orb"></div>
   <div class="lp-hero-copy">
     <p class="crumb"><a href="/pacotes">Pacotes</a> / {p.titulo}</p>
     <p class="eyebrow">{p.etiqueta}</p>
     <h1>{p.tituloAntes} {p.tituloDestaque && <em>{p.tituloDestaque}</em>}</h1>
     <p class="lead">{p.chamada}</p>
+    {p.dias.length > 0 && (
+      <div class="lp-days" aria-label="Datas do pacote">{p.dias.map((d) => <span class={`lp-day${d.feriado ? ' hol' : ''}`}><span class="dw">{d.semana}</span><span class="dn">{d.dia}</span><span class="mo">{d.mes}</span></span>)}</div>
+    )}
     <div class="lp-price">
-      <span class="value"><small>R$</small>{p.precoValor}</span>
+      <span class="value">{moeda && <small>R$</small>}{p.precoValor}</span>
       <span class="terms">{p.precoTermos}</span>
     </div>
     <div class="lp-actions">
@@ -53,6 +64,13 @@ const faqLd = JSON.stringify({
 {p.opcoes.length > 0 && (
 <section class="lp-offer">
   <div class="glow-orb"></div>
+  {(p.opcoesTitulo || p.opcoesTexto) && (
+    <div class="suite-section-head reveal" style="position:relative;z-index:2;">
+      {p.opcoesEtiqueta && <p class="eyebrow">{p.opcoesEtiqueta}</p>}
+      {p.opcoesTitulo && <h2>{p.opcoesTitulo}</h2>}
+      {p.opcoesTexto && <p>{p.opcoesTexto}</p>}
+    </div>
+  )}
   <div class="lp-offer-grid">
     {p.opcoes.map((o, i) => (
       <div class={`lp-price-card reveal${i === 0 ? ' hl' : ''}`}>
@@ -67,12 +85,51 @@ const faqLd = JSON.stringify({
 </section>
 )}
 
+{p.manifesto.titulo && (
+<section class="lp-manifesto">
+  <div class="lp-manifesto-inner">
+    <div class="intro reveal">
+      {p.manifesto.etiqueta && <p class="eyebrow">{p.manifesto.etiqueta}</p>}
+      <h2 style="margin-top:14px;">{p.manifesto.titulo}</h2>
+      {p.manifesto.texto && <p>{p.manifesto.texto}</p>}
+    </div>
+    {p.manifesto.agenda.length > 0 && (
+      <ul class="lp-agenda" id="lp-agenda" aria-label="Interrupções de um dia comum, riscadas">
+        {p.manifesto.agenda.map((a) => <li><span class="hour">{a.hora}</span><span class="task">{a.tarefa}</span></li>)}
+      </ul>
+    )}
+  </div>
+  {p.manifesto.viradaFrase && (
+    <div class="lp-turn reveal">
+      <div class="glow-orb"></div>
+      <p class="big">{p.manifesto.viradaFrase} {p.manifesto.viradaDestaque && <span>{p.manifesto.viradaDestaque}</span>}</p>
+      {p.manifesto.viradaTexto && <p class="small">{p.manifesto.viradaTexto}</p>}
+    </div>
+  )}
+</section>
+)}
+
+{p.passos.titulo && (
+<section class="lp-steps">
+  <div class="suite-section-head reveal">
+    {p.passos.etiqueta && <p class="eyebrow">{p.passos.etiqueta}</p>}
+    <h2>{p.passos.titulo}</h2>
+    {p.passos.texto && <p>{p.passos.texto}</p>}
+  </div>
+  <div class="lp-steps-grid">
+    {p.passos.itens.map((it, i) => <div class="lp-step reveal"><span class="n">{i + 1}</span><h3>{it.titulo}</h3><p>{it.texto}</p></div>)}
+  </div>
+  {p.passos.regras.length > 0 && <p class="lp-rules reveal">{p.passos.regras.map((r) => <span>{r}</span>)}</p>}
+</section>
+)}
+
 <section class="lp-included" id="incluso">
   <div class="lp-included-inner">
     <div>
       <div class="head reveal">
         <p class="eyebrow">Incluso no pacote</p>
-        <h2>O que vocês vão ter</h2>
+        <h2>{p.incluiTitulo || 'O que vocês vão ter'}</h2>
+        {p.incluiTexto && <p>{p.incluiTexto}</p>}
       </div>
       {p.inclui.map((b) => (
         <div class="lp-moment reveal">
@@ -86,8 +143,8 @@ const faqLd = JSON.stringify({
     <aside class="lp-ticket reveal" aria-label="Resumo do pacote">
       <p class="eyebrow">Resumo</p>
       <p class="name" style="margin-top:10px;">{p.titulo}</p>
-      <p class="value"><small>R$</small>{p.precoValor}</p>
-      <p class="per">{p.precoTermos}</p>
+      <p class="value">{moeda && <small>R$</small>}{p.precoValor}</p>
+      <p class="per">{p.precoResumo || p.precoTermos}</p>
       <dl>{p.resumo.map((r) => <div><dt>{r.rotulo}</dt><dd>{r.valor}</dd></div>)}{p.validade && <div><dt>Validade</dt><dd>{p.validade}</dd></div>}</dl>
       <a class="cta-glow" href={wa(msg)} target="_blank" rel="noopener">Quero reservar agora</a>
       <p class="note">Reserva direto com a equipe, pelo WhatsApp</p>
@@ -95,23 +152,34 @@ const faqLd = JSON.stringify({
   </div>
 </section>
 
-<PacoteLugar />
+{p.manifestoFinal.frase && (
+<section class="lp-manifesto" style="padding-top:clamp(70px,9vw,120px);padding-bottom:clamp(70px,9vw,120px);">
+  <div class="lp-turn reveal" style="margin-top:0;">
+    <div class="glow-orb"></div>
+    {p.manifestoFinal.etiqueta && <p class="eyebrow" style="position:relative;z-index:2;margin-bottom:18px;">{p.manifestoFinal.etiqueta}</p>}
+    <p class="big">{p.manifestoFinal.frase} {p.manifestoFinal.destaque && <span>{p.manifestoFinal.destaque}</span>}</p>
+    {p.manifestoFinal.texto && <p class="small">{p.manifestoFinal.texto}</p>}
+  </div>
+</section>
+)}
+
+<PacoteLugar legenda={p.legendaCafe || undefined} />
 
 <section class="lp-suites" id="suites">
   <div class="reel-head reveal">
     <div>
       <p class="eyebrow">Qual suíte é para vocês?</p>
-      <h2>{suites.length} suítes, cada uma com clima próprio</h2>
-      <p>{nH} com banheira de hidromassagem e {nO} com ofurô cromoterápico. Todas com ar-condicionado, frigobar e banheiro privativo. Conta pra gente qual chamou mais atenção.</p>
+      <h2>{p.suitesTitulo || `${suites.length} suítes, cada uma com clima próprio`}</h2>
+      <p>{p.suitesTexto || `${nH} com banheira de hidromassagem e ${nO} com ofurô cromoterápico. Todas com ar-condicionado, frigobar e banheiro privativo. Conta pra gente qual chamou mais atenção.`}</p>
     </div>
-    <div class="lp-filter" role="group" aria-label="Filtrar suítes">
+    {p.suitesFiltro !== 'hidro' && <div class="lp-filter" role="group" aria-label="Filtrar suítes">
       <button type="button" data-f="all" aria-pressed="true">Todas ({suites.length})</button>
       <button type="button" data-f="h" aria-pressed="false">Hidromassagem ({nH})</button>
       <button type="button" data-f="o" aria-pressed="false">Ofurô ({nO})</button>
-    </div>
+    </div>}
   </div>
   <div class="lp-reel" id="lp-reel">
-    {suites.map((s) => (
+    {listaSuites.map((s) => (
       <article class="lp-suite" data-type={s.tipo}>
         <div class="thumb"><span class="tag">{s.tipo === 'h' ? 'Hidromassagem para casal' : 'Ofurô cromoterápico'}</span><img src={`/fotos-suites/${s.slug}/capa.webp`} alt={`Suíte ${s.nome}`} loading="lazy" /></div>
         <div class="cap"><h3>{s.nome}</h3><p class="slogan">{s.slogan}</p>
@@ -128,6 +196,41 @@ const faqLd = JSON.stringify({
   </div>
 </section>
 
+{p.brotas.titulo && (
+<section class="lp-brotas">
+  <div class="lp-brotas-inner">
+    {fotoBrotas && <div class="media reveal"><img src={fotoBrotas} alt={p.brotas.fotoAlt} loading="lazy" /></div>}
+    <div class="reveal">
+      {p.brotas.etiqueta && <p class="eyebrow">{p.brotas.etiqueta}</p>}
+      <h2>{p.brotas.titulo}</h2>
+      {p.brotas.texto && <p>{p.brotas.texto}</p>}
+      <ul class="lp-places">{lugares.map((l) => <li>{l}</li>)}</ul>
+      {p.brotas.citacao && <blockquote>{p.brotas.citacao}</blockquote>}
+    </div>
+  </div>
+</section>
+)}
+
+{p.extras.titulo && p.extras.itens.length > 0 && (
+  <PacoteExtras titulo={p.extras.titulo} texto={p.extras.texto} itens={p.extras.itens} pacote={p.titulo} />
+)}
+
+{p.comparar.titulo && refComparar && (
+<section class="lp-compare">
+  <div class="lp-compare-inner">
+    <div class="reveal">
+      {p.comparar.etiqueta && <p class="eyebrow">{p.comparar.etiqueta}</p>}
+      <h2>{p.comparar.titulo}</h2>
+      {p.comparar.texto && <p>{p.comparar.texto}</p>}
+    </div>
+    <div class="box reveal">
+      <strong>{refComparar.titulo}</strong><span>{/^[\d.,]+$/.test(refComparar.precoValor.trim()) ? `R$ ${refComparar.precoValor} o casal` : refComparar.precoValor}</span>
+      <a class="link-glow" href={`/pacotes/${p.comparar.pacote}`}>Conhecer o pacote <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+)}
+
 <Depoimentos />
 
 {p.faq.length > 0 && (
@@ -142,10 +245,10 @@ const faqLd = JSON.stringify({
 )}
 
 <section class="final-cta">
-  <div class="photo" style={`background-image:url('${foto}'); background-position:center 60%;`}></div>
+  <div class="photo" style={`background-image:url('${fotoCta}'); background-position:center 60%;`}></div>
   <div class="final-cta-inner reveal">
     {p.ctaEtiqueta && <p class="eyebrow">{p.ctaEtiqueta}</p>}
-    <h2>{p.ctaTitulo}</h2>
+    <h2>{p.ctaTitulo}{p.ctaDestaque && <><br /><span class="accent">{p.ctaDestaque}</span></>}</h2>
     {p.ctaTexto && <p class="sub">{p.ctaTexto}</p>}
     <div class="actions">
       <a class="btn-whatsapp" href={wa(msg)} target="_blank" rel="noopener">Reservar no WhatsApp</a>
@@ -155,7 +258,7 @@ const faqLd = JSON.stringify({
 </section>
 <Footer />
 <div class="lp-sticky" id="lp-sticky">
-  <p class="p">R$ {p.precoValor}<small>{p.precoTermos}</small></p>
+  <p class="p">{moeda ? `R$ ${p.precoValor}` : p.precoValor}<small>{p.precoTermos}</small></p>
   <a class="cta-glow cta-glow--small" href={wa(msg)} target="_blank" rel="noopener">Reservar</a>
 </div>
 </Layout>

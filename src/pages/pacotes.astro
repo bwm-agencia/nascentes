@@ -5,7 +5,6 @@ import Footer from '../components/Footer.astro';
 import '../styles/pacotes.css';
 import { listPacotes, img, wa } from '../lib/content';
 const novos = await listPacotes();
-const temDestaque = novos.some((n) => n.entry.destaque);
 const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
 ---
 <Layout title={"Pacotes para Brotas — Pousada das Nascentes"} script="/js/pacotes.js">
@@ -27,12 +26,12 @@ const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
   <div class="package-grid">
     {novos.map((n) => (
       <div class={`package-card reveal${n.entry.destaque ? ' package-card--featured' : ''}`}>
-        <div class="photo" style={`background-image:url('${img(n.entry.fotoHero)}'); background-position:center 55%;`}></div>
+        <div class="photo" style={`background-image:url('${img(n.entry.cardFoto) || img(n.entry.fotoHero)}'); background-position:center 55%;`}></div>
         <div class="body">
-          <p class="eyebrow">{n.entry.etiqueta}</p>
+          <p class="eyebrow">{n.entry.cardEtiqueta || n.entry.etiqueta}</p>
           <h3><a href={`/pacotes/${n.slug}`}>{n.entry.titulo}</a></h3>
           <ul>
-            {(n.entry.inclui[0]?.itens ?? []).slice(0, 6).map((it) => <li><Fragment set:html={tick} />{it.texto}</li>)}
+            {(n.entry.cardItens.length ? n.entry.cardItens : (n.entry.inclui[0]?.itens ?? []).map((it) => it.texto)).slice(0, 9).map((t) => <li><Fragment set:html={tick} />{t}</li>)}
           </ul>
           <div class="actions">
             <a class="btn-book" href={wa(n.entry.mensagemWhatsapp)} target="_blank" rel="noopener">Reservar</a>
@@ -41,134 +40,6 @@ const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
         </div>
       </div>
     ))}
-    <div class={`package-card reveal${temDestaque ? '' : ' package-card--featured'}`}>
-      <div class="photo" style="background-image:url('/fotos-casais/pousada-das-nascentes-ia-3.webp'); background-position:center 55%;"></div>
-      <div class="body">
-        <p class="eyebrow">Pacote em destaque · 2 diárias</p>
-        <h3><a href="/pacotes/refugio-primavera">Refúgio Primavera</a></h3>
-        <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>2 diárias em suíte temática para o casal</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>1 mini espumante</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Banheira de hidromassagem ou ofurô cromoterápico</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Sais de banho</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>1 mimo</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo nas duas manhãs</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suíte preparada para a chegada de vocês</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Late check-out até as 17h</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Piscina e sauna à disposição</li>
-        </ul>
-        <div class="actions">
-          <a class="btn-book" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20o%20pacote%20Ref%C3%BAgio%20Primavera." target="_blank" rel="noopener">Reservar</a>
-          <a class="btn-details" href="/pacotes/refugio-primavera">Detalhes</a>
-        </div>
-      </div>
-    </div>
-    <div class="package-card reveal">
-      <div class="photo" style="background-image:url('/fotos-casais/pousada-das-nascentes-ia-10.webp'); background-position:center 45%;"></div>
-      <div class="body">
-        <p class="eyebrow">2 diárias + massagem</p>
-        <h3><a href="/pacotes/escapada-a-dois">Escapada a dois</a></h3>
-        <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>2 diárias para o casal</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suíte temática com hidromassagem ou ofurô cromoterápico</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Massagens para o casal (1 para cada)</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Mimo simples</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo nas duas manhãs</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suíte preparada para a chegada de vocês</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Late check-out até as 17h</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Piscina e sauna à disposição</li>
-        </ul>
-        <div class="actions">
-          <a class="btn-book" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20Escapada%20a%20dois." target="_blank" rel="noopener">Reservar</a>
-          <a class="btn-details" href="/pacotes/escapada-a-dois">Detalhes</a>
-        </div>
-      </div>
-    </div>
-    <div class="package-card reveal">
-      <div class="photo" style="background-image:url('/fotos-casais/nascentes-fotos-novas-26-ia-2.webp'); background-position:center 55%;"></div>
-      <div class="body">
-        <p class="eyebrow">Fique 3, pague 2 · Outubro</p>
-        <h3><a href="/pacotes/primavera-romantica">Primavera Romântica</a></h3>
-        <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Válido para outubro</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Mínimo de duas diárias</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes Temáticas com Hidromassagem</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes com Ofurô Cromoterápico (individual)</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Complete seu pacote com opcionais!</li>
-        </ul>
-        <div class="actions">
-          <a class="btn-book" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20Primavera%20Rom%C3%A2ntica%20%28Fique%203%2C%20pague%202%29." target="_blank" rel="noopener">Reservar</a>
-          <a class="btn-details" href="/pacotes/primavera-romantica">Detalhes</a>
-        </div>
-      </div>
-    </div>
-    <div class="package-card reveal">
-      <div class="photo" style="background-image:url('/fotos-casais/pousada-das-nascentes-ia-2.webp'); background-position:center 35%;"></div>
-      <div class="body">
-        <p class="eyebrow">25% OFF</p>
-        <h3><a href="/pacotes/aniversariante-do-mes">Aniversariante do Mês</a></h3>
-        <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>25% OFF para o aniversariante do mês</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes com hidromassagem</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Solicite via WhatsApp, telefone ou e-mail</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo</li>
-        </ul>
-        <div class="actions">
-          <a class="btn-book" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Sou%20aniversariante%20do%20m%C3%AAs%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20desconto." target="_blank" rel="noopener">Reservar</a>
-          <a class="btn-details" href="/pacotes/aniversariante-do-mes">Detalhes</a>
-        </div>
-      </div>
-    </div>
-    <div class="package-card reveal">
-      <div class="photo" style="background-image:url('/fotos-casais/nascentes-ia-fotos-novas-2.webp'); background-position:center 55%;"></div>
-      <div class="body">
-        <p class="eyebrow">De 09 a 12/10</p>
-        <h3><a href="/pacotes/12-de-outubro">12 de Outubro</a></h3>
-        <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Pacote de três diárias</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes Temáticas com Hidromassagem</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes com Ofurô Cromoterápico (individual)</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo</li>
-        </ul>
-        <div class="actions">
-          <a class="btn-book" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20de%2012%20de%20Outubro." target="_blank" rel="noopener">Reservar</a>
-          <a class="btn-details" href="/pacotes/12-de-outubro">Detalhes</a>
-        </div>
-      </div>
-    </div>
-    <div class="package-card reveal">
-      <div class="photo" style="background-image:url('/fotos-casais/pousada-das-nascentes-ia-9.webp'); background-position:center 60%;"></div>
-      <div class="body">
-        <p class="eyebrow">De 30/10 a 02/11</p>
-        <h3><a href="/pacotes/feriado-2-de-novembro">Feriado 2 de Novembro</a></h3>
-        <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes com Hidromassagem</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes com Ofurô Cromoterápico</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo</li>
-        </ul>
-        <div class="actions">
-          <a class="btn-book" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20do%20Feriado%20de%202%20de%20Novembro." target="_blank" rel="noopener">Reservar</a>
-          <a class="btn-details" href="/pacotes/feriado-2-de-novembro">Detalhes</a>
-        </div>
-      </div>
-    </div>
-    <div class="package-card reveal">
-      <div class="photo" style="background-image:url('/fotos-casais/nascentes-ia-fotos-novas-1.webp'); background-position:center 55%;"></div>
-      <div class="body">
-        <p class="eyebrow">De 20 a 22/11</p>
-        <h3><a href="/pacotes/consciencia-negra">Consciência Negra</a></h3>
-        <ul>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes com Hidromassagem</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Suítes com Ofurô Cromoterápico</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Café da manhã completo</li>
-        </ul>
-        <div class="actions">
-          <a class="btn-book" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20de%20Consci%C3%AAncia%20Negra." target="_blank" rel="noopener">Reservar</a>
-          <a class="btn-details" href="/pacotes/consciencia-negra">Detalhes</a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 

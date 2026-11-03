@@ -1,0 +1,118 @@
+titulo: Primavera Romântica
+publicado: true
+destaque: false
+ordem: 3
+redirecionar:
+  discriminant: nenhum
+  value: null
+palavraChave: fique 3, pague 2
+palavrasSecundarias: []
+metaTitulo: 'Primavera Romântica: fique 3, pague 2'
+metaDescricao: Reserve 2 diárias e ganhe a 3ª grátis em Brotas. Suíte temática com hidromassagem ou ofurô e café da manhã incluso. Válido para outubro.
+semIndexar: false
+fotoFoco: 55
+fotoHero: /uploads/pacotes/primavera-romantica-hero.webp
+fotoAlt: Casal relaxando na cama da suíte temática
+etiqueta: Fique 3, pague 2 em outubro
+tituloAntes: Três noites em Brotas,
+tituloDestaque: pagando duas
+chamada: Suíte temática, banheira de hidromassagem ou ofurô e café da manhã completo. Em outubro, a terceira diária é por nossa conta.
+dias: []
+precoValor: '1.070'
+precoTermos: a partir de, 3 noites para o casal
+mensagemWhatsapp: 'Olá! Vi a oferta *Primavera Romântica (Fique 3, pague 2)* de outubro no site e quero reservar. Meu nome é '
+opcoes:
+- nome: Suíte com hidromassagem
+  subtitulo: 14 suítes temáticas, banheira para o casal
+  valor: '1.300'
+  por: 3 noites para o casal
+  itens:
+  - 2 diárias com café da manhã completo
+  - 3ª diária grátis (sem café)
+  - Banheira de hidromassagem para o casal
+  mensagemWhatsapp: 'Olá! Quero a oferta Fique 3, pague 2 de outubro na suíte com hidromassagem (R$ 1.300). Meu nome é '
+- nome: Suíte com ofurô
+  subtitulo: 4 suítes temáticas, ofurô cromoterápico
+  valor: '1.070'
+  por: 3 noites para o casal
+  itens:
+  - 2 diárias com café da manhã completo
+  - 3ª diária grátis (sem café)
+  - Ofurô cromoterápico individual
+  mensagemWhatsapp: 'Olá! Quero a oferta Fique 3, pague 2 de outubro na suíte com ofurô (R$ 1.070). Meu nome é '
+opcoesEtiqueta: Escolham a suíte
+opcoesTitulo: Duas formas de aproveitar a oferta
+opcoesTexto: Os valores são para o casal, pelas três noites. As duas primeiras incluem café da manhã completo.
+notaOpcoes: O café da manhã da 3ª manhã é opcional e cobrado à parte. Válido para outubro, sujeito à disponibilidade.
+incluiTitulo: Mais tempo juntos, sem pesar no bolso
+incluiTexto: Três noites, duas pagas. Veja como fica a estadia.
+inclui:
+- titulo: Noites 1 e 2
+  itens:
+  - texto: 2 diárias em suíte temática
+    detalhe: com hidromassagem ou ofurô cromoterápico
+  - texto: Café da manhã completo nas duas manhãs
+    detalhe: ''
+- titulo: Noite 3
+  itens:
+  - texto: 3ª diária grátis
+    detalhe: por nossa conta, sem café da manhã
+  - texto: 3º café da manhã opcional
+    detalhe: é só pedir, cobrado à parte
+- titulo: Durante a estadia
+  itens:
+  - texto: Piscina e sauna à disposição
+    detalhe: ''
+  - texto: Ar-condicionado, frigobar e TV via internet
+    detalhe: em todas as suítes
+resumo:
+- rotulo: Estadia
+  valor: 3 noites, paga 2
+- rotulo: Com hidromassagem
+  valor: R$ 1.300
+- rotulo: Com ofurô
+  valor: R$ 1.070
+validade: Outubro. Mínimo de 2 diárias, exceto feriados
+legendaCafe: Incluso nas duas primeiras manhãs
+brotas:
+  etiqueta: Brotas, o grande motivo dessa viagem
+  titulo: Três dias rendem cachoeira e descanso
+  texto: 'Brotas vive agora um dos seus momentos mais especiais: o verde mais intenso, cachoeiras de água cristalina e atrações sem multidão. A pousada fica a poucos minutos de:'
+  citacao: Com três noites dá para conhecer uma cachoeira de manhã e ainda voltar a tempo da hidromassagem.
+  foto: /uploads/pacotes/primavera-romantica-brotas.webp
+  fotoAlt: Jardim e piscina da pousada ao entardecer
+extras:
+  titulo: Torne a noite ainda mais especial
+  texto: Decoração romântica e fondue no quarto podem ser acrescentados à parte, para deixar tudo com a cara de vocês.
+  itens:
+  - ambientacao
+  - fondue
+  - massagem
+faq:
+- pergunta: Como funciona o Fique 3, pague 2?
+  resposta: Vocês ficam três noites e pagam duas. O café da manhã completo está incluído nas duas primeiras manhãs. Na terceira, se quiserem, é só pedir o café separado.
+- pergunta: Os valores são por pessoa?
+  resposta: Não. R$ 1.300 (suíte com hidromassagem) ou R$ 1.070 (suíte com ofurô) é o valor total para o casal, pelas três noites.
+- pergunta: Qual a diferença entre hidromassagem e ofurô?
+  resposta: São 14 suítes com banheira de hidromassagem para o casal e 4 suítes com ofurô cromoterápico individual. As duas opções estão incluídas no pacote, é só escolher o clima que combina mais com vocês.
+- pergunta: Para quais datas a oferta é válida?
+  resposta: Para estadias em outubro, sujeitas à disponibilidade. O feriado de 12 de Outubro tem pacote próprio.
+- pergunta: Posso escolher a suíte?
+  resposta: Pode. Conta pra gente qual chamou mais atenção no momento da reserva. Sempre que a data permite, a gente separa a de vocês.
+- pergunta: Posso levar meu pet?
+  resposta: A pousada é pet friendly para animais de pequeno porte. Avise na reserva para prepararmos tudo.
+- pergunta: Como garanto a reserva?
+  resposta: Todo o processo é feito pelo WhatsApp, direto com a nossa equipe. Vocês escolhem as datas e a gente confirma a disponibilidade na hora.
+ctaFoto: /uploads/pacotes/primavera-romantica-cta.webp
+ctaEtiqueta: Vagas limitadas
+ctaTitulo: Outubro está passando
+ctaDestaque: garanta a terceira noite grátis
+ctaTexto: Escolham a suíte, chamem no WhatsApp e a gente confirma a disponibilidade na hora.
+cardItens:
+- Válido para outubro
+- Mínimo de duas diárias
+- Suítes Temáticas com Hidromassagem
+- Suítes com Ofurô Cromoterápico (individual)
+- Café da manhã completo
+- Complete seu pacote com opcionais!
+cardEtiqueta: Fique 3, pague 2 · Outubro

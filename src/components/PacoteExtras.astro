@@ -1,0 +1,24 @@
+---
+import { wa } from '../lib/content';
+const { titulo, texto, itens, pacote } = Astro.props as { titulo: string; texto?: string; itens: readonly string[]; pacote: string };
+const catalogo: Record<string, { img: string; alt: string; nome: string; desc: string; pedido: string }> = {
+  ambientacao: { img: '/fotos-hero/ritual-01-suite-pronta.webp', alt: 'Suíte decorada com pétalas e velas', nome: 'Ambientação romântica', desc: 'Pétalas, velas, balões e flores para transformar a suíte em um cenário à altura do momento.', pedido: 'da ambientação romântica' },
+  fondue: { img: '/fotos-hero/ritual-03-fondue.webp', alt: 'Fondue servido na suíte', nome: 'Fondue na suíte', desc: 'Queijo ou chocolate, preparado pela pousada e servido no quarto.', pedido: 'do fondue na suíte' },
+  massagem: { img: '/fotos-experiencia/massagem/foto-01.webp', alt: 'Sala de massagem da pousada', nome: 'Massagem com pedras quentes', desc: 'Para um ou para os dois, na sala de massagem da pousada.', pedido: 'da massagem com pedras quentes' },
+};
+---
+<section class="lp-extras">
+  <div class="suite-section-head reveal">
+    <p class="eyebrow">Para ir além</p>
+    <h2>{titulo}</h2>
+    {texto && <p>{texto}</p>}
+  </div>
+  <div class="lp-extras-grid">
+    {itens.filter((k) => catalogo[k]).map((k) => {
+      const e = catalogo[k];
+      return (
+        <div class="lp-extra reveal"><div class="thumb"><img src={e.img} alt={e.alt} loading="lazy" /></div><div class="body"><h3>{e.nome}</h3><p>{e.desc}</p><a href={wa(`Olá! Vou reservar o pacote ${pacote} e quero saber o valor ${e.pedido}.`)} target="_blank" rel="noopener">Consultar valor</a></div></div>
+      );
+    })}
+  </div>
+</section>

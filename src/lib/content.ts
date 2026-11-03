@@ -21,7 +21,9 @@ export const wa = (msg: string) =>
 
 export async function listPacotes() {
   const all = await reader.collections.pacotes.all();
-  return all.filter((p) => p.entry.publicado);
+  return all
+    .filter((p) => p.entry.publicado)
+    .sort((a, b) => (a.entry.ordem ?? 9999) - (b.entry.ordem ?? 9999) || a.entry.titulo.localeCompare(b.entry.titulo));
 }
 export async function listPosts() {
   const all = await reader.collections.posts.all();

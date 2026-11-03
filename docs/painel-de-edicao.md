@@ -43,3 +43,7 @@ Regras: o editor do texto do post só oferece H2, H3 e H4 (H1 bloqueado). Não p
 ## Despublicar um pacote ou post sem perder SEO
 
 Ao desmarcar "Publicado no site", escolha em **"Ao despublicar, redirecionar para"** a página de destino (lista de pacotes, suítes, blog, outro pacote/post). O site cria sozinho um redirecionamento 301 na próxima publicação. Sem escolha, a página dá erro 404. Evite mandar tudo para a página inicial (o Google pode tratar como erro). O relatório de SEO do build avisa quando algo é despublicado sem redirecionamento. Pacotes que voltam todo ano: mantenha a página no ar e só atualize datas e preços (por isso não coloque o ano no nome do pacote).
+
+## Pacotes que já existiam
+
+Os 7 pacotes que eram páginas fixas agora estão no painel, com os mesmos endereços: Refúgio Primavera, Escapada a dois, Primavera Romântica, Aniversariante do Mês, Consciência Negra (publicados) e 12 de Outubro e Feriado 2 de Novembro (despublicados, redirecionam para a lista de pacotes). Seções que só alguns pacotes têm (texto com agenda riscada, "Como funciona" em passos, caixa "Conheça outro pacote", seção Brotas, extras) são campos opcionais: deixe o título vazio para não mostrar. Para trocar a ordem na lista, use "Ordem na lista de pacotes".

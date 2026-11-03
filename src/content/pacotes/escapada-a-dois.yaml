@@ -1,0 +1,136 @@
+titulo: Escapada a dois
+publicado: true
+destaque: false
+ordem: 2
+redirecionar:
+  discriminant: nenhum
+  value: null
+palavraChave: escapada a dois
+palavrasSecundarias: []
+metaTitulo: 'Escapada a dois: pacote com massagem em Brotas'
+metaDescricao: Dois dias para desacelerar com massagem para o casal (1 para cada), café da manhã e late check-out às 17h. R$ 1.380 o casal.
+semIndexar: false
+fotoFoco: 45
+fotoHero: /uploads/pacotes/escapada-a-dois-hero.webp
+fotoAlt: Casal de roupão relaxando na cama da suíte
+etiqueta: Pacote Escapada a dois
+tituloAntes: Dois dias em que o mundo
+tituloDestaque: pode esperar
+chamada: Massagem para os dois, suíte temática com hidro ou ofurô e check-out só às 17h. Um pacote para o corpo entender que dá para relaxar.
+dias: []
+precoValor: '1.380'
+precoTermos: 2 diárias para o casal, com massagem e café da manhã
+mensagemWhatsapp: 'Olá! Vi o pacote *Escapada a dois* (2 diárias com massagem para o casal, R$ 1.380) no site e quero reservar. Meu nome é '
+opcoes: []
+incluiTitulo: Massagem, água quente e tempo
+incluiTexto: Tudo o que está na Escapada a dois, na ordem em que vocês vão viver.
+inclui:
+- titulo: Na chegada
+  itens:
+  - texto: Suíte preparada para a chegada de vocês
+    detalhe: ''
+  - texto: Mimo simples
+    detalhe: um carinho para começar bem
+- titulo: Durante os dois dias
+  itens:
+  - texto: 2 diárias para o casal
+    detalhe: ''
+  - texto: Suíte temática com hidromassagem ou ofurô cromoterápico
+    detalhe: escolham entre 18 suítes decoradas
+  - texto: Massagens para o casal
+    detalhe: uma para cada, na sala de massagem da pousada
+  - texto: Café da manhã completo nas duas manhãs
+    detalhe: ''
+  - texto: Piscina e sauna à disposição
+    detalhe: ''
+- titulo: Na despedida
+  itens:
+  - texto: Late check-out até as 17h
+    detalhe: o último dia ainda é de vocês, sem custo extra
+precoResumo: valor total para o casal, não por pessoa
+resumo:
+- rotulo: Estadia
+  valor: 2 diárias
+- rotulo: Massagem
+  valor: 1 para cada
+- rotulo: Suíte
+  valor: Temática, com hidro ou ofurô
+- rotulo: Check-out
+  valor: Até as 17h
+validade: Exceto feriados
+legendaCafe: Servido nas duas manhãs
+brotas:
+  etiqueta: Brotas está aqui do lado
+  titulo: Mas ninguém é obrigado a sair
+  texto: 'Nessa época do ano Brotas vive sua melhor fase: dias claros, noites frescas e trilhas com bem menos gente. Se quiserem conhecer, a gente monta o roteiro na recepção. A pousada fica a poucos minutos de:'
+  citacao: E se a ideia for não sair da suíte em nenhum dos dois dias, também está perfeito. É exatamente para isso que esse pacote existe.
+  foto: /uploads/pacotes/escapada-a-dois-brotas.webp
+  fotoAlt: Varanda da pousada cercada de verde
+extras:
+  titulo: Torne a noite ainda mais especial
+  texto: 'O pacote já entrega o essencial: silêncio, conforto, massagem e tempo. Se quiserem acrescentar alguma coisa, é só avisar no WhatsApp antes da chegada.'
+  itens:
+  - fondue
+  - ambientacao
+manifesto:
+  etiqueta: O cansaço que dormir não resolve
+  titulo: Sempre disponível, sempre respondendo, sempre com a próxima coisa esperando
+  texto: 'Vocês conhecem bem esse cansaço. A Escapada a dois nasceu para ele: dois dias em que nada disso precisa de resposta.'
+  agenda:
+  - hora: 7h12
+    tarefa: Mensagem no grupo do trabalho
+  - hora: 9h40
+    tarefa: '"Consegue ver isso rapidinho?"'
+  - hora: 12h30
+    tarefa: Almoço respondendo e-mail
+  - hora: 18h05
+    tarefa: A reunião que podia ser um e-mail
+  - hora: 22h47
+    tarefa: '"Só confirmando para amanhã cedo"'
+  viradaFrase: Aqui o telefone fica no silencioso.
+  viradaDestaque: E a água quente resolve o resto.
+  viradaTexto: Longe o suficiente da loucura dos grandes centros para vocês ouvirem a mata à noite. Perto o suficiente das cachoeiras, se em algum momento der vontade de sair.
+manifestoFinal:
+  etiqueta: O domingo mais longo do ano
+  frase: Na maioria das viagens, o último dia não existe.
+  destaque: Aqui ele vai até as 17h.
+  texto: Café sem pressa, mais um banho de hidromassagem, mais um mergulho na piscina, mais um capítulo do livro. A viagem termina quando vocês decidirem, não quando a recepção avisar.
+comparar:
+  etiqueta: Preferem um brinde no lugar da massagem?
+  titulo: Conheçam o Refúgio Primavera
+  texto: As mesmas 2 diárias e o late check-out às 17h, com mini espumante, sais de banho e um mimo especial.
+  pacote: refugio-primavera
+faq:
+- pergunta: O valor de R$ 1.380 é por pessoa?
+  resposta: Não. É o valor total para o casal, com as duas diárias, o café da manhã nas duas manhãs, as duas massagens, o mimo e o late check-out inclusos.
+- pergunta: A massagem é para os dois mesmo?
+  resposta: Sim. É uma massagem para cada um, na sala de massagem da pousada. O horário é combinado com vocês durante a estadia.
+- pergunta: Posso escolher a suíte?
+  resposta: Pode. Conta pra gente qual chamou mais atenção no momento da reserva. Sempre que a data permite, a gente separa a de vocês.
+- pergunta: Qual a diferença entre hidromassagem e ofurô?
+  resposta: São 14 suítes com banheira de hidromassagem para o casal e 4 suítes com ofurô cromoterápico individual. As duas opções estão incluídas no pacote, é só escolher o clima que combina mais com vocês.
+- pergunta: O check-out é mesmo às 17h?
+  resposta: É. O late check-out está incluído, sem custo adicional. Vocês têm a tarde inteira do último dia.
+- pergunta: Para quais datas o pacote é válido?
+  resposta: As datas disponíveis são confirmadas na hora pelo WhatsApp. Feriados e datas especiais têm pacotes próprios.
+- pergunta: Dá para ficar mais noites?
+  resposta: Dá. Chame a gente no WhatsApp e montamos a estadia com as datas de vocês.
+- pergunta: Posso levar meu pet?
+  resposta: A pousada é pet friendly para animais de pequeno porte. Avise na reserva para prepararmos tudo.
+- pergunta: Como garanto a reserva?
+  resposta: Todo o processo é feito pelo WhatsApp, direto com a nossa equipe. Vocês escolhem as datas e a gente confirma a disponibilidade na hora.
+ctaFoto: /uploads/pacotes/escapada-a-dois-cta.webp
+ctaEtiqueta: Esperamos por vocês
+ctaTitulo: Dois dias sem ninguém cobrar nada
+ctaDestaque: falta só escolher a data
+ctaTexto: O telefone no silencioso, a água quente e uma massagem para cada um. R$ 1.380 o casal.
+cardItens:
+- 2 diárias para o casal
+- Suíte temática com hidromassagem ou ofurô cromoterápico
+- Massagens para o casal (1 para cada)
+- Mimo simples
+- Café da manhã completo nas duas manhãs
+- Suíte preparada para a chegada de vocês
+- Late check-out até as 17h
+- Piscina e sauna à disposição
+cardEtiqueta: 2 diárias + massagem
