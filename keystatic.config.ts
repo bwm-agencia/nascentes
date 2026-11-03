@@ -62,8 +62,8 @@ export default config({
         fotoHero: fields.image({ label: 'Foto principal', directory: 'public/uploads/pacotes', publicPath: '/uploads/pacotes/', validation: { isRequired: true } }),
         fotoAlt: fields.text({ label: 'SEO · Descrição da foto principal (alt)', description: 'Descreva o que aparece na foto. Se couber, use a palavra-chave.', validation: { isRequired: true, length: { min: 10, max: 125 } } }),
         etiqueta: fields.text({ label: 'Etiqueta acima do título', description: 'Ex.: Fique 3, pague 2 em outubro', ...check }),
-        tituloAntes: fields.text({ label: 'Título (parte normal)', description: 'Ex.: Três noites em Brotas,', ...check }),
-        tituloDestaque: fields.text({ label: 'Título (parte em destaque, itálico)', description: 'Ex.: pagando duas' }),
+        tituloAntes: fields.text({ label: 'Título (parte normal) · vira o H1', description: 'Junto com a parte em destaque forma o título principal da página (H1). Ex.: Três noites em Brotas,', ...check }),
+        tituloDestaque: fields.text({ label: 'Título (parte em destaque, itálico) · vira o H1', description: 'Continuação do H1, em itálico. Ex.: pagando duas' }),
         chamada: fields.text({ label: 'Texto de apoio', multiline: true, ...check }),
         precoValor: fields.text({ label: 'Preço (só o número)', description: 'Ex.: 1.070', ...check }),
         precoTermos: fields.text({ label: 'Condição do preço', description: 'Ex.: a partir de, 3 noites para o casal', ...check }),
@@ -71,7 +71,7 @@ export default config({
         mensagemWhatsapp: fields.text({ label: 'Mensagem do WhatsApp', description: 'Texto que já vai escrito quando a pessoa clicar em reservar.', multiline: true, ...check }),
         opcoes: fields.array(
           fields.object({
-            nome: fields.text({ label: 'Nome da opção', ...check }),
+            nome: fields.text({ label: 'Nome da opção · vira H3', description: 'Subtítulo (H3) dentro da seção de preços.', ...check }),
             subtitulo: fields.text({ label: 'Subtítulo' }),
             valor: fields.text({ label: 'Preço (só o número)', ...check }),
             por: fields.text({ label: 'Condição', description: 'Ex.: 3 noites para o casal' }),
@@ -83,7 +83,7 @@ export default config({
         notaOpcoes: fields.text({ label: 'Observação abaixo das opções', multiline: true }),
         inclui: fields.array(
           fields.object({
-            titulo: fields.text({ label: 'Título do bloco', description: 'Ex.: Noites 1 e 2', ...check }),
+            titulo: fields.text({ label: 'Título do bloco · vira H3', description: 'Subtítulo (H3) dentro da seção fixa "O que vocês vão ter" (H2). Ex.: Noites 1 e 2', ...check }),
             itens: fields.array(
               fields.object({
                 texto: fields.text({ label: 'Item', ...check }),
@@ -92,7 +92,7 @@ export default config({
               { label: 'Itens', itemLabel: (p) => p.fields.texto.value || 'Item' },
             ),
           }),
-          { label: 'O que está incluso', itemLabel: (p) => p.fields.titulo.value || 'Bloco' },
+          { label: 'O que está incluso (seção H2 "O que vocês vão ter", cada bloco é um H3)', itemLabel: (p) => p.fields.titulo.value || 'Bloco' },
         ),
         resumo: fields.array(
           fields.object({
@@ -106,10 +106,10 @@ export default config({
             pergunta: fields.text({ label: 'Pergunta', ...check }),
             resposta: fields.text({ label: 'Resposta', multiline: true, ...check }),
           }),
-          { label: 'Perguntas frequentes', itemLabel: (p) => p.fields.pergunta.value || 'Pergunta' },
+          { label: 'Perguntas frequentes (seção H2 fixa "Antes de reservar"; as perguntas não são títulos)', itemLabel: (p) => p.fields.pergunta.value || 'Pergunta' },
         ),
         ctaEtiqueta: fields.text({ label: 'Chamada final: etiqueta', description: 'Ex.: Vagas limitadas' }),
-        ctaTitulo: fields.text({ label: 'Chamada final: título', ...check }),
+        ctaTitulo: fields.text({ label: 'Chamada final: título · vira H2', description: 'Título (H2) do bloco final de reserva.', ...check }),
         ctaTexto: fields.text({ label: 'Chamada final: texto', multiline: true }),
       },
     }),
@@ -121,7 +121,7 @@ export default config({
       format: { contentField: 'corpo' },
       columns: ['titulo', 'data', 'categoria'],
       schema: {
-        titulo: fields.slug({ name: { label: 'Título do post', validation: { isRequired: true } } }),
+        titulo: fields.slug({ name: { label: 'Título do post · vira o H1', description: 'É o título principal da página (H1). Só existe um por página. Use a palavra-chave principal.', validation: { isRequired: true } } }),
         publicado: fields.checkbox({ label: 'Publicado no site', defaultValue: true }),
         data: fields.date({ label: 'Data de publicação', validation: { isRequired: true } }),
         categoria: fields.select({
@@ -149,8 +149,9 @@ export default config({
         ),
         foto: fields.image({ label: 'Foto de capa', directory: 'public/uploads/blog', publicPath: '/uploads/blog/', validation: { isRequired: true } }),
         corpo: fields.document({
-          label: 'Texto do post',
-          formatting: true,
+          label: 'Texto do post · use H2 para seções e H3 para subdivisões',
+          description: 'O H1 é o título do post e não pode ser repetido aqui. O editor só oferece H2, H3 e H4. Não pule níveis: depois do H2 vem H3.',
+          formatting: { headingLevels: [2, 3, 4], inlineMarks: true, listTypes: true, blockTypes: { blockquote: true }, softBreaks: true },
           dividers: true,
           links: true,
           images: { directory: 'public/uploads/blog', publicPath: '/uploads/blog/' },

@@ -43,6 +43,9 @@ for (const { slug, data: d, body, tipo } of items) {
     if (kw && !has(texto.split(/\s+/).slice(0, 120).join(' '), kw)) problemas.push('palavra-chave não aparece nas primeiras 120 palavras');
     if (words(texto) < 300) problemas.push(`texto curto (${words(texto)} palavras; ideal 300+)`);
     if (!/\]\(\/[^)]*\)/.test(body)) problemas.push('nenhum link interno (ex.: para /suites ou /pacotes)');
+    if (/^#\s/m.test(body)) problemas.push('o texto tem um título H1; o H1 já é o título do post, use H2/H3 no corpo');
+    const hs = [...body.matchAll(/^(#{2,6})\s/gm)].map((m) => m[1].length);
+    if (hs.some((n, i) => i > 0 && n > hs[i - 1] + 1) || (hs.length && hs[0] > 2)) problemas.push('hierarquia de títulos pulou um nível (ex.: H2 direto para H4)');
     if (!(d.perguntas || []).length) problemas.push('sem perguntas e respostas (ajudam em respostas do Google e de IAs)');
   }
   if (problemas.length) { avisos += problemas.length; console.log(`\n[SEO] ${tipo} "${slug}"\n  - ${problemas.join('\n  - ')}`); }

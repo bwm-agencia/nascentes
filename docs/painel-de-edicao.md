@@ -27,3 +27,15 @@ Abrir http://localhost:4321/keystatic. Aqui as alterações gravam direto nos ar
 
 ## Fotos
 Fotos enviadas pelo painel são convertidas para WebP no build (`scripts/optimize-uploads.mjs`).
+
+## Títulos: o que vira H1, H2 e H3
+
+Cada campo do painel mostra no nome onde ele entra na página.
+
+| Nível | Pacotes | Posts do blog |
+|---|---|---|
+| **H1** (um só por página) | "Título (parte normal)" + "Título (parte em destaque)" | "Título do post" |
+| **H2** | Seções fixas ("O que vocês vão ter", "Antes de reservar") e "Chamada final: título" | Seções do "Texto do post" e a seção fixa "Perguntas frequentes" |
+| **H3** | "Nome da opção" e "Título do bloco" | Subdivisões dentro de um H2 no "Texto do post" |
+
+Regras: o editor do texto do post só oferece H2, H3 e H4 (H1 bloqueado). Não pule níveis (depois do H2 vem o H3). O relatório de SEO do build avisa se o texto tiver H1 ou pular nível.
