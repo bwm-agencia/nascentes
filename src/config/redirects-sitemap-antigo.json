@@ -1,0 +1,407 @@
+[
+ {
+  "source": "/sitemap.html",
+  "destination": "/",
+  "tipo": "misc"
+ },
+ {
+  "source": "/category/brotas-sp",
+  "destination": "/blog.html",
+  "tipo": "categoria"
+ },
+ {
+  "source": "/category/gastronomia",
+  "destination": "/blog.html",
+  "tipo": "categoria"
+ },
+ {
+  "source": "/category/novi-pousada",
+  "destination": "/blog.html",
+  "tipo": "categoria"
+ },
+ {
+  "source": "/category/pacotes-feriados",
+  "destination": "/blog.html",
+  "tipo": "categoria"
+ },
+ {
+  "source": "/category/romance-lua-de-mel",
+  "destination": "/blog.html",
+  "tipo": "categoria"
+ },
+ {
+  "source": "/category/aventura-ecoturismo",
+  "destination": "/blog.html",
+  "tipo": "categoria"
+ },
+ {
+  "source": "/pacotes-para-brotas/consciencia-negra",
+  "destination": "/pacotes/consciencia-negra.html",
+  "tipo": "pacote"
+ },
+ {
+  "source": "/pacotes-para-brotas/refugio-primavera",
+  "destination": "/pacotes/refugio-primavera.html",
+  "tipo": "pacote"
+ },
+ {
+  "source": "/pacotes-para-brotas/aniversariante-do-mes",
+  "destination": "/pacotes/aniversariante-do-mes.html",
+  "tipo": "pacote"
+ },
+ {
+  "source": "/pacotes-para-brotas/oferta-especial",
+  "destination": "/pacotes.html",
+  "tipo": "pacote-sem-pagina"
+ },
+ {
+  "source": "/pacotes-para-brotas/escapada-a-dois",
+  "destination": "/pacotes/escapada-a-dois.html",
+  "tipo": "pacote"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-fogo",
+  "destination": "/suites/fogo.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-amazonas",
+  "destination": "/suites/amazonas.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-bartira",
+  "destination": "/suites/bartira.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-vanilla",
+  "destination": "/suites/vanilla.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-buriti",
+  "destination": "/suites/buriti.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-simba-safari",
+  "destination": "/suites/simba-safari.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-irati",
+  "destination": "/suites/irati.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-agua",
+  "destination": "/suites/agua.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-orquidia-terra",
+  "destination": "/suites/orquidea-terra.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suites-tematica-bronze-lenda",
+  "destination": "/suites/bronze-lenda.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-terra",
+  "destination": "/suites/terra.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-maria-bonita",
+  "destination": "/suites/maria-bonita.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-amarula",
+  "destination": "/suites/amarula.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-romantica",
+  "destination": "/suites/romantica.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-indiana",
+  "destination": "/suites/indiana.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-safari-ii",
+  "destination": "/suites/safari-ii.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-savana",
+  "destination": "/suites/savana.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/pousadas-em-brotas/suite-tematica-safari",
+  "destination": "/suites/safari.html",
+  "tipo": "suite"
+ },
+ {
+  "source": "/cantinho-decor",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/motivos-para-uma-segunda-lua-de-mel",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/aniversario-de-namoro",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/ofuro-cromoterapico",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/cervejaria-hzb",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/promocao-vale-presente-pousada-das-nascentes",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/feriado-municipal-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/coaching-programas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/5-lugares-romanticos-em-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/brotas-uma-viagem-charmosa",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/lugares-mais-bonitos-do-brasil",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/pousadas-romanticas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/pacote-de-viagem-para-casal",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/atividades-casais-em-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/dicas-de-viagem",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/dia-dos-pais",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/dia-dos-namorados-no-interior",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/aventura-o-ano-todo-em-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/pousada-para-casais-em-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/certificado-excelencia-tripadvisor",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/banho-de-cachoeira-em-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/campanha-rede-solidaria",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/estamos-voltando",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/hotel-que-aceita-cachorro",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/nao-caia-em-golpes-de-perfis-fakes",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/inverno-em-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/pousada-romantica-proxima-as-mais-belas-cachoeiras-de-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/pousada-das-nascentes-romance-natureza-e-aventura",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/ja-experimentou-o-nomadismo-digital",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/sete-beneficios-exclusivos-para-os-clientes-da-pousada-das-nascentes",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/3-lugares-para-visitar-em-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/natal-romantico-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/janeiro-o-que-fazer-em-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/corporativo",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/depoimentos",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/contato",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/pacotes-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/consulta-enviada",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/pre-reserva-enviada",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/pousada-em-brotas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/na-midia",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/sala-de-massagem",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/orientacao-profissional-com-coaching",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/tarifario",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/pousadas-em-brotas-sp",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/onde-fica-a-pousada-das-nascentes",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/lua-de-mel",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/fondue-nas-suites-tematicas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/cafe-da-manha",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ },
+ {
+  "source": "/suites-tematicas",
+  "destination": "/blog.html",
+  "tipo": "post-sem-pagina"
+ }
+]
