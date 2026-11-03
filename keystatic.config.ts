@@ -61,7 +61,7 @@ export default config({
         ...seoFields,
         fotoHero: fields.image({ label: 'Foto principal', directory: 'public/uploads/pacotes', publicPath: '/uploads/pacotes/', validation: { isRequired: true } }),
         fotoAlt: fields.text({ label: 'SEO · Descrição da foto principal (alt)', description: 'Descreva o que aparece na foto. Se couber, use a palavra-chave.', validation: { isRequired: true, length: { min: 10, max: 125 } } }),
-        etiqueta: fields.text({ label: 'Etiqueta acima do título', description: 'Ex.: Fique 3, pague 2 em outubro', ...check }),
+        etiqueta: fields.text({ label: 'Etiqueta acima do título (ex.: nome do pacote)', description: 'Até 40 caracteres, para não quebrar linha no celular. Não é título (não conta como H1). Ex.: Pacote Feriado de Natal', validation: { isRequired: true, length: { max: 40 } } }),
         tituloAntes: fields.text({ label: 'Título (parte normal) · vira o H1', description: 'Junto com a parte em destaque forma o título principal da página (H1). Ex.: Três noites em Brotas,', ...check }),
         tituloDestaque: fields.text({ label: 'Título (parte em destaque, itálico) · vira o H1', description: 'Continuação do H1, em itálico. Ex.: pagando duas' }),
         chamada: fields.text({ label: 'Texto de apoio', multiline: true, ...check }),
