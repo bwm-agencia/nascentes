@@ -33,7 +33,18 @@ import '../styles/localizacao.css';
       </div>
     </div>
     <div class="lc-frame reveal">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.610511821225!2d-48.009450684617974!3d-22.443680985249287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7a1f406480b45%3A0xedfa8b4d5f23abf0!2sPousada+das+Nascentes!5e0!3m2!1spt-BR!2sbr!4v1444487667617" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da Pousada das Nascentes" allowfullscreen></iframe>
+      <div class="lc-ph" id="lc-ph">
+        <p class="lc-ph-t">Mapa da Pousada das Nascentes</p>
+        <p class="lc-ph-s">Para exibir o mapa, o Google poderá usar cookies. Ele só carrega se você clicar.</p>
+        <button type="button" class="lc-btn primary" id="lc-load">Carregar mapa</button>
+      </div>
+      <iframe id="lc-map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.610511821225!2d-48.009450684617974!3d-22.443680985249287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c7a1f406480b45%3A0xedfa8b4d5f23abf0!2sPousada+das+Nascentes!5e0!3m2!1spt-BR!2sbr!4v1444487667617" title="Mapa da Pousada das Nascentes" referrerpolicy="no-referrer-when-downgrade" allowfullscreen hidden></iframe>
+      <script is:inline>
+        document.getElementById('lc-load').addEventListener('click',function(){
+          var f=document.getElementById('lc-map');f.src=f.dataset.src;f.hidden=false;
+          document.getElementById('lc-ph').hidden=true;
+        });
+      </script>
     </div>
   </div>
 </section>

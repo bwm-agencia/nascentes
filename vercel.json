@@ -359,7 +359,7 @@
   },
   {
    "source": "/hotel-que-aceita-cachorro",
-   "destination": "/blog",
+   "destination": "/blog/hotel-que-aceita-cachorro",
    "permanent": true
   },
   {

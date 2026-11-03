@@ -356,8 +356,8 @@
  },
  {
   "source": "/hotel-que-aceita-cachorro",
-  "destination": "/blog",
-  "tipo": "post-sem-pagina"
+  "destination": "/blog/hotel-que-aceita-cachorro",
+  "tipo": "post"
  },
  {
   "source": "/nao-caia-em-golpes-de-perfis-fakes",
