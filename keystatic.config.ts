@@ -253,7 +253,7 @@ export default config({
     }),
 
     posts: collection({
-      label: 'Posts do blog (novos)',
+      label: 'Guia de Brotas · posts (novos)',
       slugField: 'titulo',
       path: 'src/content/posts/*',
       format: { contentField: 'corpo' },

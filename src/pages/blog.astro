@@ -7,13 +7,13 @@ import { listPosts, img } from '../lib/content';
 const novos = await listPosts();
 const slugCat = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
-<Layout title={"Blog — Novidades e dicas de Brotas | Pousada das Nascentes"} headExtra={"<meta name=\"description\" content=\"Dicas de Brotas, cachoeiras, gastronomia, roteiros a dois e novidades da Pousada das Nascentes.\">"} script="/js/blog.js">
+<Layout title={"Guia de Brotas — Dicas, roteiros e novidades | Pousada das Nascentes"} headExtra={"<meta name=\"description\" content=\"Dicas de Brotas, cachoeiras, gastronomia, roteiros a dois e novidades da Pousada das Nascentes.\">"} script="/js/blog.js">
 <Menu active="/blog" />
 
 <section class="bl-hero">
   <div class="glow-orb"></div>
   <div class="inner">
-    <p class="eyebrow">Blog</p>
+    <p class="eyebrow">Guia de Brotas</p>
     <h1>Novidades e dicas <em>de Brotas</em></h1>
     <p class="lead">Roteiros, cachoeiras, gastronomia, novidades da pousada e ideias para viagens a dois na Capital da Aventura.</p>
     <div class="bl-filter" role="group" aria-label="Filtrar por categoria"><button type="button" data-f="all" aria-pressed="true">Todos</button><button type="button" data-f="destaques-de-brotas" aria-pressed="false">Destaques de Brotas</button><button type="button" data-f="gastronomia" aria-pressed="false">Gastronomia</button><button type="button" data-f="novidades-da-pousada" aria-pressed="false">Novidades da Pousada</button><button type="button" data-f="pacotes-e-feriados" aria-pressed="false">Pacotes e Feriados</button><button type="button" data-f="romance-e-lua-de-mel" aria-pressed="false">Romance e Lua de Mel</button><button type="button" data-f="turismo-de-aventura-e-ecoturismo" aria-pressed="false">Turismo de Aventura e Ecoturismo</button></div>
