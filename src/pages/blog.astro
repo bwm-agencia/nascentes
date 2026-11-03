@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Menu from '../components/Menu.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/blog.css';
+import { listPosts, img } from '../lib/content';
+const novos = await listPosts();
+const slugCat = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
 <Layout title={"Blog — Novidades e dicas de Brotas | Pousada das Nascentes"} headExtra={"<meta name=\"description\" content=\"Dicas de Brotas, cachoeiras, gastronomia, roteiros a dois e novidades da Pousada das Nascentes.\">"} script="/js/blog.js">
 <Menu active="/blog" />
@@ -18,7 +21,13 @@ import '../styles/blog.css';
 </section>
 <section class="bl-list">
   <div class="bl-grid" id="bl-grid">
-    <a class="bl-card reveal featured" href="/blog/descubra-os-encantos-de-brotas-na-baixa-temporada" data-cat="destaques-de-brotas">
+    {novos.map((n, i) => (
+      <a class={`bl-card reveal${i === 0 ? ' featured' : ''}`} href={`/blog/${n.slug}`} data-cat={slugCat(n.entry.categoria)}>
+        <div class="thumb"><img src={img(n.entry.foto)} alt={n.entry.titulo} loading="lazy" /></div>
+        <div class="body"><div class="bl-meta"><span class="cat">{n.entry.categoria}</span></div><h2>{n.entry.titulo}</h2><p>{n.entry.resumo}</p><span class="more">Ler artigo →</span></div>
+      </a>
+    ))}
+    <a class={`bl-card reveal${novos.length ? '' : ' featured'}`} href="/blog/descubra-os-encantos-de-brotas-na-baixa-temporada" data-cat="destaques-de-brotas">
       <div class="thumb"><img src="/fotos-site/202204-parque-dos-saltos.webp" alt="Descubra os encantos de Brotas na baixa temporada" loading="lazy"></div>
       <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Descubra os encantos de Brotas na baixa temporada</h2><p>Na baixa temporada, Brotas é toda sua. E na Pousada das Nascentes, você vive essa experiência com charme, conforto e tudo o que importa: paz, natureza e alma renovada!</p><span class="more">Ler artigo →</span></div>
     </a>

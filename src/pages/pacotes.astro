@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Menu from '../components/Menu.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/pacotes.css';
+import { listPacotes, img, wa } from '../lib/content';
+const novos = await listPacotes();
+const temDestaque = novos.some((n) => n.entry.destaque);
+const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
 ---
 <Layout title={"Pacotes para Brotas — Pousada das Nascentes"} script="/js/pacotes.js">
 <Menu active="/pacotes" /><section class="subhero" id="top">
@@ -21,7 +25,23 @@ import '../styles/pacotes.css';
     <p>Preparamos excelentes alternativas para curtir Brotas — do jeito de sempre ou em datas especiais. Fale com a gente e complete seu pacote com opcionais.</p>
   </div>
   <div class="package-grid">
-    <div class="package-card reveal package-card--featured">
+    {novos.map((n) => (
+      <div class={`package-card reveal${n.entry.destaque ? ' package-card--featured' : ''}`}>
+        <div class="photo" style={`background-image:url('${img(n.entry.fotoHero)}'); background-position:center 55%;`}></div>
+        <div class="body">
+          <p class="eyebrow">{n.entry.etiqueta}</p>
+          <h3><a href={`/pacotes/${n.slug}`}>{n.entry.titulo}</a></h3>
+          <ul>
+            {(n.entry.inclui[0]?.itens ?? []).slice(0, 6).map((it) => <li><Fragment set:html={tick} />{it.texto}</li>)}
+          </ul>
+          <div class="actions">
+            <a class="btn-book" href={wa(n.entry.mensagemWhatsapp)} target="_blank" rel="noopener">Reservar</a>
+            <a class="btn-details" href={`/pacotes/${n.slug}`}>Detalhes</a>
+          </div>
+        </div>
+      </div>
+    ))}
+    <div class={`package-card reveal${temDestaque ? '' : ' package-card--featured'}`}>
       <div class="photo" style="background-image:url('/fotos-casais/pousada-das-nascentes-ia-3.webp'); background-position:center 55%;"></div>
       <div class="body">
         <p class="eyebrow">Pacote em destaque · 2 diárias</p>

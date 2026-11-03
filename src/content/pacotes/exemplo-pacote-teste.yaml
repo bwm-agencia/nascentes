@@ -1,0 +1,33 @@
+titulo: Modelo de pacote (não publicado)
+publicado: false
+destaque: false
+metaTitulo: Pacote de exemplo | Pousada das Nascentes
+metaDescricao: Pacote de exemplo para testar o painel de edição da Pousada das Nascentes.
+fotoHero: /fotos-casais/nascentes-fotos-novas-26-ia-2.webp
+fotoAlt: Casal relaxando na suíte temática
+etiqueta: Exemplo
+tituloAntes: Um fim de semana em Brotas,
+tituloDestaque: sem pressa
+chamada: Texto de exemplo para validar o modelo de pacote.
+precoValor: "999"
+precoTermos: a partir de, 2 noites para o casal
+validade: Exemplo
+mensagemWhatsapp: Olá! Vi o pacote de exemplo no site e quero reservar.
+opcoes: []
+notaOpcoes: ""
+inclui:
+  - titulo: Estadia
+    itens:
+      - texto: 2 diárias em suíte temática
+        detalhe: com hidromassagem ou ofurô
+      - texto: Café da manhã completo
+        detalhe: ""
+resumo:
+  - rotulo: Estadia
+    valor: 2 noites
+faq:
+  - pergunta: Como reservo?
+    resposta: Pelo WhatsApp, direto com a equipe.
+ctaEtiqueta: Vagas limitadas
+ctaTitulo: Garanta o seu fim de semana
+ctaTexto: Chame no WhatsApp e confirmamos a disponibilidade.

@@ -5,11 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "node scripts/optimize-uploads.mjs && astro build",
+    "preview": "astro preview",
+    "dev:admin": "ADMIN=1 astro dev",
+    "build:admin": "ADMIN=1 node scripts/optimize-uploads.mjs && ADMIN=1 astro build"
   },
   "dependencies": {
-    "astro": "^7.4.1"
+    "@astrojs/react": "^7.1.0",
+    "@astrojs/vercel": "^11.0.18",
+    "@keystatic/astro": "^6.0.0",
+    "@keystatic/core": "^0.6.9",
+    "astro": "^7.4.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
     "@fontsource-variable/manrope": "^5.3.0",
