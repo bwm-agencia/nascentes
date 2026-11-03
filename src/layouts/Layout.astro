@@ -18,10 +18,11 @@ const canonical = siteUrl + (path === '/' ? '/' : path);
 const pick = (re: RegExp) => headExtra.match(re)?.[1];
 const robots = pick(/<meta name="robots" content="([^"]*)"/);
 const noindex = !!robots && /noindex/i.test(robots);
+const published = pick(/<meta property="article:published_time" content="([^"]*)"/);
 const description = pick(/<meta name="description" content="([^"]*)"/) ?? descriptions[path] ?? defaultDescription;
 const ogTitle = pick(/<meta property="og:title" content="([^"]*)"/) ?? title;
 const segs0 = path.split('/').filter(Boolean);
-let image = pick(/<meta property="og:image" content="([^"]*)"/) ?? (segs0[0] === 'suites' && segs0[1] ? `/fotos-suites/${segs0[1]}/hero.jpg` : business.defaultImage);
+let image = pick(/<meta property="og:image" content="([^"]*)"/) ?? (segs0[0] === 'suites' && segs0[1] ? `/fotos-suites/${segs0[1]}/hero.webp` : business.defaultImage);
 if (!/^https?:/.test(image)) image = siteUrl + '/' + image.replace(/^(\.\.\/|\.\/|\/)+/, '');
 const extra = headExtra
   .replace(/<meta name="description"[^>]*>\s*/g, '')
@@ -77,6 +78,7 @@ if (seg[0] === 'blog' && seg.length === 2) {
     image,
     mainEntityOfPage: canonical,
     inLanguage: 'pt-BR',
+    ...(published ? { datePublished: published } : {}),
     author: { '@id': hotelId },
     publisher: { '@id': hotelId },
   });

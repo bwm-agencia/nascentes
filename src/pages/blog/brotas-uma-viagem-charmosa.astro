@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Menu from '../../components/Menu.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/blog.css';
+const body = "<p>Os casais que desejam viajar para viverem grandes momentos, encontram em Brotas uma viagem charmosa. E a <strong>Pousada das Nascentes</strong> se encaixa perfeitamente nesse quesito, pois aqui trabalhamos para ser esse destino que os casais tanto procuram.</p>\n<p>A <strong>Capital da Aventura</strong> apresenta o cenário perfeito para uma <strong>viagem romântica</strong>. Bem localizada, no centro do estado a aproximadamente 250 km de São Paulo, o acesso à cidade se dá por uma das melhores rodovias do país e com um cenário deslumbrante. Isso sem contar que não há engarrafamentos, como por exemplo, nas descidas para as praias. Os ares do interior contagiam demais, e a sensação é a de liberdade e descanso.</p>\n<p>Destino predileto de muitos casais, Brotas proporciona belas paisagens com seus atrativos naturais, atividades de aventura e ecoturismo e a gastronomia de primeira. Todos estes atributos compõem perfeitamente uma viagem que irá te surpreender. E a Pousada das Nascentes, como sempre, atua como um “guia” para facilitar o seu planejamento de viagem. Então, vamos começar a planejar? Gastronomia, aventuras, natureza e contemplação… Temos <strong><a href=\"/blog\">muitas dicas</a></strong> para que você aproveite em <strong>Brotas, uma viagem charmosa</strong>!</p>\n<h2>Venha para Brotas, uma viagem charmosa espera por você</h2>\n<p><img src=\"/blog-fotos/201507-pousada-em-brotas-nascentes-300x200.webp\" alt=\"Pousada em Brotas - Viagem Charmosa para Brotas\" loading=\"lazy\">Não poderíamos começar seu planejamento de uma viagem charmosa sem uma pousada que seja perfeita para os casais. E quem já conhece a <strong><a href=\"https://www.facebook.com/pousadadasnascentesbrotas\" target=\"_blank\" rel=\"noopener\">Pousada das Nascentes</a></strong> sabe que aqui  atmosfera é diferente. Podemos elencar diversos motivos para uma viagem a dois.</p>\n<p>E nesse momento tão charmoso o que não podem faltar são os mimos, não é mesmo? Decoração especial romântica, uma suíte temática com diferenciais como ofurô e hidromassagem e aquela paz e tranquilidade do interior.</p>\n<h3>Suítes temáticas</h3>\n<p>A Pousada das Nascentes quer lhes oferecer o que há de mais perfeito para esse momento ser especial. Todos os <strong><a href=\"/suites\">quartos são temáticos</a></strong> com excelentes banheiras de hidromassagem, sendo alguns deles com Ofurô Cromoterápico. Ainda, para momentos de prazer e romantismo, nossos hóspedes podem solicitar uma boa garrafa de champanhe para brindar essa viagem inesquecível.</p>";
+---
+<Layout title={"Brotas: uma viagem charmosa | Pousada das Nascentes"} headExtra={"<meta name=\"description\" content=\"Em Brotas, uma viagem charmosa é uma excelente pedida em um final de semana diferente do trivial para casais apaixonados, veja.\">\n<meta property=\"og:image\" content=\"/blog-fotos/201707-brotas-uma-viagem-charmosa.webp\">\n<meta property=\"article:published_time\" content=\"2019-01-10\">"} script="/js/blog.js">
+<Menu active="/blog" />
+
+<section class="ar-hero">
+  <div class="photo" style="background-image:url('/blog-fotos/201707-brotas-uma-viagem-charmosa.webp');" role="img" aria-label={"Brotas: uma viagem charmosa"}></div>
+  <div class="inner">
+    <a class="back" href="/blog">← Voltar para o blog</a>
+    <div class="bl-meta"><span class="cat">Destaques de Brotas</span></div>
+    <h1>Brotas: uma viagem charmosa</h1>
+  </div>
+</section>
+<article class="ar-body">
+  <div class="content">
+<Fragment set:html={body} />
+  </div>
+  <div class="ar-cta reveal">
+    <div><p class="eyebrow">Pousada das Nascentes</p><h2>Vem viver Brotas com a gente</h2><p>Suítes temáticas com hidromassagem ou ofurô, no Circuito das Cachoeiras.</p></div>
+    <div class="btns"><a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Vim%20pelo%20blog%20e%20gostaria%20de%20consultar%20valores%20e%20disponibilidade." target="_blank" rel="noopener">Reservar no WhatsApp</a></div>
+  </div>
+</article>
+<section class="ar-more">
+  <div class="suite-section-head reveal"><p class="eyebrow">Continue lendo</p><h2>Outras novidades</h2></div>
+  <div class="bl-grid">
+    <a class="bl-card reveal" href="/blog/5-lugares-romanticos-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201508-fim-de-semana-a-dois-em-brotas.webp" alt="5 Lugares românticos em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>5 Lugares românticos em Brotas</h2><p>A Pousada das Nascentes preparou algumas dicas para vocês. Escolhemos 5 lugares românticos em Brotas para se apreciar, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/cervejaria-hzb" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201510-cerveja-hzb.webp" alt="Cervejaria HZB e Pousada das Nascentes, união de sabores e sensações" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Cervejaria HZB e Pousada das Nascentes, união de sabores e sensações</h2><p>Aqui na Pousada das Nascentes, você encontra os produtos da Cervejaria HZB para saborear nos momentos de lazer ao lado de quem você mais ama.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/ofuro-cromoterapico" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201507-pousada-brotas-orquidea-terra-3-300x200.webp" alt="Ofurô Cromoterápico na Pousada das Nascentes" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Ofurô Cromoterápico na Pousada das Nascentes</h2><p>Um Ofurô Cromoterápico pode ser um algo a mais para você descansar com qualidade, e nós oferecemos essa opção com condições incríveis, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+  </div>
+</section>
+<Footer />
+</Layout>

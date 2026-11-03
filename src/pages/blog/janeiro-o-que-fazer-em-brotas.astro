@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Menu from '../../components/Menu.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/blog.css';
+const body = "<p>Janeiro está se aproximando em um ritmo frenético e acelerado e por isso já está na hora de pensar nas merecidas e esperadas férias de janeiro. E para quem está buscando por bons momentos com diversão, descanso, relaxamento e até aventura, Brotas pode ser o destino ideal.</p>\n<h3>Recanto das cachoeiras</h3>\n<figure><img src=\"/blog-fotos/202112-recanto-das-cachoeiras.webp\" alt=\"\" loading=\"lazy\"></figure>\n<p>Um parque com duas lindas cachoeiras: a Roseira e a Santo Antônio e uma infraestrutura de lazer de encher os olhos, o local conta com oásis (parece uma prainha) e piscina de borda infinita com vista para o vale, perfeita para fotos incríveis.</p>\n<h2>Rafting</h2>\n<figure><img src=\"/blog-fotos/201507-rafting-corporativo.webp\" alt=\"Treinamento em Brotas\" loading=\"lazy\"></figure>\n<p>Um esporte muito praticado e difundido na cidade merece uma chance sua. Aqui você experimentará em um esporte radical, aventura, adrenalina, superação e muita diversão ao desbravar as corredeiras do Rio Jacaré Pepira com obstáculos pelo caminho.</p>\n<h2>Gastronomia</h2>\n<p>Um destino turístico sem uma boa culinária não é completo, concorda? Brotas não deixa a desejar neste quesito, pois conta com restaurantes maravilhosos, que oferecem mais que uma boa gastronomia, oferecem uma experiência completa.</p>\n<h3>Vila Del Capo Restaurante e Antiquário</h3>\n<figure><img src=\"/blog-fotos/201606-vila-del-capo.webp\" alt=\"Vila del Capo em Brotas\" loading=\"lazy\"></figure>\n<p>Preparado para um mergulho em anos passados? Ao adentrar o antiquário Villa Del Capo a nostalgia tomará conta da sua visita. Além do mais, você poderá ver e até conhecer tradições e costumes antigos, por meio dos objetos em exposição. Um local para viver e reviver.</p>\n<p>A culinária é um espetáculo à parte, com pratos à lá carte e raízes na gastronomia italiana, você receberá pratos exclusivos e deliciosos que variam no cardápio entre massas, risotos, peixes e carnes (branca e vermelha).</p>\n<h3>Restaurante Brotas Bar</h3>\n<figure><img src=\"/blog-fotos/202112-brotas-bar.webp\" alt=\"\" loading=\"lazy\"></figure>\n<p>Este badalado restaurante temático, vale a pena ser visitado, apreciado e degustado. Com uma refinada gastronomia, não deixa a desejar em nada, com sua comida ítalo-brasileira e um cardápio especial, baseado em experiências vividas pelo país e mundo afora.</p>\n<p>O restaurante é dono de um ambiente incrível com decoração sobre os esportes de aventura, da cidade de Brotas, ou seja, o tema do restaurante é a própria cidade, que conta até com um museu para ser apreciado em seu interior. O Restaurante é um dos cartões postais da cidade de Brotas.</p>\n<h3>Especialeria</h3>\n<figure><img src=\"/blog-fotos/202112-especialeria-brotas.webp\" alt=\"\" loading=\"lazy\"></figure>\n<p>Uma refinada doceria, que tem como missão proporcionar momentos especiais. Um local onde os doces são confeccionados artesanalmente, o café é coado na mesa, proporcionando um aroma maravilhoso, já que os cafés oferecidos são diferenciados.</p>\n<p>A dica é: experimente o famoso sorvete de queijo, inesquecível.</p>\n<h2>A Pousada das Nascentes é perfeita para a sua estadia durante as suas merecidas férias de janeiro</h2>\n<p>Suas suítes contam com estrutura completa para proporcionar o conforto e o descanso que você precisa e voltar energizado de uma viagem maravilhosa. A Pousada está localizada perto das cachoeiras e parques e acessível aos restaurantes.</p>\n<p>Além do mais, durante a reserva ou sua estadia, a equipe da recepção pode te auxiliar na reserva dos passeios e atividades que você deseja fazer, deixando sua estada muito mais cômoda e relaxante.</p>\n<p>Aproveite a oportunidade e desfrute do seu merecido descanso nas férias de janeiro.</p>";
+---
+<Layout title={"Descanso merecido em janeiro: O que fazer em Brotas?"} headExtra={"<meta name=\"description\" content=\"Para quem está buscando por bons momentos com diversão, descanso, relaxamento e até aventura, Brotas pode ser o destino ideal, confira!\">\n<meta property=\"og:image\" content=\"/blog-fotos/202010-pousada-das-nascentes-56-1.webp\">\n<meta property=\"article:published_time\" content=\"2021-12-16\">"} script="/js/blog.js">
+<Menu active="/blog" />
+
+<section class="ar-hero">
+  <div class="photo" style="background-image:url('/blog-fotos/202010-pousada-das-nascentes-56-1.webp');" role="img" aria-label={"Descanso merecido em janeiro: O que fazer em Brotas?"}></div>
+  <div class="inner">
+    <a class="back" href="/blog">← Voltar para o blog</a>
+    <div class="bl-meta"><span class="cat">Novidades da Pousada</span></div>
+    <h1>Descanso merecido em janeiro: O que fazer em Brotas?</h1>
+  </div>
+</section>
+<article class="ar-body">
+  <div class="content">
+<Fragment set:html={body} />
+  </div>
+  <div class="ar-cta reveal">
+    <div><p class="eyebrow">Pousada das Nascentes</p><h2>Vem viver Brotas com a gente</h2><p>Suítes temáticas com hidromassagem ou ofurô, no Circuito das Cachoeiras.</p></div>
+    <div class="btns"><a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Vim%20pelo%20blog%20e%20gostaria%20de%20consultar%20valores%20e%20disponibilidade." target="_blank" rel="noopener">Reservar no WhatsApp</a></div>
+  </div>
+</article>
+<section class="ar-more">
+  <div class="suite-section-head reveal"><p class="eyebrow">Continue lendo</p><h2>Outras novidades</h2></div>
+  <div class="bl-grid">
+    <a class="bl-card reveal" href="/blog/3-lugares-para-visitar-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201507-parque-jacare-1024x681.webp" alt="Brotas além das águas: veja 3 lugares para visitar na cidade e se encantar" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Brotas além das águas: veja 3 lugares para visitar na cidade e se encantar</h2><p>Em sua próxima viagem inclua esses locais em seu roteiro e aproveite essa experiência cultural e deliciosa que Brotas proporciona, é incrível.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/ja-experimentou-o-nomadismo-digital" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/202108-pousada-das-nascentes-nomadismo-digital-2.webp" alt="Já experimentou o nomadismo digital?" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Já experimentou o nomadismo digital?</h2><p>Esse é um estilo de vida onde as pessoas conseguem viajar ou viver em diferentes lugares por tempos determinados sem deixar a carreira de lado, entenda.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/pousada-das-nascentes-romance-natureza-e-aventura" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201507-brotas-pousada-das-nascentes-27-1.webp" alt="Pousada das Nascentes: romance, natureza e aventura" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Pousada das Nascentes: romance, natureza e aventura</h2><p>A dica de hoje é para os casais apaixonados e amantes da natureza e aventura e ressaltar os benefícios de uma viagem romântica.</p><span class="more">Ler artigo →</span></div>
+    </a>
+  </div>
+</section>
+<Footer />
+</Layout>

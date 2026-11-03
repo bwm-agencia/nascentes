@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import '@fontsource-variable/playfair-display/wght.css';
+@import '@fontsource-variable/playfair-display/wght-italic.css';
+@import '@fontsource-variable/manrope/wght.css';
 
 :root{
   --ink:#0B0607;
@@ -12,8 +14,8 @@
   --mist:#F3EDE2;
   --smoke:#C6A29D;
 
-  --display:'Playfair Display', serif;
-  --body:'Manrope', sans-serif;
+  --display:'Playfair Display Variable', 'Playfair Display', Georgia, serif;
+  --body:'Manrope Variable', 'Manrope', system-ui, sans-serif;
 
   --pad: clamp(24px, 5vw, 96px);
   --max: 1320px;
@@ -776,7 +778,7 @@ section{ position:relative; }
 
 /* ===== Lua de mel ===== */
 .lm-hero{ position:relative; min-height:100svh; display:flex; align-items:flex-end; overflow:hidden; }
-.lm-hero .photo{ position:absolute; inset:0; background:url('/fotos-casais/nascentes-casal-na-cama-toalhas-ia.jpg') center 42%/cover no-repeat; transform:scale(1.05); animation:lmSettle 2.6s var(--ease) forwards; }
+.lm-hero .photo{ position:absolute; inset:0; background:url('/fotos-casais/nascentes-casal-na-cama-toalhas-ia.webp') center 42%/cover no-repeat; transform:scale(1.05); animation:lmSettle 2.6s var(--ease) forwards; }
 @keyframes lmSettle{ to{ transform:scale(1); } }
 .lm-hero::after{ content:''; position:absolute; inset:0; background:linear-gradient(90deg, rgba(11,6,7,.9) 0%, rgba(11,6,7,.55) 40%, rgba(11,6,7,.05) 75%), linear-gradient(0deg, rgba(11,6,7,.85), transparent 45%); }
 .lm-hero .inner{ position:relative; z-index:2; width:100%; max-width:var(--max); margin:0 auto; padding:140px var(--pad) clamp(56px,8vw,100px); }

@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Menu from '../../components/Menu.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/blog.css';
+const body = "<h2>A Pousada das Nascentes é especializada em promover esses momentos inesquecíveis</h2>\n<p>Muitos casais fazem <strong>aniversário de namoro</strong> nessa época do ano. O carnaval, as férias de verão, a viagem para Brotas. Essa é a época em que costumamos construir novas amizades e conhecer novas pessoas, e por consequência as unindo com um motivo maior. Muito dos casos de “amizade de verão” acabam se tornando relacionamentos sérios, fortes e duradouros. Por isso a Pousada das Nascentes está sempre preparada pra proporcionar o que de melhor nossa infra estrutura oferece para esquentar a relação do casal. Você já conhece alguma de nossas suítes temáticas? Ainda não? Não sabe o que está perdendo! Muitos casais escolhem a nossa pousada para passar o <strong>aniversário de namoro </strong>pela atmosfera de romance que nós temos.</p>\n<h2>Suítes temáticas: Um brinde para seu aniversário de namoro</h2>\n<figure><img src=\"/blog-fotos/201508-pousada-brotas-terra.webp\" alt=\"pousada-brotas-terra\" loading=\"lazy\"></figure>\n<p>Essa é uma pequena ilustração do que você pode proporcionar à pessoa que mais ama, uma decoração especial com pétalas de rosa, cestas de chocolate e momentos especiais em uma de nossas hidromassagens. O <strong>aniversário de namoro </strong>é uma ocasião especial, e uma viagem para Brotas é um atrativo a mais, já que vivemos o dia a dia com muita intensidade e normalmente não encontramos tempo para nós mesmos. Chegou a hora de esquecer um pouco dos problemas e do trabalho. A natureza do interior espera você para brindar esse momento incrível. Para que nessa viagem tudo seja perfeito, recomendamos nossa <a href=\"/suites/romantica\">Suíte Romântica</a>. Ideal para casais apaixonados, ela é totalmente decorada nos tons da cor rosa, ideal para seu <strong>aniversário de namoro</strong> . É um quarto clean e romântico, cheio de detalhes com almofadas, sofá, mantas, tapetes, aparador e abajur. Nele você dispõe de Banheiro com hidromassagem e jardim de inverno, uma banheira redonda revestida de granito santa Cecília para duas pessoas. Ducha com aquecimento por energia solar e à gás e Internet WIFI.</p>\n<h3><a href=\"/\">Quero passar meu <strong>aniversário de namoro</strong> na Pousada das Nascentes</a></h3>\n<p>Aproveite para presentear a pessoa que mais ama com um fim de semana super especial na Pousada das Nascentes. O seu <strong>aniversário de namoro</strong> a partir de agora nunca mais será o mesmo! Entre em contato e saiba mais informações sobre o que nós podemos preparas especialmente para esta data. Estamos esperando.</p>";
+---
+<Layout title={"Venha comemorar seu aniversário de namoro"} headExtra={"<meta name=\"description\" content=\"Muitos casais escolhem a Pousada das Nascentes para passar o seu aniversário de namoro pela atmosfera de romance que nós temos, conheça mais.\">\n<meta property=\"og:image\" content=\"/blog-fotos/201508-aniversario-de-namoro.webp\">\n<meta property=\"article:published_time\" content=\"2015-08-07\">"} script="/js/blog.js">
+<Menu active="/blog" />
+
+<section class="ar-hero">
+  <div class="photo" style="background-image:url('/blog-fotos/201508-aniversario-de-namoro.webp');" role="img" aria-label={"Venha comemorar seu aniversário de namoro"}></div>
+  <div class="inner">
+    <a class="back" href="/blog">← Voltar para o blog</a>
+    <div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div>
+    <h1>Venha comemorar seu aniversário de namoro</h1>
+  </div>
+</section>
+<article class="ar-body">
+  <div class="content">
+<Fragment set:html={body} />
+  </div>
+  <div class="ar-cta reveal">
+    <div><p class="eyebrow">Pousada das Nascentes</p><h2>Vem viver Brotas com a gente</h2><p>Suítes temáticas com hidromassagem ou ofurô, no Circuito das Cachoeiras.</p></div>
+    <div class="btns"><a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Vim%20pelo%20blog%20e%20gostaria%20de%20consultar%20valores%20e%20disponibilidade." target="_blank" rel="noopener">Reservar no WhatsApp</a></div>
+  </div>
+</article>
+<section class="ar-more">
+  <div class="suite-section-head reveal"><p class="eyebrow">Continue lendo</p><h2>Outras novidades</h2></div>
+  <div class="bl-grid">
+    <a class="bl-card reveal" href="/blog/motivos-para-uma-segunda-lua-de-mel" data-cat="romance-e-lua-de-mel">
+      <div class="thumb"><img src="/blog-fotos/201508-segunda-lua-de-mel-em-brotas.webp" alt="Motivos para uma segunda lua de mel" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div><h2>Motivos para uma segunda lua de mel</h2><p>A segunda lua de mel é como uma injeção de boas vibrações e sensações, e a Pousada das Nascentes é o destino ideal para essa ocasião.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/cantinho-decor" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201508-cantinho-decor-pousada-das-nascentes-brotas1.webp" alt="Cantinho Decor" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Cantinho Decor</h2><p>A Pousada das Nascentes oferece o Cantinho Decor como mais uma opção de compra. Leve para casa um pedacinho de Brotas e também de nossa pousada.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/janeiro-o-que-fazer-em-brotas" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/202010-pousada-das-nascentes-56-1.webp" alt="Descanso merecido em janeiro: O que fazer em Brotas?" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Descanso merecido em janeiro: O que fazer em Brotas?</h2><p>Para quem está buscando por bons momentos com diversão, descanso, relaxamento e até aventura, Brotas pode ser o destino ideal, confira!</p><span class="more">Ler artigo →</span></div>
+    </a>
+  </div>
+</section>
+<Footer />
+</Layout>

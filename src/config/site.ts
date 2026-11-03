@@ -22,7 +22,7 @@ export const business = {
     'https://instagram.com/pousadadasnascentes',
     'https://www.tripadvisor.com.br/Hotel_Review-g793338-d2529742-Reviews-Pousada_das_Nascentes-Brotas_State_of_Sao_Paulo.html',
   ],
-  defaultImage: '/fotos-hero/foto-05.jpg',
+  defaultImage: '/fotos-hero/foto-05.webp',
 };
 
 export const defaultDescription =
@@ -44,8 +44,8 @@ export const tracking = {
 
 // Dados do controlador (política de privacidade). Preencha quando tivermos: aparecem na página só se existirem.
 export const controller = {
-  razaoSocial: '',
-  cnpj: '',
-  email: '',
+  razaoSocial: 'GIMENEZ BROTAS LTDA',
+  cnpj: '06.342.466/0001-51',
+  email: 'falecom@pousadadasnascentes.com.br',
   atualizadoEm: '3 de novembro de 2026',
 };
