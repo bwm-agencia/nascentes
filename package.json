@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/optimize-uploads.mjs && astro build",
+    "build": "node scripts/optimize-uploads.mjs && node scripts/seo-check.mjs && astro build",
     "preview": "astro preview",
     "dev:admin": "ADMIN=1 astro dev",
-    "build:admin": "ADMIN=1 node scripts/optimize-uploads.mjs && ADMIN=1 astro build"
+    "build:admin": "ADMIN=1 node scripts/optimize-uploads.mjs && ADMIN=1 astro build",
+    "seo:check": "node scripts/seo-check.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.0",

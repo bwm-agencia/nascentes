@@ -9,8 +9,8 @@ export async function GET() {
     .filter((p) => p !== '/404' && !p.includes('['))
     .map((p) => (p === '/index' ? '/' : p))
     .sort((a, b) => (a === '/' ? -1 : b === '/' ? 1 : a.localeCompare(b)));
-  for (const x of await listPacotes()) paths.push('/pacotes/' + x.slug);
-  for (const x of await listPosts()) paths.push('/blog/' + x.slug);
+  for (const x of (await listPacotes()).filter((i) => !i.entry.semIndexar)) paths.push('/pacotes/' + x.slug);
+  for (const x of (await listPosts()).filter((i) => !i.entry.semIndexar)) paths.push('/blog/' + x.slug);
   const body = paths.map((p) => `  <url><loc>${siteUrl}${p}</loc></url>`).join('\n');
   return new Response(
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`,

@@ -1,8 +1,11 @@
 titulo: Modelo de pacote (não publicado)
 publicado: false
 destaque: false
-metaTitulo: Pacote de exemplo | Pousada das Nascentes
-metaDescricao: Pacote de exemplo para testar o painel de edição da Pousada das Nascentes.
+palavraChave: pacote romântico em Brotas
+palavrasSecundarias: []
+metaTitulo: "Pacote romântico em Brotas: modelo de exemplo"
+semIndexar: true
+metaDescricao: "Modelo de pacote romântico em Brotas para a equipe copiar: suíte temática, café da manhã completo e reserva direto pelo WhatsApp."
 fotoHero: /fotos-casais/nascentes-fotos-novas-26-ia-2.webp
 fotoAlt: Casal relaxando na suíte temática
 etiqueta: Exemplo

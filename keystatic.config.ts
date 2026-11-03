@@ -5,6 +5,43 @@ const useGithub = process.env.KEYSTATIC_STORAGE === 'github';
 
 const check = { validation: { isRequired: true } };
 
+// ---------- Campos de SEO (iguais para pacotes e posts) ----------
+const seoFields = {
+  palavraChave: fields.text({
+    label: 'SEO · Palavra-chave principal',
+    description: 'A busca que esta página quer atender. Ex.: pousada romântica em Brotas. Ela deve aparecer no título, na descrição e no começo do texto.',
+    validation: { isRequired: true, length: { min: 3, max: 70 } },
+  }),
+  palavrasSecundarias: fields.array(fields.text({ label: 'Palavra-chave' }), {
+    label: 'SEO · Palavras-chave secundárias (opcional)',
+    description: 'Variações e termos relacionados. Use no texto de forma natural, sem repetir à força.',
+    itemLabel: (p) => p.value,
+  }),
+  metaTitulo: fields.text({
+    label: 'SEO · Título no Google (meta title)',
+    description: 'De 30 a 60 caracteres. Comece pela palavra-chave. Evite repetir o nome da pousada se o título ficar longo.',
+    validation: { isRequired: true, length: { min: 30, max: 60 } },
+  }),
+  metaDescricao: fields.text({
+    label: 'SEO · Descrição no Google (meta description)',
+    description: 'De 120 a 155 caracteres. Inclua a palavra-chave e um motivo para clicar (benefício, preço, chamada para ação).',
+    multiline: true,
+    validation: { isRequired: true, length: { min: 120, max: 155 } },
+  }),
+  imagemCompartilhamento: fields.image({
+    label: 'SEO · Imagem ao compartilhar (opcional)',
+    description: 'Aparece no WhatsApp, Facebook e LinkedIn. Ideal: 1200 x 630. Se vazio, usa a foto principal.',
+    directory: 'public/uploads/seo',
+    publicPath: '/uploads/seo/',
+  }),
+  semIndexar: fields.checkbox({
+    label: 'SEO · Não aparecer no Google (noindex)',
+    description: 'Marque só para páginas que não devem ser encontradas na busca, como pacotes de teste.',
+    defaultValue: false,
+  }),
+};
+
+
 export default config({
   storage: useGithub
     ? { kind: 'github', repo: { owner: 'bwm-agencia', name: 'nascentes' } }
@@ -21,10 +58,9 @@ export default config({
         titulo: fields.slug({ name: { label: 'Nome do pacote', description: 'Ex.: Pacote Feriado de Natal. Vira o endereço da página.', validation: { isRequired: true } } }),
         publicado: fields.checkbox({ label: 'Publicado no site', description: 'Desmarque para esconder o pacote sem apagá-lo.', defaultValue: true }),
         destaque: fields.checkbox({ label: 'Mostrar em destaque na lista de pacotes', defaultValue: false }),
-        metaTitulo: fields.text({ label: 'Título no Google', description: 'Até 60 caracteres.', ...check }),
-        metaDescricao: fields.text({ label: 'Descrição no Google', description: 'Até 155 caracteres.', multiline: true, ...check }),
+        ...seoFields,
         fotoHero: fields.image({ label: 'Foto principal', directory: 'public/uploads/pacotes', publicPath: '/uploads/pacotes/', validation: { isRequired: true } }),
-        fotoAlt: fields.text({ label: 'Descrição da foto (acessibilidade)', ...check }),
+        fotoAlt: fields.text({ label: 'SEO · Descrição da foto principal (alt)', description: 'Descreva o que aparece na foto. Se couber, use a palavra-chave.', validation: { isRequired: true, length: { min: 10, max: 125 } } }),
         etiqueta: fields.text({ label: 'Etiqueta acima do título', description: 'Ex.: Fique 3, pague 2 em outubro', ...check }),
         tituloAntes: fields.text({ label: 'Título (parte normal)', description: 'Ex.: Três noites em Brotas,', ...check }),
         tituloDestaque: fields.text({ label: 'Título (parte em destaque, itálico)', description: 'Ex.: pagando duas' }),
@@ -100,8 +136,17 @@ export default config({
           ],
           defaultValue: 'Destaques de Brotas',
         }),
-        metaTitulo: fields.text({ label: 'Título no Google (opcional)', description: 'Até 60 caracteres. Se vazio, usa o título do post.' }),
-        resumo: fields.text({ label: 'Resumo (aparece no Google e na lista do blog)', description: 'Até 155 caracteres.', multiline: true, validation: { isRequired: true, length: { max: 160 } } }),
+        ...seoFields,
+        resumo: fields.text({ label: 'Resumo do post (aparece no card da lista do blog)', description: 'De 80 a 200 caracteres. Pode ser diferente da descrição do Google.', multiline: true, validation: { isRequired: true, length: { min: 80, max: 200 } } }),
+        fotoAlt: fields.text({ label: 'SEO · Descrição da foto de capa (alt)', description: 'Descreva o que aparece na foto. Se couber, use a palavra-chave.', validation: { isRequired: true, length: { min: 10, max: 125 } } }),
+        atualizadoEm: fields.date({ label: 'SEO · Última atualização do conteúdo (opcional)', description: 'Atualize ao revisar o post. O Google valoriza conteúdo mantido.' }),
+        perguntas: fields.array(
+          fields.object({
+            pergunta: fields.text({ label: 'Pergunta', validation: { isRequired: true } }),
+            resposta: fields.text({ label: 'Resposta', multiline: true, validation: { isRequired: true, length: { min: 40, max: 400 } } }),
+          }),
+          { label: 'SEO · Perguntas e respostas (opcional)', description: 'Aparecem no fim do post e ajudam a ser citado em respostas do Google e de IAs. Escreva perguntas que o hóspede realmente faz.', itemLabel: (p) => p.fields.pergunta.value || 'Pergunta' },
+        ),
         foto: fields.image({ label: 'Foto de capa', directory: 'public/uploads/blog', publicPath: '/uploads/blog/', validation: { isRequired: true } }),
         corpo: fields.document({
           label: 'Texto do post',

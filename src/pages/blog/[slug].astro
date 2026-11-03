@@ -16,18 +16,22 @@ const post = (await reader.collections.posts.read(slug))!;
 const corpo = await post.corpo();
 const foto = img(post.foto);
 const titulo = post.titulo;
-const pageTitle = (post.metaTitulo || (titulo + ' | Pousada das Nascentes')).slice(0, 70);
+const pageTitle = post.metaTitulo;
+const ogImg = img(post.imagemCompartilhamento) || foto;
+const faqLd = post.perguntas.length ? JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: post.perguntas.map((f) => ({ '@type': 'Question', name: f.pergunta, acceptedAnswer: { '@type': 'Answer', text: f.resposta } })) }) : '';
 const head =
-  `<meta name="description" content="${post.resumo.replace(/"/g, '&quot;')}">\n` +
-  `<meta property="og:image" content="${foto}">\n` +
-  `<meta property="article:published_time" content="${post.data}">`;
+  `<meta name="description" content="${post.metaDescricao.replace(/"/g, '&quot;')}">\n` +
+  `<meta property="og:image" content="${ogImg}">\n` +
+  `<meta property="article:published_time" content="${post.data}">` +
+  (post.atualizadoEm ? `\n<meta property="article:modified_time" content="${post.atualizadoEm}">` : '') +
+  (post.semIndexar ? '\n<meta name="robots" content="noindex">' : '');
 const outros = (await listPosts()).filter((p) => p.slug !== slug).slice(0, 3);
 ---
 <Layout title={pageTitle} headExtra={head} script="/js/blog.js">
 <Menu active="/blog" />
 
 <section class="ar-hero">
-  <div class="photo" style={`background-image:url('${foto}');`} role="img" aria-label={titulo}></div>
+  <div class="photo" style={`background-image:url('${foto}');`} role="img" aria-label={post.fotoAlt}></div>
   <div class="inner">
     <a class="back" href="/blog">← Voltar para o blog</a>
     <div class="bl-meta"><span class="cat">{post.categoria}</span></div>
@@ -37,6 +41,13 @@ const outros = (await listPosts()).filter((p) => p.slug !== slug).slice(0, 3);
 <article class="ar-body">
   <div class="content">
     <DocumentRenderer document={corpo} />
+    {post.perguntas.length > 0 && (
+      <section class="ar-faq" style="margin-top:48px;">
+        <h2>Perguntas frequentes</h2>
+        {post.perguntas.map((f) => <details style="margin:12px 0;"><summary style="cursor:pointer;font-weight:600;">{f.pergunta}</summary><p>{f.resposta}</p></details>)}
+        <script type="application/ld+json" set:html={faqLd}></script>
+      </section>
+    )}
   </div>
   <div class="ar-cta reveal">
     <div><p class="eyebrow">Pousada das Nascentes</p><h2>Vem viver Brotas com a gente</h2><p>Suítes temáticas com hidromassagem ou ofurô, no Circuito das Cachoeiras.</p></div>

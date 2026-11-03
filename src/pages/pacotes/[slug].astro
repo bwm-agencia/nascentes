@@ -15,10 +15,12 @@ export async function getStaticPaths() {
 const { slug } = Astro.props;
 const p = (await reader.collections.pacotes.read(slug))!;
 const foto = img(p.fotoHero);
+const ogImg = img(p.imagemCompartilhamento) || foto;
 const msg = p.mensagemWhatsapp;
 const q = (s: string) => s.replace(/"/g, '&quot;');
 const head =
-  `<meta name="description" content="${q(p.metaDescricao)}">\n<meta property="og:image" content="${foto}">`;
+  `<meta name="description" content="${q(p.metaDescricao)}">\n<meta property="og:image" content="${ogImg}">` +
+  (p.semIndexar ? '\n<meta name="robots" content="noindex">' : '');
 const check = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
 const nH = suites.filter((s) => s.tipo === 'h').length;
 const nO = suites.filter((s) => s.tipo === 'o').length;
