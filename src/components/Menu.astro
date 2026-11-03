@@ -5,16 +5,16 @@ interface Props {
   active?: string;
   logoHref?: string;
 }
-const { active = '', logoHref = '/index.html' } = Astro.props;
+const { active = '', logoHref = '/' } = Astro.props;
 
 const links = [
-  { href: '/suites.html', label: 'Suítes' },
-  { href: '/experiencia.html', label: 'A experiência' },
-  { href: '/cafe-da-manha.html', label: 'Café da manhã' },
-  { href: '/pacotes.html', label: 'Pacotes' },
-  { href: '/lua-de-mel.html', label: 'Lua de mel' },
-  { href: '/blog.html', label: 'Blog' },
-  { href: '/localizacao.html', label: 'Localização' },
+  { href: '/suites', label: 'Suítes' },
+  { href: '/experiencia', label: 'A experiência' },
+  { href: '/cafe-da-manha', label: 'Café da manhã' },
+  { href: '/pacotes', label: 'Pacotes' },
+  { href: '/lua-de-mel', label: 'Lua de mel' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/localizacao', label: 'Localização' },
 ];
 ---
 <header class="topbar">

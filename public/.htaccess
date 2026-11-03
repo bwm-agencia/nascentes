@@ -1,0 +1,132 @@
+# Gerado a partir do mapa de redirects (vercel.json + sitemap antigo). Hostinger / Apache.
+RewriteEngine On
+
+# 0) /index e /index.html -> /
+RewriteRule ^index(\.html)?$ / [R=301,L]
+
+# 1) /pagina.html -> /pagina (301)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 2) remove barra final (exceto pastas reais)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# 3) serve /pagina a partir de pagina.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+ErrorDocument 404 /404.html
+
+# URLs antigas (WordPress) -> novas
+Redirect 301 /descubra-os-encantos-de-brotas-na-baixa-temporada /blog/descubra-os-encantos-de-brotas-na-baixa-temporada
+Redirect 301 /festival-brotas-gourmet /blog/festival-brotas-gourmet
+Redirect 301 /massagem-na-pousada-das-nascentes /blog/massagem-na-pousada-das-nascentes
+Redirect 301 /degustacao-cafe /blog/degustacao-cafe
+Redirect 301 /sauna-vidro-integrada-piscina /blog/sauna-vidro-integrada-piscina
+Redirect 301 /temporada-de-outono-inverno /blog/temporada-de-outono-inverno
+Redirect 301 /viagem-a-dois-acima-de-60-pode-ser-apaixonante /blog/viagem-a-dois-acima-de-60-pode-ser-apaixonante
+Redirect 301 /pousada-das-nascentes-preferida-casais /blog/pousada-das-nascentes-preferida-casais
+Redirect 301 /fim-de-semana-perfeito-brotas-casais /blog/fim-de-semana-perfeito-brotas-casais
+Redirect 301 /cachoeiras-em-brotas /blog/cachoeiras-em-brotas
+Redirect 301 /o-melhor-carnaval-do-interior-paulista /blog/o-melhor-carnaval-do-interior-paulista
+Redirect 301 /aniversario-de-sao-paulo-aproveite-o-25-de-janeiro-aqui /blog/aniversario-de-sao-paulo-aproveite-o-25-de-janeiro-aqui
+Redirect 301 /por-que-viajar-para-o-interior-de-sp /blog/por-que-viajar-para-o-interior-de-sp
+Redirect 301 /ferias-em-brotas /blog/ferias-em-brotas
+Redirect 301 /feriado-da-consciencia-negra-em-brotas /blog/feriado-da-consciencia-negra-em-brotas
+Redirect 301 /festas-de-final-de-ano-na-pousada-das-nascentes /blog/festas-de-final-de-ano-na-pousada-das-nascentes
+Redirect 301 /primavera-em-brotas /blog/primavera-em-brotas
+Redirect 301 /sugestoes-para-um-fim-de-semana-a-dois /blog/sugestoes-para-um-fim-de-semana-a-dois
+Redirect 301 /2-dias-em-brotas-saiba-o-que-fazer /blog/2-dias-em-brotas-saiba-o-que-fazer
+Redirect 301 /aniversario-de-casamento /blog/aniversario-de-casamento
+Redirect 301 /uma-viagem-romantica /blog/uma-viagem-romantica
+Redirect 301 /cafe-da-manha-perfeito-em-brotas /blog/cafe-da-manha-perfeito-em-brotas
+Redirect 301 /o-que-fazer-pertinho-da-pousada /blog/o-que-fazer-pertinho-da-pousada
+Redirect 301 /restaurantes-em-brotas-para-um-jantar-romantico /blog/restaurantes-em-brotas-para-um-jantar-romantico
+Redirect 301 /jantar-romantico /blog/jantar-romantico
+Redirect 301 /hidromassagem-e-ofuro-o-diferencial-da-pousada-das-nascentes /blog/hidromassagem-e-ofuro-o-diferencial-da-pousada-das-nascentes
+Redirect 301 /noite-romantica /blog/noite-romantica
+Redirect 301 /novidades /blog
+Redirect 301 /novidades/(.*) /blog
+Redirect 301 /sitemap /
+Redirect 301 /category/brotas-sp /blog
+Redirect 301 /category/gastronomia /blog
+Redirect 301 /category/novi-pousada /blog
+Redirect 301 /category/pacotes-feriados /blog
+Redirect 301 /category/romance-lua-de-mel /blog
+Redirect 301 /category/aventura-ecoturismo /blog
+Redirect 301 /pacotes-para-brotas/consciencia-negra /pacotes/consciencia-negra
+Redirect 301 /pacotes-para-brotas/refugio-primavera /pacotes/refugio-primavera
+Redirect 301 /pacotes-para-brotas/aniversariante-do-mes /pacotes/aniversariante-do-mes
+Redirect 301 /pacotes-para-brotas/oferta-especial /pacotes
+Redirect 301 /pacotes-para-brotas/escapada-a-dois /pacotes/escapada-a-dois
+Redirect 301 /pousadas-em-brotas/suite-tematica-fogo /suites/fogo
+Redirect 301 /pousadas-em-brotas/suite-tematica-amazonas /suites/amazonas
+Redirect 301 /pousadas-em-brotas/suite-tematica-bartira /suites/bartira
+Redirect 301 /pousadas-em-brotas/suite-tematica-vanilla /suites/vanilla
+Redirect 301 /pousadas-em-brotas/suite-tematica-buriti /suites/buriti
+Redirect 301 /pousadas-em-brotas/suite-tematica-simba-safari /suites/simba-safari
+Redirect 301 /pousadas-em-brotas/suite-tematica-irati /suites/irati
+Redirect 301 /pousadas-em-brotas/suite-tematica-agua /suites/agua
+Redirect 301 /pousadas-em-brotas/suite-tematica-orquidia-terra /suites/orquidea-terra
+Redirect 301 /pousadas-em-brotas/suites-tematica-bronze-lenda /suites/bronze-lenda
+Redirect 301 /pousadas-em-brotas/suite-tematica-terra /suites/terra
+Redirect 301 /pousadas-em-brotas/suite-tematica-maria-bonita /suites/maria-bonita
+Redirect 301 /pousadas-em-brotas/suite-tematica-amarula /suites/amarula
+Redirect 301 /pousadas-em-brotas/suite-tematica-romantica /suites/romantica
+Redirect 301 /pousadas-em-brotas/suite-tematica-indiana /suites/indiana
+Redirect 301 /pousadas-em-brotas/suite-tematica-safari-ii /suites/safari-ii
+Redirect 301 /pousadas-em-brotas/suite-tematica-savana /suites/savana
+Redirect 301 /pousadas-em-brotas/suite-tematica-safari /suites/safari
+Redirect 301 /cantinho-decor /blog
+Redirect 301 /motivos-para-uma-segunda-lua-de-mel /blog
+Redirect 301 /aniversario-de-namoro /blog
+Redirect 301 /ofuro-cromoterapico /blog
+Redirect 301 /cervejaria-hzb /blog
+Redirect 301 /promocao-vale-presente-pousada-das-nascentes /blog
+Redirect 301 /feriado-municipal-brotas /blog
+Redirect 301 /coaching-programas /blog
+Redirect 301 /5-lugares-romanticos-em-brotas /blog
+Redirect 301 /brotas-uma-viagem-charmosa /blog
+Redirect 301 /lugares-mais-bonitos-do-brasil /blog
+Redirect 301 /pousadas-romanticas /blog
+Redirect 301 /pacote-de-viagem-para-casal /blog
+Redirect 301 /atividades-casais-em-brotas /blog
+Redirect 301 /dicas-de-viagem /blog
+Redirect 301 /dia-dos-pais /blog
+Redirect 301 /dia-dos-namorados-no-interior /blog
+Redirect 301 /aventura-o-ano-todo-em-brotas /blog
+Redirect 301 /pousada-para-casais-em-brotas /blog
+Redirect 301 /certificado-excelencia-tripadvisor /blog
+Redirect 301 /banho-de-cachoeira-em-brotas /blog
+Redirect 301 /campanha-rede-solidaria /blog
+Redirect 301 /estamos-voltando /blog
+Redirect 301 /hotel-que-aceita-cachorro /blog
+Redirect 301 /nao-caia-em-golpes-de-perfis-fakes /blog
+Redirect 301 /inverno-em-brotas /blog
+Redirect 301 /pousada-romantica-proxima-as-mais-belas-cachoeiras-de-brotas /blog
+Redirect 301 /pousada-das-nascentes-romance-natureza-e-aventura /blog
+Redirect 301 /ja-experimentou-o-nomadismo-digital /blog
+Redirect 301 /sete-beneficios-exclusivos-para-os-clientes-da-pousada-das-nascentes /blog
+Redirect 301 /3-lugares-para-visitar-em-brotas /blog
+Redirect 301 /natal-romantico-brotas /blog
+Redirect 301 /janeiro-o-que-fazer-em-brotas /blog
+Redirect 301 /corporativo /blog
+Redirect 301 /brotas /blog
+Redirect 301 /depoimentos /blog
+Redirect 301 /contato /blog
+Redirect 301 /pacotes-brotas /blog
+Redirect 301 /consulta-enviada /blog
+Redirect 301 /pre-reserva-enviada /blog
+Redirect 301 /pousada-em-brotas /blog
+Redirect 301 /na-midia /blog
+Redirect 301 /sala-de-massagem /blog
+Redirect 301 /orientacao-profissional-com-coaching /blog
+Redirect 301 /tarifario /blog
+Redirect 301 /pousadas-em-brotas-sp /blog
+Redirect 301 /onde-fica-a-pousada-das-nascentes /blog
+Redirect 301 /lua-de-mel /blog
+Redirect 301 /fondue-nas-suites-tematicas /blog
+Redirect 301 /cafe-da-manha /blog
+Redirect 301 /suites-tematicas /blog
