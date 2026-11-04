@@ -28,7 +28,7 @@ const description = pick(/<meta name="description" content="([^"]*)"/) ?? descri
 const ogTitle = pick(/<meta property="og:title" content="([^"]*)"/) ?? title;
 const segs0 = path.split('/').filter(Boolean);
 // capas de compartilhamento 1200x630 (public/og): páginas principais e pacotes
-const ogKey = path === '/' ? 'home' : segs0.length === 1 ? segs0[0] : (segs0[0] === 'pacotes' && segs0.length === 2 ? 'pacote-' + segs0[1] : '');
+const ogKey = path === '/' ? 'home' : segs0.length === 1 ? segs0[0] : (segs0[0] === 'pacotes' && segs0.length === 2 ? 'pacote-' + segs0[1] : (segs0[0] === 'blog' && segs0.length === 2 ? 'blog/' + segs0[1] : ''));
 const ogFile = ogKey && existsSync(`public/og/${ogKey}.jpg`) ? `/og/${ogKey}.jpg` : null;
 let image = ogFile ?? pick(/<meta property="og:image" content="([^"]*)"/) ?? (segs0[0] === 'suites' && segs0[1] ? `/fotos-suites/${segs0[1]}/hero.webp` : business.defaultImage);
 if (!/^https?:/.test(image)) image = siteUrl + '/' + image.replace(/^(\.\.\/|\.\/|\/)+/, '');
