@@ -1,0 +1,177 @@
+titulo: Natal 2026
+publicado: true
+destaque: false
+mostrarNaHome: true
+ordem: 2
+redirecionar:
+  discriminant: nenhum
+  value: null
+palavraChave: natal em brotas
+palavrasSecundarias:
+- pacote de natal em brotas
+- pousada natal brotas
+metaTitulo: 'Natal 2026 em Brotas: pacote com happy hour e chopp'
+metaDescricao: Passe o Natal em Brotas em suíte temática com hidromassagem ou ofurô, café da manhã e happy hour com chopp na piscina em 24/12. De 23 a 27/12/2026.
+semIndexar: false
+fotoFoco: 55
+fotoHero: /uploads/pacotes/primavera-romantica-brotas.webp
+fotoAlt: Piscina da pousada iluminada ao entardecer, cercada de jardim
+etiqueta: Natal 2026 · 23 a 27 de dezembro
+tituloAntes: Tempo de compartilhar
+tituloDestaque: luz, amor e gratidão
+chamada: Suíte temática com hidromassagem ou ofurô, café da manhã todos os dias e um happy hour de confraternização na piscina na noite de 24/12, com chopp por nossa conta.
+dias:
+- semana: Qua
+  dia: '23'
+  mes: dez
+  feriado: false
+- semana: Qui
+  dia: '24'
+  mes: dez
+  feriado: false
+- semana: Sex
+  dia: '25'
+  mes: dez
+  feriado: true
+- semana: Sáb
+  dia: '26'
+  mes: dez
+  feriado: false
+- semana: Dom
+  dia: '27'
+  mes: dez
+  feriado: false
+precoValor: '1.595'
+precoTermos: a partir de, 2 diárias em suíte dupla com ofurô
+mensagemWhatsapp: 'Olá! Vi o pacote *Natal 2026* no site e quero consultar disponibilidade. Meu nome é '
+opcoes:
+- nome: Duplo com hidro
+  subtitulo: Suíte temática com banheira de hidromassagem
+  valor: '1.795'
+  por: 2 diárias
+  itens:
+  - '3 diárias: R$ 2.410'
+  - '4 diárias: R$ 2.930 (a 5ª diária é cortesia)'
+  mensagemWhatsapp: 'Olá! Quero o pacote Natal 2026 na suíte dupla com hidromassagem (2 diárias R$ 1.795, 3 diárias R$ 2.410, 4 diárias R$ 2.930). Meu nome é '
+- nome: Duplo com ofurô
+  subtitulo: Suíte temática com ofurô
+  valor: '1.595'
+  por: 2 diárias
+  itens:
+  - '3 diárias: R$ 1.990'
+  - '4 diárias: R$ 2.550 (a 5ª diária é cortesia)'
+  mensagemWhatsapp: 'Olá! Quero o pacote Natal 2026 na suíte dupla com ofurô (2 diárias R$ 1.595, 3 diárias R$ 1.990, 4 diárias R$ 2.550). Meu nome é '
+- nome: Triplo com hidro
+  subtitulo: Suíte temática com hidromassagem para três pessoas
+  valor: '2.310'
+  por: 2 diárias
+  itens:
+  - '3 diárias: R$ 2.998'
+  - '4 diárias: R$ 3.300 (a 5ª diária é cortesia)'
+  mensagemWhatsapp: 'Olá! Quero o pacote Natal 2026 na suíte tripla com hidromassagem (2 diárias R$ 2.310, 3 diárias R$ 2.998, 4 diárias R$ 3.300). Meu nome é '
+- nome: Quádruplo com hidro
+  subtitulo: Suíte temática com hidromassagem para quatro pessoas
+  valor: '2.890'
+  por: 2 diárias
+  itens:
+  - '3 diárias: R$ 3.800'
+  - '4 diárias: R$ 4.480 (a 5ª diária é cortesia)'
+  mensagemWhatsapp: 'Olá! Quero o pacote Natal 2026 na suíte quádrupla com hidromassagem (2 diárias R$ 2.890, 3 diárias R$ 3.800, 4 diárias R$ 4.480). Meu nome é '
+opcoesEtiqueta: Acomodações
+opcoesTitulo: Escolha a suíte e quantas diárias
+opcoesTexto: Os valores são por suíte, pelo total de diárias, com café da manhã todos os dias. Vocês escolhem o período dentro de 23 a 27/12.
+notaOpcoes: Mínimo de 2 diárias. Quem ficar 4 diárias ganha a 5ª como cortesia. Sujeito à disponibilidade. Cobrado 3% de taxa de serviço e turismo sobre o valor das diárias. Os valores podem sofrer alterações sem aviso prévio.
+incluiTitulo: Um Natal para brindar
+incluiTexto: Hospedagem, café da manhã e a confraternização do dia 24 na piscina.
+inclui:
+- titulo: Hospedagem
+  itens:
+  - texto: Suíte temática com hidromassagem ou ofurô
+    detalhe: todas as acomodações da pousada são temáticas
+  - texto: Café da manhã todos os dias
+    detalhe: ''
+  - texto: Piscina e sauna à disposição
+    detalhe: ''
+  - texto: Check-in a partir das 14h e check-out até as 14h
+    detalhe: ''
+- titulo: Noite de 24/12
+  itens:
+  - texto: 50 litros de chopp na piscina
+    detalhe: cortesia da pousada para os hóspedes da noite de 24/12
+  - texto: Happy hour de confraternização com coquetel
+    detalhe: um coquetel especial no entorno da piscina
+- titulo: Na mesa do happy hour
+  itens:
+  - texto: Maionese, caponata, guacamole e mousses de atum e de gorgonzola
+    detalhe: ''
+  - texto: Terrines de damasco com nozes e de tomatinho confit com frutas secas
+    detalhe: ''
+  - texto: Peito de peru fatiado com fios de ovos, salame com cereja e presunto com figo
+    detalhe: ''
+  - texto: Tomate seco, azeitonas gourmet e salada de frios
+    detalhe: ''
+  - texto: Torta gelada e crepe cake
+    detalhe: ''
+  - texto: Torradas, Doritos, canudinhos, barquinhas, uvas, azeite e pimentas
+    detalhe: acompanhamentos
+precoResumo: valor por suíte, conforme o número de diárias
+resumo:
+- rotulo: Período
+  valor: 23 a 27/12/2026
+- rotulo: Estadia
+  valor: Mínimo de 2 diárias
+- rotulo: Cortesia
+  valor: 5ª diária para 4 diárias
+- rotulo: Pagamento
+  valor: Em 5x com link
+validade: De 23 a 27/12/2026. Mínimo de 2 diárias
+legendaCafe: Servido todas as manhãs
+brotas:
+  etiqueta: Brotas no fim de ano
+  titulo: Cachoeira de manhã, brinde à noite
+  texto: 'Entre uma ceia e outra sobra tempo para conhecer a cidade. A pousada fica a poucos minutos de:'
+  citacao: Natal em Brotas combina água cristalina de dia e luz de vela ao redor da piscina à noite.
+  foto: /uploads/pacotes/escapada-a-dois-brotas.webp
+  fotoAlt: Varanda da pousada cercada de verde
+extras:
+  titulo: Para deixar o Natal ainda mais especial
+  texto: Se quiserem acrescentar alguma coisa à estadia, é só avisar no WhatsApp antes da chegada.
+  itens:
+  - ambientacao
+  - fondue
+  - massagem
+faq:
+- pergunta: Quais as datas do pacote de Natal?
+  resposta: De 23 a 27/12/2026. Vocês escolhem o período dentro dessas datas, com mínimo de 2 diárias, sujeito à disponibilidade.
+- pergunta: Como funciona a 5ª diária de cortesia?
+  resposta: Quem ficar 4 diárias ganha a 5ª como cortesia. Consulte pelo WhatsApp a disponibilidade para o período desejado.
+- pergunta: O chopp e o happy hour valem para quem?
+  resposta: Para os hóspedes que estiverem hospedados na noite de 24/12. A pousada oferece 50 litros de chopp na piscina e um happy hour de confraternização com coquetel e petiscos no entorno da piscina.
+- pergunta: O café da manhã está incluso?
+  resposta: Sim, em todos os dias da hospedagem.
+- pergunta: Os valores são por pessoa?
+  resposta: Não. São valores por suíte (dupla, tripla ou quádrupla), pelo total de diárias escolhido.
+- pergunta: Quais as formas de pagamento?
+  resposta: Em até 5x no ato da reserva, com link de pagamento. Sobre o valor das diárias é cobrado 3% de taxa de serviço e turismo.
+- pergunta: Qual o horário de check-in e check-out?
+  resposta: Check-in a partir das 14h e check-out até as 14h.
+- pergunta: Qual a diferença entre hidromassagem e ofurô?
+  resposta: Há suítes com banheira de hidromassagem e suítes com ofurô cromoterápico individual. Todas são temáticas, é só escolher o clima que combina mais com vocês.
+- pergunta: Posso levar meu pet?
+  resposta: A pousada é pet friendly para animais de pequeno porte. Avise na reserva para prepararmos tudo.
+- pergunta: Como garanto a reserva?
+  resposta: Todo o processo é feito pelo WhatsApp, direto com a nossa equipe. Vocês escolhem as datas e a gente confirma a disponibilidade na hora.
+ctaFoto: /uploads/pacotes/primavera-romantica-hero.webp
+ctaEtiqueta: Vagas limitadas
+ctaTitulo: O Natal está chegando
+ctaDestaque: garanta a sua suíte
+ctaTexto: Escolham a suíte e o período, chamem no WhatsApp e a gente confirma a disponibilidade na hora.
+cardItens:
+- De 23 a 27/12/2026
+- Mínimo de 2 diárias, 5ª cortesia para quem ficar 4
+- Suítes temáticas com hidromassagem ou ofurô
+- Café da manhã todos os dias
+- 50 litros de chopp na piscina em 24/12
+- Happy hour com coquetel na noite de 24/12
+- Pagamento em até 5x com link
+cardEtiqueta: Natal · 23 a 27/12

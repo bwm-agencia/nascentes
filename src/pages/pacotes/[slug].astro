@@ -71,7 +71,7 @@ const faqLd = JSON.stringify({
       {p.opcoesTexto && <p>{p.opcoesTexto}</p>}
     </div>
   )}
-  <div class="lp-offer-grid">
+  <div class={`lp-offer-grid${p.opcoes.length === 4 ? " lp-offer-grid--4" : ""}`}>
     {p.opcoes.map((o, i) => (
       <div class={`lp-price-card reveal${i === 0 ? ' hl' : ''}`}>
         <h3>{o.nome}</h3>{o.subtitulo && <p class="sub">{o.subtitulo}</p>}

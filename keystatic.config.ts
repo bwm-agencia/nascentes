@@ -126,7 +126,7 @@ export default config({
             itens: fields.array(fields.text({ label: 'Item' }), { label: 'O que inclui', itemLabel: (p) => p.value }),
             mensagemWhatsapp: fields.text({ label: 'Mensagem do WhatsApp desta opção', multiline: true }),
           }),
-          { label: 'Opções de preço (opcional, até 3)', itemLabel: (p) => p.fields.nome.value || 'Opção', validation: { length: { max: 3 } } },
+          { label: 'Opções de preço (opcional, até 4)', itemLabel: (p) => p.fields.nome.value || 'Opção', validation: { length: { max: 4 } } },
         ),
         opcoesEtiqueta: fields.text({ label: 'Opções de preço: etiqueta da seção (opcional)', description: 'Ex.: Escolham a suíte' }),
         opcoesTitulo: fields.text({ label: 'Opções de preço: título da seção (opcional)', description: 'Vira H2. Ex.: Duas formas de aproveitar a oferta' }),
