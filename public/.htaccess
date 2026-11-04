@@ -4,6 +4,8 @@
   AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml application/rss+xml image/svg+xml
 </IfModule>
 <IfModule mod_headers.c>
+  # avisa agentes/IA onde está o resumo do site em texto
+  Header always set Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </sitemap.xml>; rel=\"sitemap\"; type=\"application/xml\""
   # arquivos com hash no nome (CSS/JS/fontes gerados pelo build): 1 ano
   <FilesMatch "^[^/]+\.[A-Za-z0-9_-]{8}\.(css|js|woff2)$">
     Header set Cache-Control "public, max-age=31536000, immutable"

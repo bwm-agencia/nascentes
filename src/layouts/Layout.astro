@@ -48,10 +48,12 @@ const addr = {
   addressCountry: 'BR',
 };
 const hotel = {
-  '@type': 'LodgingBusiness',
+  '@type': ['LodgingBusiness', 'LocalBusiness'],
   '@id': hotelId,
   name: business.name,
   url: siteUrl + '/',
+  logo: siteUrl + '/logo/logo-horizontal.png',
+  contactPoint: [{ '@type': 'ContactPoint', contactType: 'reservations', telephone: '+5514991797722', availableLanguage: 'pt-BR', url: 'https://api.whatsapp.com/send?phone=5514991797722' }],
   image: siteUrl + business.defaultImage,
   telephone: business.phone,
   address: addr,
@@ -72,7 +74,8 @@ if (seg.length >= 1) {
     crumbs.push({ name: shortTitle, item: canonical });
   }
 }
-const graph: any[] = [hotel];
+const site = { '@type': 'WebSite', '@id': siteUrl + '/#site', url: siteUrl + '/', name: business.name, inLanguage: 'pt-BR', publisher: { '@id': hotelId } };
+const graph: any[] = [hotel, site];
 if (seg.length >= 1 && !noindex) {
   graph.push({
     '@type': 'BreadcrumbList',
