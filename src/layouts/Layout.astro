@@ -1,4 +1,7 @@
 ---
+import playfairNormal from '@fontsource-variable/playfair-display/files/playfair-display-latin-wght-normal.woff2?url';
+import playfairItalic from '@fontsource-variable/playfair-display/files/playfair-display-latin-wght-italic.woff2?url';
+import manropeNormal from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
 import { siteUrl, siteName, business, defaultDescription, descriptions, tracking } from '../config/site';
 
 interface Props {
@@ -115,6 +118,9 @@ const jsonld = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
 <meta property="og:image" content={image}>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B0607">
+<link rel="preload" href={manropeNormal} as="font" type="font/woff2" crossorigin>
+<link rel="preload" href={playfairNormal} as="font" type="font/woff2" crossorigin>
+<link rel="preload" href={playfairItalic} as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">

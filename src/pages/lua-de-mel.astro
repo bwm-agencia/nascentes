@@ -4,7 +4,7 @@ import Menu from '../components/Menu.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/lua-de-mel.css';
 ---
-<Layout title={"Lua de mel em Brotas — Pousada das Nascentes"} headExtra={"<meta name=\"description\" content=\"Viva a lua de mel em Brotas em uma suíte temática preparada para vocês, com hidromassagem, decoração romântica, fondue na suíte e café da manhã.\">"} script="/js/404.js">
+<Layout title={"Lua de mel em Brotas — Pousada das Nascentes"} headExtra={"<meta name=\"description\" content=\"Viva a lua de mel em Brotas em uma suíte temática preparada para vocês, com hidromassagem, decoração romântica, fondue na suíte e café da manhã.\">\n<link rel=\"preload\" as=\"image\" href=\"/fotos-casais/nascentes-casal-na-cama-toalhas-ia.webp\" fetchpriority=\"high\">"} script="/js/404.js">
 <Menu active="/lua-de-mel" />
 <section class="lm-hero" id="top">
   <div class="photo" role="img" aria-label="Casal brindando na cama da suíte decorada com balões de coração"></div>
@@ -113,11 +113,12 @@ import '../styles/lua-de-mel.css';
   <div class="suite-section-head reveal">
     <p class="eyebrow">Pacotes para casais</p>
     <h2>Prefere tudo já combinado?</h2>
-    <p>Dois pacotes pensados para casais, com diárias, café da manhã e late check-out até as 17h.</p>
+    <p>Dois pacotes pensados para casais, com diárias, café da manhã e late check-out até as 17h. E, para quem faz aniversário, um desconto especial.</p>
   </div>
   <div class="lm-pkg-grid">
     <a class="lm-pkg reveal" href="/pacotes/refugio-primavera"><div class="thumb"><img src="/fotos-casais/pousada-das-nascentes-ia-3.webp" alt="Casal na hidromassagem com espumante" loading="lazy"></div><div class="body"><h3>Refúgio Primavera</h3><p class="price">R$ 1.270 o casal · 2 diárias</p><p>Mini espumante, sais de banho, um mimo e a suíte preparada para a chegada.</p><span class="link-glow">Ver o pacote <span class="arrow">→</span></span></div></a>
     <a class="lm-pkg reveal" href="/pacotes/escapada-a-dois"><div class="thumb"><img src="/fotos-casais/pousada-das-nascentes-ia-10.webp" alt="Casal relaxando na cama da suíte" loading="lazy"></div><div class="body"><h3>Escapada a dois</h3><p class="price">R$ 1.380 o casal · 2 diárias</p><p>Uma massagem para cada um, mimo e a suíte preparada para a chegada.</p><span class="link-glow">Ver o pacote <span class="arrow">→</span></span></div></a>
+    <a class="lm-pkg lm-pkg--wide reveal" href="/pacotes/aniversariante-do-mes"><div class="thumb"><img src="/uploads/pacotes/aniversariante-do-mes-hero.webp" alt="Casal brindando com espumante" loading="lazy"></div><div class="body"><h3>Aniversariante do Mês</h3><p class="price">Até 25% de desconto</p><p>Válido somente para o aniversariante, no mês do aniversário, em pacotes acima de 2 diárias. Exceto feriados.</p><span class="link-glow">Ver as condições <span class="arrow">→</span></span></div></a>
   </div>
 </section>
 
