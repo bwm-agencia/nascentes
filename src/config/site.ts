@@ -15,6 +15,7 @@ export const business = {
   city: 'Brotas',
   state: 'SP',
   zip: '17380-000',
+  geo: { latitude: -22.443681, longitude: -48.009451 }, // do mapa da página Localização
   phone: '+551436536133',
   phoneWhatsapp: '+5514991797722',
   sameAs: [

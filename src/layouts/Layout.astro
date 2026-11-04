@@ -48,6 +48,7 @@ const hotel = {
   image: siteUrl + business.defaultImage,
   telephone: business.phone,
   address: addr,
+  geo: { '@type': 'GeoCoordinates', latitude: business.geo.latitude, longitude: business.geo.longitude },
   sameAs: business.sameAs,
 };
 const shortTitle = title.split(/\s[—–|-]\s/)[0].trim();
