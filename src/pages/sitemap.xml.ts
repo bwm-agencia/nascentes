@@ -6,7 +6,7 @@ export async function GET() {
   const files = Object.keys(import.meta.glob('/src/pages/**/*.astro'));
   const paths = files
     .map((f) => f.replace('/src/pages', '').replace(/\.astro$/, ''))
-    .filter((p) => p !== '/404' && !p.includes('['))
+    .filter((p) => p !== '/404' && p !== '/links' && !p.includes('['))
     .map((p) => (p === '/index' ? '/' : p))
     .sort((a, b) => (a === '/' ? -1 : b === '/' ? 1 : a.localeCompare(b)));
   for (const x of (await listPacotes()).filter((i) => !i.entry.semIndexar)) paths.push('/pacotes/' + x.slug);

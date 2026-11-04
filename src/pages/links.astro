@@ -1,0 +1,90 @@
+---
+// Página para a bio do Instagram (substitui o Linktree). Não entra no Google nem no sitemap.
+// Os pacotes aparecem sozinhos: publicou ou despublicou no painel, a lista acompanha.
+import Layout from '../layouts/Layout.astro';
+import '../styles/links.css';
+import { listPacotes, img } from '../lib/content';
+import { whatsapp, business } from '../config/site';
+
+// UTMs: mesmo source/medium que o próprio Instagram aplica no link da bio (ig / social),
+// para o GA4 juntar tudo em "Organic Social". O que muda é a campanha e o botão (utm_content).
+const utm = (botao: string) => `utm_source=ig&utm_medium=social&utm_campaign=link_na_bio&utm_content=${botao}`;
+const interno = (caminho: string, botao: string) => `${caminho}?${utm(botao)}`;
+const msg = 'Olá! Vim pelo Instagram e gostaria de consultar valores e disponibilidade.';
+const zap = (botao: string) => `https://api.whatsapp.com/send?phone=${whatsapp}&text=${encodeURIComponent(msg)}&${utm(botao)}`;
+
+const todos = await listPacotes();
+const pacotes = [...todos.filter((p) => p.entry.destaqueTopo), ...todos.filter((p) => !p.entry.destaqueTopo)].slice(0, 4);
+const [destaque, ...outros] = pacotes;
+const tripadvisor = business.sameAs.find((u) => u.includes('tripadvisor')) ?? '';
+
+const links = [
+  { nome: 'suites', rotulo: 'Suítes temáticas', sub: 'Hidromassagem ou ofurô em cada uma', href: interno('/suites', 'suites') },
+  { nome: 'lua_de_mel', rotulo: 'Lua de mel', sub: 'Para começar a vida a dois com calma', href: interno('/lua-de-mel', 'lua_de_mel') },
+  { nome: 'cafe_da_manha', rotulo: 'Café da manhã', sub: 'Servido todas as manhãs, incluso na diária', href: interno('/cafe-da-manha', 'cafe_da_manha') },
+  { nome: 'guia_de_brotas', rotulo: 'Guia de Brotas', sub: 'Roteiros, passeios e dicas da cidade', href: interno('/blog', 'guia_de_brotas') },
+  { nome: 'como_chegar', rotulo: 'Como chegar', sub: 'Endereço e mapa', href: interno('/localizacao', 'como_chegar') },
+];
+---
+<Layout title={"Pousada das Nascentes — Links"} headExtra={"<meta name=\"robots\" content=\"noindex, nofollow\">\n<meta name=\"description\" content=\"Links da Pousada das Nascentes, em Brotas-SP: pacotes, suítes e reservas pelo WhatsApp.\">"}>
+<div class="bio">
+  <div class="bio-bg" aria-hidden="true"></div>
+  <main class="bio-wrap">
+    <header class="bio-head">
+      <img class="bio-logo" src="/logo/logo-horizontal.png" alt="Pousada das Nascentes" width="200" height="79">
+      <p class="bio-tag">Suítes temáticas com hidromassagem<br>Brotas · SP · à beira do rio</p>
+    </header>
+
+    <a class="bio-wa" href={zap('whatsapp_topo')} target="_blank" rel="noopener" data-loc="bio_whatsapp_topo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 0 0-8.1 14.4L2.5 21.5l4.7-1.2A9.5 9.5 0 1 0 12 2.5Z"/><path d="M8.6 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2 0 .4-.1.6l-.5.6c-.1.1-.1.3 0 .4.6 1 1.4 1.7 2.5 2.2.2.1.3 0 .4-.1l.6-.7c.2-.2.4-.2.6-.1l1.7.8c.2.1.3.3.3.5 0 .6-.4 1.2-1 1.5-.7.3-1.6.3-3-.3-1.8-.8-3.3-2.4-4-4-.4-1-.4-2 .4-2.9Z"/></svg>
+      <span><strong>Reservar pelo WhatsApp</strong><small>Consulte valores e disponibilidade</small></span>
+    </a>
+
+    {destaque && (
+      <section class="bio-sec" aria-labelledby="bio-ofertas">
+        <h2 id="bio-ofertas" class="bio-eyebrow">Ofertas do momento</h2>
+        <a class="bio-feat" href={interno(`/pacotes/${destaque.slug}`, `pacote_${destaque.slug}`)} data-bio={`pacote_${destaque.slug}`}>
+          <span class="bio-feat-photo" style={`background-image:url('${img(destaque.entry.cardFoto) || img(destaque.entry.fotoHero)}')`}></span>
+          <span class="bio-feat-body">
+            <span class="bio-badge">{destaque.entry.cardEtiqueta || destaque.entry.etiqueta}</span>
+            <strong>{destaque.entry.titulo}</strong>
+            <span class="bio-more">Ver pacote →</span>
+          </span>
+        </a>
+        {outros.map((p) => (
+          <a class="bio-row" href={interno(`/pacotes/${p.slug}`, `pacote_${p.slug}`)} data-bio={`pacote_${p.slug}`}>
+            <span><strong>{p.entry.titulo}</strong><small>{p.entry.cardEtiqueta || p.entry.etiqueta}</small></span>
+            <i aria-hidden="true">→</i>
+          </a>
+        ))}
+        <a class="bio-all" href={interno('/pacotes', 'todos_os_pacotes')} data-bio="todos_os_pacotes">Ver todos os pacotes →</a>
+      </section>
+    )}
+
+    <section class="bio-sec" aria-labelledby="bio-conheca">
+      <h2 id="bio-conheca" class="bio-eyebrow">Conheça a pousada</h2>
+      {links.map((l) => (
+        <a class="bio-row" href={l.href} data-bio={l.nome}>
+          <span><strong>{l.rotulo}</strong><small>{l.sub}</small></span>
+          <i aria-hidden="true">→</i>
+        </a>
+      ))}
+      {tripadvisor && (
+        <a class="bio-row" href={tripadvisor} target="_blank" rel="noopener" data-bio="tripadvisor">
+          <span><strong>Avaliações no Tripadvisor</strong><small>O que os hóspedes dizem</small></span>
+          <i aria-hidden="true">↗</i>
+        </a>
+      )}
+    </section>
+
+    <a class="bio-wa bio-wa--fim" href={zap('whatsapp_fim')} target="_blank" rel="noopener" data-loc="bio_whatsapp_fim">
+      <span><strong>Ficou com dúvida?</strong><small>Chame a gente no WhatsApp</small></span>
+    </a>
+
+    <footer class="bio-foot">
+      <a href={interno('/', 'site_completo')} data-bio="site_completo">Ir para o site completo</a>
+      <p>{business.street} · {business.city}-{business.state}</p>
+    </footer>
+  </main>
+</div>
+</Layout>
