@@ -1,6 +1,10 @@
 # Gerado a partir do mapa de redirects (vercel.json + sitemap antigo). Hostinger / Apache.
 RewriteEngine On
 
+# -1) endereço sem www -> com www (um único endereço para o Google)
+RewriteCond %{HTTP_HOST} ^pousadadasnascentes\.com\.br$ [NC]
+RewriteRule ^(.*)$ https://www.pousadadasnascentes.com.br/$1 [R=301,L]
+
 # 0) /index e /index.html -> /
 RewriteRule ^index(\.html)?$ / [R=301,L]
 

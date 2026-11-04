@@ -7,7 +7,7 @@ import { listPosts, img } from '../lib/content';
 const novos = await listPosts();
 const slugCat = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
-<Layout title={"Guia de Brotas — Dicas, roteiros e novidades | Pousada das Nascentes"} headExtra={"<meta name=\"description\" content=\"Dicas de Brotas, cachoeiras, gastronomia, roteiros a dois e novidades da Pousada das Nascentes.\">"} script="/js/blog.js">
+<Layout title={"Guia de Brotas: dicas e roteiros | Pousada das Nascentes"} headExtra={"<meta name=\"description\" content=\"Dicas de Brotas, cachoeiras, gastronomia, roteiros a dois e novidades da Pousada das Nascentes.\">"} script="/js/blog.js">
 <Menu active="/blog" />
 
 <section class="bl-hero">
