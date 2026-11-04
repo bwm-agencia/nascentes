@@ -924,3 +924,9 @@ section{ position:relative; }
 .topbar:has(~ .fullnav.open){ background:var(--ink); }
 .topbar:has(~ .fullnav.open) .logo-vertical{ display:none; }
 .topbar:has(~ .fullnav.open) .logo-horizontal{ display:block; }
+
+/* Natal e Réveillon lado a lado */
+.package-pair{ grid-column:1 / -1; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:inherit; }
+.package-pair .package-card h3{ font-size:1.8rem; }
+.package-pair .package-card .photo{ aspect-ratio:16/9; }
+@media (max-width:900px){ .package-pair{ grid-template-columns:1fr; } }

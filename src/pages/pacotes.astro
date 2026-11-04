@@ -3,11 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import Menu from '../components/Menu.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/pacotes.css';
-import NatalDeco from '../components/NatalDeco.astro';
-import ReveillonDeco from '../components/ReveillonDeco.astro';
+import PacoteCard from '../components/PacoteCard.astro';
 import { listPacotes, img, wa } from '../lib/content';
 const todos = await listPacotes();
 const novos = [...todos.filter((n) => n.entry.destaqueTopo), ...todos.filter((n) => !n.entry.destaqueTopo)];
+// Natal e Réveillon (datas de fim de ano) ficam lado a lado, logo depois do destaque do topo
+const topo = todos.filter((n) => n.entry.destaqueTopo);
+const festivos = todos.filter((n) => !n.entry.destaqueTopo && (n.entry.temaNatal || n.entry.temaReveillon)).slice(0, 2);
+const resto = todos.filter((n) => !n.entry.destaqueTopo && !festivos.includes(n));
 const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
 ---
 <Layout title={"Pacotes para Brotas — Pousada das Nascentes"} script="/js/pacotes.js">
@@ -27,24 +30,13 @@ const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
     <p>Preparamos excelentes alternativas para curtir Brotas — do jeito de sempre ou em datas especiais. Fale com a gente e complete seu pacote com opcionais.</p>
   </div>
   <div class="package-grid">
-    {novos.map((n) => (
-      <div class={`package-card reveal${n.entry.destaque ? ' package-card--featured' : ''}${n.entry.destaqueTopo ? ' package-card--topo' : ''}`}>
-        {n.entry.destaqueTopo && <span class="topo-selo">Em destaque · {n.entry.cardEtiqueta || n.entry.etiqueta}</span>}
-        <div class={`photo${n.entry.temaNatal || n.entry.temaReveillon ? ' xm-host' : ''}`} style={`background-image:url('${img(n.entry.cardFoto) || img(n.entry.fotoHero)}'); background-position:center 55%;`}>{n.entry.temaNatal && <NatalDeco />}{n.entry.temaReveillon && <ReveillonDeco />}</div>
-        <div class="body">
-          <p class="eyebrow">{n.entry.cardEtiqueta || n.entry.etiqueta}</p>
-          <h3><a href={`/pacotes/${n.slug}`}>{n.entry.titulo}</a></h3>
-          {n.entry.destaqueTopo && n.entry.chamada && <p class="topo-chamada">{n.entry.chamada}</p>}
-          <ul>
-            {(n.entry.cardItens.length ? n.entry.cardItens : (n.entry.inclui[0]?.itens ?? []).map((it) => it.texto)).slice(0, 9).map((t) => <li><Fragment set:html={tick} />{t}</li>)}
-          </ul>
-          <div class="actions">
-            <a class="btn-book" href={wa(n.entry.mensagemWhatsapp)} target="_blank" rel="noopener">Reservar</a>
-            <a class="btn-details" href={`/pacotes/${n.slug}`}>Detalhes</a>
-          </div>
-        </div>
+    {topo.map((n) => <PacoteCard n={n} />)}
+    {festivos.length > 0 && (
+      <div class="package-pair">
+        {festivos.map((n) => <PacoteCard n={n} />)}
       </div>
-    ))}
+    )}
+    {resto.map((n) => <PacoteCard n={n} />)}
   </div>
 </section>
 

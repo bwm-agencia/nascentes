@@ -1,0 +1,24 @@
+---
+import NatalDeco from './NatalDeco.astro';
+import ReveillonDeco from './ReveillonDeco.astro';
+import { img, wa } from '../lib/content';
+const { n } = Astro.props;
+const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
+const itens = (n.entry.cardItens.length ? n.entry.cardItens : (n.entry.inclui[0]?.itens ?? []).map((it: any) => it.texto)).slice(0, 9);
+---
+<div class={`package-card reveal${n.entry.destaque ? ' package-card--featured' : ''}${n.entry.destaqueTopo ? ' package-card--topo' : ''}`}>
+  {n.entry.destaqueTopo && <span class="topo-selo">Em destaque · {n.entry.cardEtiqueta || n.entry.etiqueta}</span>}
+  <div class={`photo${n.entry.temaNatal || n.entry.temaReveillon ? ' xm-host' : ''}`} style={`background-image:url('${img(n.entry.cardFoto) || img(n.entry.fotoHero)}'); background-position:center 55%;`}>{n.entry.temaNatal && <NatalDeco />}{n.entry.temaReveillon && <ReveillonDeco />}</div>
+  <div class="body">
+    <p class="eyebrow">{n.entry.cardEtiqueta || n.entry.etiqueta}</p>
+    <h3><a href={`/pacotes/${n.slug}`}>{n.entry.titulo}</a></h3>
+    {n.entry.destaqueTopo && n.entry.chamada && <p class="topo-chamada">{n.entry.chamada}</p>}
+    <ul>
+      {itens.map((t: string) => <li><Fragment set:html={tick} />{t}</li>)}
+    </ul>
+    <div class="actions">
+      <a class="btn-book" href={wa(n.entry.mensagemWhatsapp)} target="_blank" rel="noopener">Reservar</a>
+      <a class="btn-details" href={`/pacotes/${n.slug}`}>Detalhes</a>
+    </div>
+  </div>
+</div>
