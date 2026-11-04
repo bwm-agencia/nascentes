@@ -35,44 +35,80 @@ dias:
   dia: '22'
   mes: nov
   feriado: false
-precoValor: 19 a 22/11
-precoTermos: feriado prolongado, com café da manhã
+precoValor: '1.060'
+precoTermos: a partir de, 2 diárias em suíte dupla com ofurô, com café da manhã
 mensagemWhatsapp: 'Olá! Quero reservar o pacote do *Feriado da Consciência Negra* (19 a 22/11). Meu nome é '
-opcoes: []
+opcoes:
+- nome: Duplo com hidro
+  subtitulo: Suíte temática com banheira de hidromassagem
+  valor: '1.380'
+  por: 2 diárias
+  itens:
+  - '3 diárias: R$ 1.880'
+  mensagemWhatsapp: 'Olá! Quero o pacote do Feriado da Consciência Negra na suíte duplo com hidro (2 diárias R$ 1.380, 3 diárias R$ 1.880). Meu nome é '
+- nome: Duplo com ofurô
+  subtitulo: Suíte temática com ofurô
+  valor: '1.060'
+  por: 2 diárias
+  itens:
+  - '3 diárias: R$ 1.560'
+  mensagemWhatsapp: 'Olá! Quero o pacote do Feriado da Consciência Negra na suíte duplo com ofurô (2 diárias R$ 1.060, 3 diárias R$ 1.560). Meu nome é '
+- nome: Triplo com hidro
+  subtitulo: Suíte temática com hidromassagem para três pessoas
+  valor: '1.680'
+  por: 2 diárias
+  itens:
+  - '3 diárias: R$ 2.365'
+  mensagemWhatsapp: 'Olá! Quero o pacote do Feriado da Consciência Negra na suíte triplo com hidro (2 diárias R$ 1.680, 3 diárias R$ 2.365). Meu nome é '
+- nome: Quádruplo com hidro
+  subtitulo: Suíte temática com hidromassagem para quatro pessoas
+  valor: '1.990'
+  por: 2 diárias
+  itens:
+  - '3 diárias: R$ 2.785'
+  mensagemWhatsapp: 'Olá! Quero o pacote do Feriado da Consciência Negra na suíte quádruplo com hidro (2 diárias R$ 1.990, 3 diárias R$ 2.785). Meu nome é '
 incluiTitulo: O feriado inteiro, sem correria
 incluiTexto: O que está incluído no pacote do feriado.
 inclui:
 - titulo: A estadia
   itens:
-  - texto: De 19 a 22/11
+  - texto: De 19/11 (quinta) a 22/11 (domingo)
+    detalhe: check-in a partir das 14h e check-out até as 14h
+  - texto: Todos os aptos são temáticos
+    detalhe: com hidromassagem ou ofurô
+  - texto: Café da manhã em todas as diárias
     detalhe: ''
-  - texto: Suítes temáticas com hidromassagem
-    detalhe: ''
-  - texto: Suítes com ofurô cromoterápico (individual)
-    detalhe: ''
-  - texto: Café da manhã completo
-    detalhe: ''
-- titulo: Na pousada
+- titulo: Configuração dos aptos
   itens:
-  - texto: Piscina e sauna à disposição
+  - texto: 14 aptos com hidromassagem
+    detalhe: acomoda 2 pessoas na banheira
+  - texto: 4 aptos com ofurô + jato de hidro
+    detalhe: acomoda 1 pessoa por vez na banheira
+  - texto: TV via internet e ar-condicionado
     detalhe: ''
-  - texto: Ar-condicionado, frigobar e TV via internet
-    detalhe: em todas as suítes
-- titulo: Para vir em mais pessoas
+  - texto: Aquecimento solar e gás
+    detalhe: ''
+- titulo: Descritivo da pousada
   itens:
-  - texto: Suítes duplas, triplas e quádruplas
-    detalhe: consulte a disponibilidade
-precoResumo: feriado da Consciência Negra
+  - texto: Restaurante para o café da manhã
+    detalhe: ''
+  - texto: Sala de massagem e relaxamento
+    detalhe: serviços à parte
+  - texto: Piscina e sauna acoplada
+    detalhe: ''
+  - texto: Quiosque para churrasco
+    detalhe: necessário agendar
+precoResumo: feriado da Consciência Negra, de 19 a 22/11
 resumo:
 - rotulo: Datas
   valor: 19 a 22/11
 - rotulo: Suíte
   valor: Hidromassagem ou ofurô
 - rotulo: Café da manhã
-  valor: Incluso
-- rotulo: Valores
-  valor: Consulte no WhatsApp
-validade: ''
+  valor: Incluso em todas as diárias
+- rotulo: Pagamento
+  valor: Pix + cartão, ou 5x no link
+validade: 19 a 22/11/2026 (quinta a domingo)
 legendaCafe: Servido todas as manhãs da estadia
 brotas:
   etiqueta: Brotas no feriado
@@ -90,13 +126,17 @@ extras:
   - massagem
 faq:
 - pergunta: Qual é o valor do pacote?
-  resposta: As tarifas variam conforme a suíte e o número de pessoas. Chame a gente no WhatsApp para receber o valor atualizado, que está sujeito a alterações sem aviso prévio.
+  resposta: 'Duplo com hidro: R$ 1.380 (2 diárias) ou R$ 1.880 (3). Duplo com ofurô: R$ 1.060 ou R$ 1.560. Triplo com hidro: R$ 1.680 ou R$ 2.365. Quádruplo com hidro: R$ 1.990 ou R$ 2.785. Todos com café da manhã e taxa de serviço/turismo de 3% sobre as diárias.'
 - pergunta: Quais são as datas?
-  resposta: O pacote vai de 19 a 22 de novembro. Para chegar antes ou ficar mais, chame a gente no WhatsApp.
+  resposta: O pacote vai de quinta, 19/11, a domingo, 22/11, com check-in a partir das 14h e check-out até as 14h.
 - pergunta: Dá para vir com mais pessoas?
   resposta: Dá. Temos suítes temáticas duplas, triplas e quádruplas, com hidromassagem ou ofurô. Consulte a disponibilidade.
 - pergunta: Qual a diferença entre hidromassagem e ofurô?
-  resposta: São 14 suítes com banheira de hidromassagem para o casal e 4 suítes com ofurô cromoterápico individual. As duas opções estão incluídas no pacote, é só escolher o clima que combina mais com vocês.
+  resposta: São 14 aptos com hidromassagem, que acomoda 2 pessoas na banheira, e 4 aptos com ofurô e jato de hidro, para 1 pessoa por vez. As duas opções estão incluídas no pacote.
+- pergunta: Quais as formas de pagamento?
+  resposta: 50% do total da reserva como sinal em Pix e o restante em até 3x no cartão no check-in. Ou em 5x no ato da reserva, no cartão, por link de pagamento.
+- pergunta: E se eu precisar cancelar ou sair antes?
+  resposta: Em caso de desistência ou cancelamento, o sinal da reserva não será reembolsado nem transferido para outro período. Em caso de saída antecipada, será cobrado o valor total do período.
 - pergunta: A massagem está incluída?
   resposta: Não, mas a pousada tem sala de massagem, a partir de R$ 120 por pessoa. É só pedir na reserva.
 - pergunta: Posso levar meu pet?
@@ -109,7 +149,13 @@ ctaTitulo: Garanta a sua suíte
 ctaDestaque: antes que acabem as vagas
 ctaTexto: Escolham a suíte, chamem no WhatsApp e a gente confirma a disponibilidade na hora.
 cardItens:
-- Suítes com Hidromassagem
-- Suítes com Ofurô Cromoterápico
-- Café da manhã completo
+- De 19 a 22/11 (quinta a domingo)
+- A partir de R$ 1.060 (2 diárias)
+- Suítes com Hidromassagem ou Ofurô
+- Café da manhã em todas as diárias
+- Pagamento em até 5x no link
 cardEtiqueta: De 19 a 22/11
+opcoesEtiqueta: Acomodações
+opcoesTitulo: Escolha a suíte e quantas diárias
+opcoesTexto: Os valores são por suíte, pelo total de diárias, com café da manhã em todas as diárias. Vocês escolhem 2 ou 3 diárias dentro de 19 a 22/11.
+notaOpcoes: Taxa de serviço/turismo de 3%, cobrada em cima das diárias. Os valores estão sujeitos a alteração sem aviso prévio.

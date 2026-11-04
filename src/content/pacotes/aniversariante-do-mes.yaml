@@ -7,8 +7,8 @@ redirecionar:
   value: null
 palavraChave: aniversariante do mês
 palavrasSecundarias: []
-metaTitulo: 'Aniversariante do Mês: até 25% OFF em Brotas'
-metaDescricao: Comemore o seu aniversário em Brotas com até 25% de desconto em suíte temática com hidromassagem e café da manhã completo.
+metaTitulo: 'Aniversariante do Mês: 25% OFF em Brotas'
+metaDescricao: Comemore o seu aniversário em Brotas com 25% de desconto em 2 diárias com hidromassagem, café da manhã, Wi-Fi e estacionamento.
 semIndexar: false
 fotoFoco: 35
 fotoHero: /uploads/pacotes/aniversariante-do-mes-hero.webp
@@ -19,7 +19,7 @@ tituloDestaque: alguns dias a mais
 chamada: Escutar os pássaros, respirar ar puro e comemorar com quem você mais ama, em suíte temática com hidromassagem e café da manhã completo.
 dias: []
 precoValor: 25% OFF
-precoTermos: até 25% de desconto somente para o aniversariante, no mês do aniversário, em pacotes acima de 2 diárias. Exceto feriados
+precoTermos: 'somente para o aniversariante, no mês do aniversário, em pacote de 2 diárias. Exemplo: casal na hidromassagem, de R$ 1.380,00 por R$ 1.207,50. Exceto feriados prolongados'
 mensagemWhatsapp: 'Olá! Vi a promoção *Aniversariante do Mês* no site e quero reservar no mês do meu aniversário. Meu nome é '
 opcoes: []
 incluiTitulo: Um presente que dura alguns dias
@@ -27,27 +27,31 @@ incluiTexto: O que está incluído para quem comemora aqui.
 inclui:
 - titulo: O presente
   itens:
-  - texto: Até 25% OFF na estadia
-    detalhe: no mês do seu aniversário
+  - texto: 25% OFF na estadia
+    detalhe: somente para o aniversariante, no mês do aniversário
 - titulo: A estadia
   itens:
-  - texto: Suíte temática com hidromassagem
+  - texto: 2 diárias em suíte temática com hidromassagem
     detalhe: escolha entre 14 suítes
   - texto: Café da manhã completo
     detalhe: ''
-  - texto: Piscina e sauna à disposição
+  - texto: Wi-Fi gratuito
     detalhe: ''
-precoResumo: desconto de até 25% somente para o aniversariante, em pacotes acima de 2 diárias. Exceto feriados
+  - texto: Estacionamento aberto
+    detalhe: ''
+  - texto: Acesso à piscina e sauna
+    detalhe: ''
+precoResumo: desconto somente para o aniversariante, em pacote de 2 diárias. Exceto feriados prolongados
 resumo:
 - rotulo: Quando
   valor: Mês do aniversário
 - rotulo: Estadia
-  valor: Acima de 2 diárias
+  valor: 2 diárias
 - rotulo: Suíte
   valor: Com hidromassagem
 - rotulo: Não vale
-  valor: Em feriados
-validade: Exceto feriados
+  valor: Em feriados prolongados
+validade: Exceto feriados prolongados
 legendaCafe: Servido todas as manhãs da estadia
 brotas:
   etiqueta: Aventura ou descanso
@@ -58,7 +62,7 @@ brotas:
   fotoAlt: Piscina da pousada em dia de sol
 extras:
   titulo: Deixe a comemoração com a sua cara
-  texto: Pétalas, balões de coração, flores e fondue para transformar a suíte. Combine com a gente antes da chegada.
+  texto: 'Para transformar a suíte: pétalas (R$ 90), ambientação romântica (R$ 240, com pétalas de rosas, balões em formato de coração e vinho na hidro) e fondue de queijo ou chocolate (R$ 240). Devem ser solicitados no ato da reserva.'
   itens:
   - ambientacao
   - fondue
@@ -69,30 +73,36 @@ passos:
   texto: O desconto é solicitado direto com a nossa equipe.
   itens:
   - titulo: Escolha as datas
-    texto: Reserve para o mês do seu aniversário, em um pacote acima de duas diárias.
+    texto: Reserve para o mês do seu aniversário, em pacote de 2 diárias.
   - titulo: Chame a gente
     texto: Pelo WhatsApp, telefone ou e-mail, e avise que é aniversariante.
   - titulo: Informe a data de nascimento
-    texto: A gente confirma o desconto e a reserva na hora.
+    texto: Basta informar seus dados de nascimento no momento da reserva. A gente confirma o desconto na hora.
   regras:
   - Válido somente para o aniversariante
-  - Pacotes acima de duas diárias
+  - Pacote de 2 diárias
   - Apenas suítes com hidromassagem
-  - Exceto feriados
+  - Exceto feriados prolongados
 suitesFiltro: hidro
 suitesTitulo: 14 suítes com hidromassagem para comemorar
 suitesTexto: A promoção vale para as suítes temáticas com banheira de hidromassagem. Todas com ar-condicionado, frigobar e banheiro privativo.
 faq:
 - pergunta: Como recebo o desconto?
-  resposta: Faça a reserva pelo WhatsApp, telefone ou e-mail e informe sua data de nascimento. A equipe aplica o desconto na hora.
+  resposta: Faça a reserva pelo WhatsApp, telefone ou e-mail e informe seus dados de nascimento no momento da reserva. A equipe aplica o desconto na hora.
 - pergunta: Quem tem direito?
   resposta: O desconto vale somente para o aniversariante, em reservas feitas para o mês do aniversário, e não se estende aos demais hóspedes.
+- pergunta: Quanto fica o pacote?
+  resposta: Para um casal na suíte com hidromassagem, 2 diárias com café da manhã saem de R$ 1.380,00 por R$ 1.207,50. O desconto vale na parte do aniversariante.
 - pergunta: Vale para qualquer suíte?
   resposta: A promoção vale para as 14 suítes temáticas com banheira de hidromassagem.
-- pergunta: Quantas diárias preciso reservar?
-  resposta: O desconto vale para pacotes acima de duas diárias. Exceto feriados.
 - pergunta: Vale em feriados?
-  resposta: Não. A promoção não é válida em feriados, que têm pacotes próprios.
+  resposta: Não. A promoção não é válida em feriados prolongados, que têm pacotes próprios.
+- pergunta: Quais as formas de pagamento?
+  resposta: 'Duas opções: 50% no ato da reserva como sinal e o restante no check-out, podendo ser parcelado no cartão de crédito; ou 4x no cartão de crédito no ato da reserva, por link de pagamento.'
+- pergunta: Há taxas adicionais?
+  resposta: Sim. É cobrada taxa de serviço/turismo de 3%, no check-out. Os valores estão sujeitos a alteração sem aviso prévio.
+- pergunta: Qual o horário de check-in e check-out?
+  resposta: Check-in a partir das 14h e check-out até as 14h.
 - pergunta: Posso levar meu pet?
   resposta: A pousada é pet friendly para animais de pequeno porte. Avise na reserva para prepararmos tudo.
 - pergunta: Como garanto a reserva?
@@ -101,12 +111,12 @@ ctaFoto: /uploads/pacotes/aniversariante-do-mes-cta.webp
 ctaEtiqueta: Feliz aniversário
 ctaTitulo: Mais um ano de vida
 ctaDestaque: merece dias inesquecíveis
-ctaTexto: Chame no WhatsApp, informe sua data de nascimento e garanta até 25% OFF no mês do seu aniversário.
+ctaTexto: Chame no WhatsApp, informe seus dados de nascimento e garanta 25% OFF no mês do seu aniversário.
 cardItens:
 - 25% OFF somente para o aniversariante do mês
-- Em pacotes acima de 2 diárias
-- Exceto feriados
+- Pacote de 2 diárias
+- Exceto feriados prolongados
 - Suítes com hidromassagem
+- Café da manhã, Wi-Fi e estacionamento
 - Solicite via WhatsApp, telefone ou e-mail
-- Café da manhã completo
 cardEtiqueta: 25% OFF

@@ -1,0 +1,203 @@
+titulo: Réveillon 2027
+publicado: true
+destaque: false
+mostrarNaHome: true
+ordem: 3
+redirecionar:
+  discriminant: nenhum
+  value: null
+palavraChave: réveillon em brotas
+palavrasSecundarias:
+- pacote de réveillon em brotas
+- ano novo em brotas
+metaTitulo: 'Réveillon 2027 em Brotas: ceia, chopp e brinde'
+metaDescricao: Passe o Réveillon 2027 em Brotas, de 30/12 a 03/01, em suíte temática com ceia em 31/12, 50 litros de chopp artesanal e café da manhã.
+semIndexar: false
+fotoFoco: 55
+fotoHero: /uploads/pacotes/primavera-romantica-brotas.webp
+fotoAlt: Piscina da pousada iluminada à noite, cercada de jardim
+etiqueta: Réveillon 2027 · 30/12 a 03/01
+tituloAntes: Receba 2027
+tituloDestaque: de braços abertos
+chamada: Suíte temática com hidromassagem ou ofurô, ceia na noite de 31/12, 50 litros de chopp artesanal na piscina e café da manhã todos os dias.
+dias:
+- semana: Qua
+  dia: '30'
+  mes: dez
+  feriado: false
+- semana: Qui
+  dia: '31'
+  mes: dez
+  feriado: true
+- semana: Sex
+  dia: '01'
+  mes: jan
+  feriado: true
+- semana: Sáb
+  dia: '02'
+  mes: jan
+  feriado: false
+- semana: Dom
+  dia: '03'
+  mes: jan
+  feriado: false
+precoValor: '3.760'
+precoTermos: a partir de, 3 diárias em suíte dupla com ofurô, com ceia
+mensagemWhatsapp: 'Olá! Vi o pacote *Réveillon 2027* no site e quero consultar disponibilidade. Meu nome é '
+opcoes:
+- nome: Duplo com hidro
+  subtitulo: Suíte temática com banheira de hidromassagem
+  valor: '3.870'
+  por: 3 diárias
+  itens:
+  - '4 diárias: R$ 4.140 (a 5ª diária é cortesia)'
+  mensagemWhatsapp: 'Olá! Quero o pacote Réveillon 2027 na suíte duplo com hidro (3 diárias R$ 3.870, 4 diárias R$ 4.140). Meu nome é '
+- nome: Duplo com ofurô
+  subtitulo: Suíte temática com ofurô
+  valor: '3.760'
+  por: 3 diárias
+  itens:
+  - '4 diárias: R$ 3.920 (a 5ª diária é cortesia)'
+  mensagemWhatsapp: 'Olá! Quero o pacote Réveillon 2027 na suíte duplo com ofurô (3 diárias R$ 3.760, 4 diárias R$ 3.920). Meu nome é '
+- nome: Triplo com hidro
+  subtitulo: Suíte temática com hidromassagem para três pessoas
+  valor: '4.940'
+  por: 3 diárias
+  itens:
+  - '4 diárias: R$ 5.200 (a 5ª diária é cortesia)'
+  mensagemWhatsapp: 'Olá! Quero o pacote Réveillon 2027 na suíte triplo com hidro (3 diárias R$ 4.940, 4 diárias R$ 5.200). Meu nome é '
+- nome: Quádruplo com hidro
+  subtitulo: Suíte temática com hidromassagem para quatro pessoas
+  valor: '5.860'
+  por: 3 diárias
+  itens:
+  - '4 diárias: R$ 6.380 (a 5ª diária é cortesia)'
+  mensagemWhatsapp: 'Olá! Quero o pacote Réveillon 2027 na suíte quádruplo com hidro (3 diárias R$ 5.860, 4 diárias R$ 6.380). Meu nome é '
+opcoesEtiqueta: Acomodações
+opcoesTitulo: Escolha a suíte e quantas diárias
+opcoesTexto: Os valores são por suíte, pelo total de diárias, com a ceia de 31/12 e café da manhã todos os dias. Vocês escolhem os dias a partir de 30/12.
+notaOpcoes: Quem ficar 4 diárias ganha a 5ª como cortesia, prolongando a confraternização. Pagamento em até 5x no ato da reserva, no link. Sujeito à disponibilidade. Valores sujeitos a alteração sem aviso prévio.
+incluiTitulo: Uma virada para brindar
+incluiTexto: Hospedagem, ceia, chopp e Prosecco para receber o ano novo na pousada.
+inclui:
+- titulo: Hospedagem
+  itens:
+  - texto: Suíte temática com hidromassagem ou ofurô
+    detalhe: todos os aptos da pousada são temáticos
+  - texto: Café da manhã todos os dias
+    detalhe: ''
+  - texto: Check-in a partir das 14h e check-out até as 14h
+    detalhe: ''
+  - texto: Piscina e sauna à disposição
+    detalhe: ''
+- titulo: Noite de 31/12
+  itens:
+  - texto: Ceia de Réveillon
+    detalhe: incluída nas diárias
+  - texto: 50 litros de chopp artesanal na piscina
+    detalhe: cortesia da pousada no dia 31/12
+  - texto: Um Prosecco por apartamento
+    detalhe: ''
+- titulo: Ceia de 31/12 · Entradas
+  itens:
+  - texto: Salada tropical
+    detalhe: abacaxi, manga e creme de leite
+  - texto: Tábua de frutas secas
+    detalhe: ''
+  - texto: Cesta de frutas da época
+    detalhe: ''
+- titulo: Ceia de 31/12 · Pratos
+  itens:
+  - texto: Peru tropical com frutas
+    detalhe: ''
+  - texto: Pernil de ano novo
+    detalhe: ''
+  - texto: Lagarto com champignon ao molho madeira
+    detalhe: ''
+  - texto: Batatas assadas com alecrim
+    detalhe: ''
+  - texto: Tender com fios de ovos
+    detalhe: ''
+  - texto: Lasanha de abobrinha com queijo e creme de queijo
+    detalhe: ''
+  - texto: Purê de mandioquinha com creme de leite
+    detalhe: ''
+  - texto: Farofa salgada
+    detalhe: ''
+  - texto: Farofa doce
+    detalhe: ''
+  - texto: Shimeji na manteiga e shoyo
+    detalhe: ''
+  - texto: Torta de palmito
+    detalhe: ''
+  - texto: Arroz com castanhas e champanhe
+    detalhe: ''
+  - texto: Arroz branco
+    detalhe: ''
+- titulo: Ceia de 31/12 · Sobremesas
+  itens:
+  - texto: Tortas e pavês
+    detalhe: ''
+precoResumo: valor por suíte, conforme o número de diárias
+resumo:
+- rotulo: Período
+  valor: 30/12 a 03/01
+- rotulo: Estadia
+  valor: 3 ou 4 diárias
+- rotulo: Cortesia
+  valor: 5ª diária para 4 diárias
+- rotulo: Pagamento
+  valor: Em 5x com link
+validade: De 30/12/2026 a 03/01/2027
+legendaCafe: Servido todas as manhãs
+brotas:
+  etiqueta: Brotas na virada
+  titulo: Cachoeira de manhã, brinde à noite
+  texto: 'Entre uma refeição e outra sobra tempo para conhecer a cidade. A pousada fica a poucos minutos de:'
+  citacao: Réveillon em Brotas combina água cristalina de dia e brinde ao redor da piscina à noite.
+  foto: /uploads/pacotes/escapada-a-dois-brotas.webp
+  fotoAlt: Varanda da pousada cercada de verde
+extras:
+  titulo: Para deixar a virada ainda mais especial
+  texto: Se quiserem acrescentar alguma coisa à estadia, é só avisar no WhatsApp antes da chegada.
+  itens:
+  - ambientacao
+  - fondue
+  - massagem
+faq:
+- pergunta: Quais as datas do pacote de Réveillon?
+  resposta: De 30/12/2026 (quarta) a 03/01/2027 (domingo). Vocês escolhem os dias a partir de 30/12, sujeito à disponibilidade.
+- pergunta: Como funciona a 5ª diária de cortesia?
+  resposta: Quem ficar 4 diárias ganha a 5ª como cortesia, prolongando a confraternização. Consulte pelo WhatsApp a disponibilidade para o período desejado.
+- pergunta: A ceia está inclusa?
+  resposta: Sim. A ceia da noite de 31/12 está incluída nas diárias, com entradas, pratos e sobremesas (tortas e pavês).
+- pergunta: O que mais o pacote oferece na virada?
+  resposta: A pousada oferece 50 litros de chopp artesanal na piscina no dia 31/12 e um Prosecco por apartamento.
+- pergunta: O café da manhã está incluso?
+  resposta: Sim, todos os dias da hospedagem.
+- pergunta: Os valores são por pessoa?
+  resposta: Não. São valores por suíte (dupla, tripla ou quádrupla), pelo total de diárias escolhido.
+- pergunta: Quais as formas de pagamento?
+  resposta: Em até 5x no ato da reserva, com link de pagamento.
+- pergunta: Qual o horário de check-in e check-out?
+  resposta: Check-in a partir das 14h e check-out até as 14h.
+- pergunta: E se eu precisar cancelar ou sair antes?
+  resposta: Em caso de desistência ou cancelamento, o sinal da reserva não será reembolsado nem transferido para outro período. Em caso de saída antecipada, será cobrado o valor total do período.
+- pergunta: Posso levar meu pet?
+  resposta: A pousada é pet friendly para animais de pequeno porte. Avise na reserva para prepararmos tudo.
+- pergunta: Como garanto a reserva?
+  resposta: Todo o processo é feito pelo WhatsApp, direto com a nossa equipe. Vocês escolhem as datas e a gente confirma a disponibilidade na hora.
+ctaFoto: /uploads/pacotes/primavera-romantica-hero.webp
+ctaEtiqueta: Vagas limitadas
+ctaTitulo: A virada está chegando
+ctaDestaque: garanta a sua suíte
+ctaTexto: Escolham a suíte e o período, chamem no WhatsApp e a gente confirma a disponibilidade na hora.
+cardItens:
+- De 30/12 a 03/01
+- 3 ou 4 diárias, 5ª cortesia para quem ficar 4
+- Ceia de Réveillon em 31/12
+- 50 litros de chopp artesanal na piscina
+- Um Prosecco por apartamento
+- Café da manhã todos os dias
+- Pagamento em até 5x no link
+cardEtiqueta: Réveillon · 30/12 a 03/01
