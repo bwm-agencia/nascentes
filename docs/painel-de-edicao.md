@@ -51,3 +51,12 @@ Os 7 pacotes que eram páginas fixas agora estão no painel, com os mesmos ender
 ## Pacotes na página inicial
 
 A seção "Pacotes" da página inicial mostra até 3 pacotes publicados que tenham "Mostrar na página inicial" marcado, na ordem da lista. Foto, etiqueta e itens vêm do card da lista de pacotes. Para trocar o que aparece na Home, marque ou desmarque esse campo.
+
+
+## Como o site chega na Hostinger
+
+1. A equipe publica no painel, e o conteúdo vai para a branch `main`.
+2. O GitHub (workflow *Publicar para Hostinger*) gera o site e grava o resultado na branch `hostinger`.
+3. A Hostinger (Sites → Implantação a partir do Git) está ligada à branch `hostinger` e atualiza o site sozinha (webhook de implantação automática).
+
+Se algo falhar, veja a aba **Actions** do repositório.
