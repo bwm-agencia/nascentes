@@ -7,7 +7,6 @@ Regra: título curto + " | Pousada das Nascentes" quando couber; senão, só o t
 | /blog/aniversario-de-casamento | Aniversário de casamento em Brotas \| Pousada das Nascentes | 58 |
 | /blog/aniversario-de-sao-paulo-aproveite-o-25-de-janeiro-aqui | Aniversário de São Paulo: 25 de janeiro em Brotas | 49 |
 | /blog/cachoeiras-em-brotas | Cachoeiras em Brotas: dicas de passeio \| Pousada das Nascentes | 61 → use "Cachoeiras em Brotas: dicas de passeio" (39) |
-| /blog/degustacao-cafe | Degustação de café em Brotas \| Pousada das Nascentes | 52 |
 | /blog/descubra-os-encantos-de-brotas-na-baixa-temporada | Brotas na baixa temporada: encantos e vantagens | 47 |
 | /blog/feriado-da-consciencia-negra-em-brotas | Feriado da Consciência Negra em Brotas | 38 |
 | /blog/festas-de-final-de-ano-na-pousada-das-nascentes | Festas de final de ano em Brotas \| Pousada das Nascentes | 56 |

@@ -431,7 +431,7 @@
  },
  {
   "source": "/degustacao-cafe",
-  "destination": "/blog/degustacao-cafe",
+  "destination": "/blog",
   "tipo": "post"
  },
  {
@@ -441,7 +441,7 @@
  },
  {
   "source": "/festival-brotas-gourmet",
-  "destination": "/blog/festival-brotas-gourmet",
+  "destination": "/blog",
   "tipo": "post"
  },
  {

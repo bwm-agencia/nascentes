@@ -107,9 +107,11 @@ Redirect 301 /pousada-das-nascentes-preferida-casais /blog/pousada-das-nascentes
 Redirect 301 /viagem-a-dois-acima-de-60-pode-ser-apaixonante /blog/viagem-a-dois-acima-de-60-pode-ser-apaixonante
 Redirect 301 /temporada-de-outono-inverno /blog/temporada-de-outono-inverno
 Redirect 301 /sauna-vidro-integrada-piscina /blog/sauna-vidro-integrada-piscina
-Redirect 301 /degustacao-cafe /blog/degustacao-cafe
+Redirect 301 /degustacao-cafe /blog
+Redirect 301 /blog/degustacao-cafe /blog
 Redirect 301 /massagem-na-pousada-das-nascentes /blog/massagem-na-pousada-das-nascentes
-Redirect 301 /festival-brotas-gourmet /blog/festival-brotas-gourmet
+Redirect 301 /festival-brotas-gourmet /blog
+Redirect 301 /blog/festival-brotas-gourmet /blog
 Redirect 301 /descubra-os-encantos-de-brotas-na-baixa-temporada /blog/descubra-os-encantos-de-brotas-na-baixa-temporada
 Redirect 301 /corporativo /
 Redirect 301 /brotas /blog
