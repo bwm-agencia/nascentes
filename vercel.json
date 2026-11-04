@@ -3,6 +3,17 @@
  "trailingSlash": false,
  "redirects": [
   {
+   "source": "/",
+   "has": [
+    {
+     "type": "host",
+     "value": "painel.pousadadasnascentes.com.br"
+    }
+   ],
+   "destination": "/keystatic",
+   "permanent": false
+  },
+  {
    "source": "/sitemap.html",
    "destination": "/",
    "permanent": true
@@ -544,6 +555,21 @@
   }
  ],
  "headers": [
+  {
+   "source": "/(.*)",
+   "has": [
+    {
+     "type": "host",
+     "value": "painel.pousadadasnascentes.com.br"
+    }
+   ],
+   "headers": [
+    {
+     "key": "X-Robots-Tag",
+     "value": "noindex, nofollow"
+    }
+   ]
+  },
   {
    "source": "/(.*)",
    "has": [

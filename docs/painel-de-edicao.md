@@ -60,3 +60,10 @@ A seção "Pacotes" da página inicial mostra até 3 pacotes publicados que tenh
 3. A Hostinger (Sites → Implantação a partir do Git) está ligada à branch `hostinger` e atualiza o site sozinha (webhook de implantação automática).
 
 Se algo falhar, veja a aba **Actions** do repositório.
+
+## Endereço do painel
+
+O painel fica em **https://painel.pousadadasnascentes.com.br** (abre direto no editor). Esse endereço só funciona com:
+1. Registro DNS `CNAME painel → cname.vercel-dns.com` na zona do domínio (Locaweb).
+2. No GitHub App "Nascentes Painel", a URL de retorno `https://painel.pousadadasnascentes.com.br/api/keystatic/github/oauth/callback` cadastrada.
+O endereço antigo da Vercel continua funcionando como reserva.
