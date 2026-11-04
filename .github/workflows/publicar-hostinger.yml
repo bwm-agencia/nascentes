@@ -29,6 +29,21 @@ jobs:
 
       - run: npm ci
 
+      # Capas de compartilhamento dos artigos do blog: só instala o navegador
+      # (Playwright) quando há artigo novo ou alterado sem capa.
+      - name: Capas de compartilhamento do blog
+        run: |
+          if node scripts/gen-og-blog.mjs --check | grep -vq " 0 capa"; then
+            npm i --no-save playwright
+            npx playwright install --with-deps chromium
+            node scripts/gen-og-blog.mjs
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/og/blog
+            git commit -q -m "Capas de compartilhamento do blog (geradas automaticamente) [skip ci]" || true
+            git push -q origin HEAD:main || echo "não foi possível gravar as capas na main (seguindo com o build)"
+          fi
+
       - name: Gerar o site
         run: npm run build
 
