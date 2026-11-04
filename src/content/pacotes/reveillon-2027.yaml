@@ -12,7 +12,7 @@ palavrasSecundarias:
 - pacote de réveillon em brotas
 - ano novo em brotas
 metaTitulo: 'Réveillon 2027 em Brotas: ceia, chopp e brinde'
-metaDescricao: Passe o Réveillon 2027 em Brotas, de 30/12 a 03/01, em suíte temática com ceia em 31/12, 50 litros de chopp artesanal e café da manhã.
+metaDescricao: Passe o Réveillon 2027 em Brotas, de 30/12 a 03/01, em suíte temática com ceia e música ao vivo em 31/12, 50 litros de chopp artesanal e café da manhã.
 semIndexar: false
 fotoFoco: 40
 fotoHero: /uploads/pacotes/reveillon-2027-hero.webp
@@ -20,7 +20,7 @@ fotoAlt: Piscina da pousada iluminada à noite, com céu estrelado
 etiqueta: Réveillon 2027 · 30/12 a 03/01
 tituloAntes: Receba 2027
 tituloDestaque: de braços abertos
-chamada: Suíte temática com hidromassagem ou ofurô, ceia na noite de 31/12, 50 litros de chopp artesanal na piscina e café da manhã todos os dias.
+chamada: Suíte temática com hidromassagem ou ofurô, ceia e música ao vivo na noite de 31/12, 50 litros de chopp artesanal na piscina e café da manhã todos os dias.
 dias:
 - semana: Qua
   dia: '30'
@@ -79,7 +79,7 @@ opcoesTitulo: Escolha a suíte e quantas diárias
 opcoesTexto: Os valores são por suíte, pelo total de diárias, com a ceia de 31/12 e café da manhã todos os dias. Vocês escolhem os dias a partir de 30/12.
 notaOpcoes: Quem ficar 4 diárias ganha a 5ª como cortesia, prolongando a confraternização. Pagamento em até 5x no ato da reserva, no link. Sujeito à disponibilidade. Valores sujeitos a alteração sem aviso prévio.
 incluiTitulo: Uma virada para brindar
-incluiTexto: Hospedagem, ceia, chopp e Prosecco para receber o ano novo na pousada.
+incluiTexto: Hospedagem, ceia, música ao vivo, chopp e Prosecco para receber o ano novo na pousada.
 inclui:
 - titulo: Hospedagem
   itens:
@@ -95,6 +95,8 @@ inclui:
   itens:
   - texto: Ceia de Réveillon
     detalhe: incluída nas diárias
+  - texto: Música ao vivo
+    detalhe: para animar a virada
   - texto: 50 litros de chopp artesanal na piscina
     detalhe: cortesia da pousada no dia 31/12
   - texto: Um Prosecco por apartamento
@@ -173,7 +175,7 @@ faq:
 - pergunta: A ceia está inclusa?
   resposta: Sim. A ceia da noite de 31/12 está incluída nas diárias, com entradas, pratos e sobremesas (tortas e pavês).
 - pergunta: O que mais o pacote oferece na virada?
-  resposta: A pousada oferece 50 litros de chopp artesanal na piscina no dia 31/12 e um Prosecco por apartamento.
+  resposta: A pousada oferece música ao vivo, 50 litros de chopp artesanal na piscina no dia 31/12 e um Prosecco por apartamento.
 - pergunta: O café da manhã está incluso?
   resposta: Sim, todos os dias da hospedagem.
 - pergunta: Os valores são por pessoa?
@@ -196,7 +198,7 @@ ctaTexto: Escolham a suíte e o período, chamem no WhatsApp e a gente confirma 
 cardItens:
 - De 30/12 a 03/01
 - 3 ou 4 diárias, 5ª cortesia para quem ficar 4
-- Ceia de Réveillon em 31/12
+- Ceia de Réveillon e música ao vivo em 31/12
 - 50 litros de chopp artesanal na piscina
 - Um Prosecco por apartamento
 - Café da manhã todos os dias

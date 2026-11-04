@@ -20,7 +20,7 @@ fotoAlt: Piscina da pousada iluminada ao entardecer, cercada de jardim
 etiqueta: Natal 2026 · 23 a 27 de dezembro
 tituloAntes: Tempo de compartilhar
 tituloDestaque: luz, amor e gratidão
-chamada: Suíte temática com hidromassagem ou ofurô, café da manhã todos os dias e um happy hour de confraternização na piscina na noite de 24/12, com chopp por nossa conta.
+chamada: Suíte temática com hidromassagem ou ofurô, café da manhã todos os dias e um happy hour de confraternização na piscina na noite de 24/12, com chopp artesanal por nossa conta. Além do chopp artesanal, teremos a delícia do clericot.
 dias:
 - semana: Qua
   dia: '23'
@@ -97,8 +97,10 @@ inclui:
     detalhe: ''
 - titulo: Noite de 24/12
   itens:
-  - texto: 50 litros de chopp na piscina
+  - texto: 50 litros de chopp artesanal na piscina
     detalhe: cortesia da pousada para os hóspedes da noite de 24/12
+  - texto: Clericot
+    detalhe: além do chopp artesanal, teremos a delícia do clericot
   - texto: Happy hour de confraternização com coquetel
     detalhe: um coquetel especial no entorno da piscina
 - titulo: Na mesa do happy hour
@@ -147,7 +149,7 @@ faq:
 - pergunta: Como funciona a 5ª diária de cortesia?
   resposta: Quem ficar 4 diárias ganha a 5ª como cortesia. Consulte pelo WhatsApp a disponibilidade para o período desejado.
 - pergunta: O chopp e o happy hour valem para quem?
-  resposta: Para os hóspedes que estiverem hospedados na noite de 24/12. A pousada oferece 50 litros de chopp na piscina e um happy hour de confraternização com coquetel e petiscos no entorno da piscina.
+  resposta: Para os hóspedes que estiverem hospedados na noite de 24/12. A pousada oferece 50 litros de chopp artesanal na piscina, além da delícia do clericot, e um happy hour de confraternização com coquetel e petiscos no entorno da piscina.
 - pergunta: O café da manhã está incluso?
   resposta: Sim, em todos os dias da hospedagem.
 - pergunta: Os valores são por pessoa?
@@ -172,7 +174,7 @@ cardItens:
 - Mínimo de 2 diárias, 5ª cortesia para quem ficar 4
 - Suítes temáticas com hidromassagem ou ofurô
 - Café da manhã todos os dias
-- 50 litros de chopp na piscina em 24/12
+- 50 litros de chopp artesanal e clericot na piscina em 24/12
 - Happy hour com coquetel na noite de 24/12
 - Pagamento em até 5x com link
 cardEtiqueta: Natal · 23 a 27/12
