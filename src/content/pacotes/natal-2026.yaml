@@ -2,6 +2,7 @@ titulo: Natal 2026
 publicado: true
 destaque: false
 mostrarNaHome: true
+temaNatal: true
 ordem: 2
 redirecionar:
   discriminant: nenhum

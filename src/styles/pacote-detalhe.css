@@ -1138,3 +1138,21 @@ section{ position:relative; }
 .topbar:has(~ .fullnav.open){ background:var(--ink); }
 .topbar:has(~ .fullnav.open) .logo-vertical{ display:none; }
 .topbar:has(~ .fullnav.open) .logo-horizontal{ display:block; }
+
+/* ===== tema de Natal (opcional por pacote) ===== */
+.lp-hero--natal{ position:relative; }
+.xmas-tint{ position:absolute; inset:0; z-index:1; pointer-events:none; background:radial-gradient(ellipse at 75% 30%, rgba(255,196,92,.28), transparent 60%), linear-gradient(180deg, rgba(120,18,24,.22), rgba(232,168,76,.10)); mix-blend-mode:soft-light; }
+.xmas-lights{ position:absolute; z-index:2; left:0; right:0; top:0; height:44px; pointer-events:none; }
+.xmas-lights svg{ position:absolute; inset:0; width:100%; height:100%; }
+.xmas-lights .bulb{ position:absolute; width:9px; height:13px; margin-left:-4.5px; border-radius:50% 50% 55% 55%; animation:xmasTwinkle 2.6s ease-in-out infinite; }
+.xmas-lights .bulb.r{ background:#ff5a4f; color:#ff5a4f; }
+.xmas-lights .bulb.a{ background:#ffc86b; color:#ffc86b; }
+.xmas-lights .bulb.g{ background:#7fd69a; color:#7fd69a; }
+.xmas-lights .bulb.w{ background:#fff3d6; color:#fff3d6; }
+.xmas-lights .bulb{ box-shadow:0 0 10px 3px currentColor; }
+.xmas-snow{ position:absolute; inset:0; z-index:2; overflow:hidden; pointer-events:none; }
+.xmas-snow i{ position:absolute; top:-10px; border-radius:50%; background:rgba(255,248,230,.85); box-shadow:0 0 6px rgba(255,236,190,.8); animation:xmasFall linear infinite; }
+@keyframes xmasTwinkle{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
+@keyframes xmasFall{ from{ transform:translate3d(0,-10px,0); opacity:0; } 10%{ opacity:1; } to{ transform:translate3d(24px,105vh,0); opacity:.2; } }
+@media (max-width:760px){ .xmas-lights{ top:68px; } .xmas-tint{ bottom:auto; height:62svh; } .xmas-snow{ bottom:auto; height:62svh; } }
+@media (prefers-reduced-motion:reduce){ .xmas-lights .bulb, .xmas-snow i{ animation:none; } .xmas-snow{ display:none; } }
