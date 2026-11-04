@@ -11,3 +11,7 @@
 @keyframes xmTwinkle{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
 @keyframes xmFall{ from{ transform:translate3d(0,-8px,0); opacity:0; } 10%{ opacity:1; } to{ transform:translate3d(18px,420px,0); opacity:.2; } }
 @media (prefers-reduced-motion:reduce){ .xm-bulb, .xm-snow i{ animation:none; } .xm-snow{ display:none; } }
+
+/* Réveillon: céu noturno e fogos (canvas em /js/fogos.js) */
+.fx-night{ position:absolute; inset:0; z-index:1; pointer-events:none; display:block; background:linear-gradient(180deg, rgba(5,8,32,.62) 0%, rgba(24,10,48,.34) 52%, rgba(40,14,30,.08) 100%); }
+canvas.fx-fogos{ position:absolute; inset:0; width:100%; height:100%; z-index:2; pointer-events:none; display:block; }

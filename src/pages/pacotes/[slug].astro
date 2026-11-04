@@ -6,6 +6,7 @@ import PacoteLugar from '../../components/PacoteLugar.astro';
 import Depoimentos from '../../components/Depoimentos.astro';
 import PacoteExtras from '../../components/PacoteExtras.astro';
 import '../../styles/pacote-detalhe.css';
+import '../../styles/natal.css';
 import { listPacotes, reader, img, wa } from '../../lib/content';
 import { suites } from '../../config/suites';
 
@@ -30,6 +31,7 @@ const head =
   `<meta name="description" content="${q(p.metaDescricao)}">\n<meta property="og:image" content="${ogImg}">` +
   (p.semIndexar ? '\n<meta name="robots" content="noindex">' : '');
 const natal = !!p.temaNatal;
+const reveillon = !!p.temaReveillon;
 const N = 7, pts = 70;
 const fio = Array.from({ length: pts + 1 }, (_, i) => { const x = (i / pts) * 100; return [x, 12 + 9 * Math.abs(Math.sin((x / 100) * Math.PI * N))] as const; });
 const luzes = Array.from({ length: N * 3 + 1 }, (_, i) => { const x = (i / (N * 3)) * 100; return { x, y: 12 + 9 * Math.abs(Math.sin((x / 100) * Math.PI * N)), c: ['r', 'a', 'g', 'w'][i % 4], d: ((i * 37) % 23) / 10 }; });
@@ -44,8 +46,15 @@ const faqLd = JSON.stringify({
 ---
 <Layout title={p.metaTitulo} headExtra={head} script="/js/pacote-detalhe.js">
 <Menu active="/pacotes" />
-<section class={`lp-hero${natal ? " lp-hero--natal" : ""}`} id="top">
+<section class={`lp-hero${natal ? " lp-hero--natal" : ""}${reveillon ? " lp-hero--reveillon" : ""}`} id="top">
   <div class="lp-hero-photo" role="img" aria-label={p.fotoAlt} style={`background-image:url('${foto}'); --pos:center ${foco}%; --mpos:center ${foco}%;`}></div>
+  {reveillon && (
+    <>
+      <div class="fx-night" aria-hidden="true"></div>
+      <canvas class="fx-fogos" aria-hidden="true"></canvas>
+      <script is:inline src="/js/fogos.js" defer></script>
+    </>
+  )}
   {natal && (
     <>
       <div class="xmas-tint" aria-hidden="true"></div>

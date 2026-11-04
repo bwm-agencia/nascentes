@@ -4,6 +4,7 @@ import Menu from '../components/Menu.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/pacotes.css';
 import NatalDeco from '../components/NatalDeco.astro';
+import ReveillonDeco from '../components/ReveillonDeco.astro';
 import { listPacotes, img, wa } from '../lib/content';
 const todos = await listPacotes();
 const novos = [...todos.filter((n) => n.entry.destaqueTopo), ...todos.filter((n) => !n.entry.destaqueTopo)];
@@ -29,7 +30,7 @@ const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
     {novos.map((n) => (
       <div class={`package-card reveal${n.entry.destaque ? ' package-card--featured' : ''}${n.entry.destaqueTopo ? ' package-card--topo' : ''}`}>
         {n.entry.destaqueTopo && <span class="topo-selo">Em destaque · {n.entry.cardEtiqueta || n.entry.etiqueta}</span>}
-        <div class={`photo${n.entry.temaNatal ? ' xm-host' : ''}`} style={`background-image:url('${img(n.entry.cardFoto) || img(n.entry.fotoHero)}'); background-position:center 55%;`}>{n.entry.temaNatal && <NatalDeco />}</div>
+        <div class={`photo${n.entry.temaNatal || n.entry.temaReveillon ? ' xm-host' : ''}`} style={`background-image:url('${img(n.entry.cardFoto) || img(n.entry.fotoHero)}'); background-position:center 55%;`}>{n.entry.temaNatal && <NatalDeco />}{n.entry.temaReveillon && <ReveillonDeco />}</div>
         <div class="body">
           <p class="eyebrow">{n.entry.cardEtiqueta || n.entry.etiqueta}</p>
           <h3><a href={`/pacotes/${n.slug}`}>{n.entry.titulo}</a></h3>
@@ -47,6 +48,7 @@ const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
   </div>
 </section>
 
+{novos.some((n) => n.entry.temaReveillon) && <script is:inline src="/js/fogos.js" defer></script>}
 <section class="final-cta">
   <div class="photo" style="background-image:url('/fotos-hero/foto-04.webp'); background-position:center 25%;"></div>
   <div class="final-cta-inner reveal">

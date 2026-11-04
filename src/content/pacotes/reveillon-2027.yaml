@@ -2,6 +2,7 @@ titulo: Réveillon 2027
 publicado: true
 destaque: false
 mostrarNaHome: true
+temaReveillon: true
 ordem: 3
 redirecionar:
   discriminant: nenhum
@@ -13,9 +14,9 @@ palavrasSecundarias:
 metaTitulo: 'Réveillon 2027 em Brotas: ceia, chopp e brinde'
 metaDescricao: Passe o Réveillon 2027 em Brotas, de 30/12 a 03/01, em suíte temática com ceia em 31/12, 50 litros de chopp artesanal e café da manhã.
 semIndexar: false
-fotoFoco: 55
-fotoHero: /uploads/pacotes/primavera-romantica-brotas.webp
-fotoAlt: Piscina da pousada iluminada à noite, cercada de jardim
+fotoFoco: 35
+fotoHero: /uploads/pacotes/reveillon-2027-hero.webp
+fotoAlt: Jardim e piscina da pousada ao entardecer, com céu aberto
 etiqueta: Réveillon 2027 · 30/12 a 03/01
 tituloAntes: Receba 2027
 tituloDestaque: de braços abertos

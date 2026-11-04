@@ -90,6 +90,7 @@ export default config({
         destaque: fields.checkbox({ label: 'Mostrar em destaque na lista de pacotes', defaultValue: false }),
         destaqueTopo: fields.checkbox({ label: 'Fixar no topo da lista, em destaque grande', description: 'O pacote aparece acima dos demais, em um cartão largo com selo. Use para feriados e campanhas da vez. Vale para vários, mas funciona melhor com um ou dois.', defaultValue: false }),
         temaNatal: fields.checkbox({ label: 'Decoração de Natal no topo da página', description: 'Acrescenta pisca-pisca, brilho dourado e flocos suaves sobre a foto principal. Desmarque depois do Natal ou deixe desmarcado em outros pacotes.', defaultValue: false }),
+        temaReveillon: fields.checkbox({ label: 'Fogos de artifício no topo da página', description: 'Acrescenta céu noturno e fogos animados sobre a foto principal. Use no pacote de Réveillon e desmarque depois da virada.', defaultValue: false }),
         redirecionar: redirecionar('pacotes'),
         mostrarNaHome: fields.checkbox({ label: 'Mostrar na página inicial', description: 'A página inicial mostra até 3 pacotes marcados, na ordem da lista. A chamada usa a foto, a etiqueta e os itens do card da lista.', defaultValue: false }),
         ...seoFields,

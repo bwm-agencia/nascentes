@@ -1,5 +1,6 @@
 ---
 import NatalDeco from '../components/NatalDeco.astro';
+import ReveillonDeco from '../components/ReveillonDeco.astro';
 import Layout from '../layouts/Layout.astro';
 import Menu from '../components/Menu.astro';
 import FooterHome from '../components/FooterHome.astro';
@@ -195,6 +196,7 @@ const pacotesHome = (marcados.length ? marcados : todos).slice(0, 3);
   <p class="reveal">A água encontra o seu caminho devagar. Nós aprendemos isso com ela.</p>
 </section>
 
+{pacotesHome.some((x) => x.entry.temaReveillon) && <script is:inline src="/js/fogos.js" defer></script>}
 <section class="packages-night" id="pacotes">
   <div class="pkg-head reveal">
     <p class="eyebrow">Pacotes</p>
@@ -204,7 +206,7 @@ const pacotesHome = (marcados.length ? marcados : todos).slice(0, 3);
   <div class="pkg-grid">
     {pacotesHome.map((x) => (
       <div class="pkg-card reveal">
-        <div class={`pkg-thumb${x.entry.temaNatal ? " xm-host" : ""}`}><img src={img(x.entry.cardFoto) || img(x.entry.fotoHero)} alt={x.entry.fotoAlt} loading="lazy" />{x.entry.temaNatal && <NatalDeco />}</div>
+        <div class={`pkg-thumb${x.entry.temaNatal || x.entry.temaReveillon ? " xm-host" : ""}`}><img src={img(x.entry.cardFoto) || img(x.entry.fotoHero)} alt={x.entry.fotoAlt} loading="lazy" />{x.entry.temaNatal && <NatalDeco />}{x.entry.temaReveillon && <ReveillonDeco />}</div>
         <div class="pkg-body">
           <p class="eyebrow">{x.entry.cardEtiqueta || x.entry.etiqueta}</p>
           <h3>{x.entry.titulo}</h3>
