@@ -125,6 +125,7 @@ try{var c=JSON.parse(localStorage.getItem('nascentes_consent_v1')||'null');if(c)
 <body>
 <slot />
 <script is:inline src="/js/consent.js" defer data-gtm={tracking.gtmId} data-pixel={tracking.metaPixelId}></script>
+<script is:inline src="/js/track.js" defer></script>
 {script && <script is:inline src={script} defer></script>}
 </body>
 </html>
