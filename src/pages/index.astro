@@ -1,0 +1,344 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import FooterHome from '../components/FooterHome.astro';
+import '../styles/index.css';
+import { listPacotes, img, wa } from '../lib/content';
+const todos = await listPacotes();
+const marcados = todos.filter((x) => x.entry.mostrarNaHome);
+const pacotesHome = (marcados.length ? marcados : todos).slice(0, 3);
+---
+<Layout title={"Pousada das Nascentes — À beira do rio, depois do anoitecer"} script="/js/index.js">
+<Menu logoHref="#top" />
+
+<section class="hero" id="top">
+  <div class="hero-photo" style="background-image:url('/fotos-hero/foto-05.webp');"></div>
+  <div class="glow-orb"></div>
+  <div class="hero-copy">
+    <p class="eyebrow reveal in">Brotas · à beira do rio</p>
+    <h1 class="reveal in">Onde a <em class="glow">água nasce</em><br>e a noite <em class="rose">desacelera</em></h1>
+    <p class="reveal in">Dezoito suítes com hidromassagem ou ofurô cromoterápico, cercadas pelas cachoeiras de Brotas. Chegamos de dia — mas é depois do anoitecer que a Nascentes se revela.</p>
+    <div class="hero-actions reveal in">
+      <a class="cta-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá! Gostaria de consultar valores e disponibilidade." target="_blank" rel="noopener">Reservar a nossa noite</a>
+      <a class="link-glow" href="/suites">Ver suítes <span class="arrow">→</span></a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Role</span><span class="line"></span></div>
+</section>
+
+<section class="availability-wrap">
+  <div class="availability-card reveal in">
+    <p class="avail-title">Verifique disponibilidade</p>
+    <div class="avail-row">
+      <div class="avail-fields">
+        <button type="button" class="avail-field" id="checkin-field" data-target="in" aria-haspopup="dialog" aria-expanded="false">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
+          <span class="avail-text"><small>Check-in</small><span class="avail-label" id="checkin-label">Data de Entrada</span></span>
+        </button>
+        <button type="button" class="avail-field" id="checkout-field" data-target="out" aria-haspopup="dialog" aria-expanded="false">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
+          <span class="avail-text"><small>Check-out</small><span class="avail-label" id="checkout-label">Data de Saída</span></span>
+        </button>
+      </div>
+      <button type="button" class="avail-submit" id="avail-submit">Continuar</button>
+    </div>
+    <div class="cal-pop" id="cal-pop" role="dialog" aria-label="Escolha as datas" hidden>
+      <div class="cal-head">
+        <button type="button" class="cal-nav" id="cal-prev" aria-label="Mês anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <p class="cal-hint" id="cal-hint">Escolha a data de entrada</p>
+        <button type="button" class="cal-nav" id="cal-next" aria-label="Próximo mês"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="cal-months" id="cal-months"></div>
+      <div class="cal-foot">
+        <span id="cal-summary"></span>
+        <div><button type="button" class="cal-clear" id="cal-clear">Limpar</button><button type="button" class="cal-ok" id="cal-ok">Confirmar</button></div>
+      </div>
+    </div>
+    <p class="avail-msg" id="avail-msg" hidden></p>
+    <p class="avail-footer">Atendimento via WhatsApp · (14) 99179-7722</p>
+  </div>
+</section>
+
+<section class="intro-title-section">
+  <div class="intro-title-inner reveal">
+    <h2>Pousada Romântica em Brotas</h2>
+    <p>Uma das melhores pousadas em Brotas, oferecemos conforto e tranquilidade para sua estadia em Brotas, com aquele clima de romance todo especial. Conheça nossas suítes temáticas e viva momentos inesquecíveis ao lado de quem você mais ama.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item reveal">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 20.2c-.3 0-.6-.1-.8-.3C7.6 17 4 13.6 4 9.9 4 7.2 6.1 5 8.8 5c1.4 0 2.7.7 3.2 1.8.5-1.1 1.8-1.8 3.2-1.8C17.9 5 20 7.2 20 9.9c0 3.7-3.6 7.1-7.2 10-.2.2-.5.3-.8.3z"/></svg>
+      </div>
+      <p>Suítes temáticas com decoração autoral e personalizada</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 14h18"/><path d="M4 14v-3a2 2 0 0 1 2-2"/><rect x="2.5" y="14" width="19" height="5.2" rx="2.2"/><path d="M12 8.3c-.6-1-2-1-2.4 0-.4 1 .6 1.8 2.4 3 1.8-1.2 2.8-2 2.4-3-.4-1-1.8-1-2.4 0z"/></svg>
+      </div>
+      <p>Hidromassagem para casal ou ofurô cromoterápico individual</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="14.5" r="2.8"/><circle cx="5.8" cy="10" r="1.5"/><circle cx="18.2" cy="10" r="1.5"/><circle cx="8.5" cy="6.3" r="1.3"/><circle cx="15.5" cy="6.3" r="1.3"/></svg>
+      </div>
+      <p>Pet friendly — aceitamos animais de pequeno porte</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 8.5c1.4 1.4 2.4 1.4 3.8 0s2.4-1.4 3.8 0 2.4 1.4 3.8 0 2.4-1.4 3.8 0"/><path d="M3 13.5c1.4 1.4 2.4 1.4 3.8 0s2.4-1.4 3.8 0 2.4 1.4 3.8 0 2.4-1.4 3.8 0"/><path d="M3 18.5c1.4 1.4 2.4 1.4 3.8 0s2.4-1.4 3.8 0 2.4 1.4 3.8 0 2.4-1.4 3.8 0"/></svg>
+      </div>
+      <p>A poucos minutos das cachoeiras da Estância de Brotas</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="4.2"/><path d="M9.1 11.7L7 20.5l5-2.6 5 2.6-2.1-8.8"/></svg>
+      </div>
+      <p>Travellers' Choice 2026 — top 10% dos hotéis do mundo</p>
+    </div>
+  </div>
+</section>
+
+<section class="reel-section" id="suites">
+  <div class="reel-head">
+    <div>
+      <p class="eyebrow">Suítes temáticas</p>
+      <h2>Escolha a sua noite</h2>
+    </div>
+    <div class="reel-controls">
+      <button class="reel-prev" aria-label="Anterior">←</button>
+      <button class="reel-next" aria-label="Próximo">→</button>
+    </div>
+  </div>
+  <div class="reel">
+    <a class="reel-card reveal" href="/suites/romantica" aria-label="Ver a Suíte Romântica">
+      <img src="/fotos-suites/romantica/capa.webp" alt="Suíte Romântica">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Romântica</h3><span class="slogan">Aconchego a dois, à luz de velas</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="/suites/amarula" aria-label="Ver a Suíte Amarula">
+      <img src="/fotos-suites/amarula/capa.webp" alt="Suíte Amarula">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Amarula</h3><span class="slogan">Elegância selvagem em tons dourados</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="/suites/savana" aria-label="Ver a Suíte Savana">
+      <img src="/fotos-suites/savana/capa.webp" alt="Suíte Savana">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Savana</h3><span class="slogan">O espírito livre da savana africana</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="/suites/irati" aria-label="Ver a Suíte Irati">
+      <img src="/fotos-suites/irati/capa.webp" alt="Suíte Irati">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Irati</h3><span class="slogan">Conforto dourado, ritmo lento</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="/suites/vanilla" aria-label="Ver a Suíte Vanilla">
+      <img src="/fotos-suites/vanilla/capa.webp" alt="Suíte Vanilla">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Vanilla</h3><span class="slogan">Doçura floral em cada detalhe</span><span class="amenity">Hidromassagem para casal</span></div></a>
+    <a class="reel-card reveal" href="/suites/terra" aria-label="Ver a Suíte Terra">
+      <img src="/fotos-suites/terra/capa.webp" alt="Suíte Terra">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Terra</h3><span class="slogan">Calor terroso, raízes brasileiras</span><span class="amenity">Ofurô cromoterápico individual</span></div></a>
+    <a class="reel-card reveal" href="/suites/agua" aria-label="Ver a Suíte Água">
+      <img src="/fotos-suites/agua/capa.webp" alt="Suíte Água">
+      <div class="cap"><p class="eyebrow">Temática</p><h3>Água</h3><span class="slogan">Fluidez azul, alma marinha</span><span class="amenity">Ofurô cromoterápico individual</span></div></a>
+    <a class="reel-card reel-card--more reveal" href="/suites">
+      <h3>Ver as dezoito suítes</h3>
+      <span class="link-glow">Abrir catálogo <span class="arrow">→</span></span>
+    </a>
+  </div>
+</section>
+
+<section class="sticky-split" id="ritual">
+  <div class="sticky-media">
+    <img src="/fotos-hero/ritual-01-suite-pronta.webp" alt="Suíte preparada ao anoitecer" class="is-active" data-ritual-img="1">
+    <img src="/fotos-hero/ritual-02-ofuro-velas.webp" alt="Ofurô à luz de velas" data-ritual-img="2">
+    <img src="/fotos-hero/ritual-03-fondue.webp" alt="Fondue na suíte" data-ritual-img="3">
+    <img src="/fotos-hero/ritual-04-cafe-colonial.webp" alt="Café colonial" data-ritual-img="4">
+  </div>
+  <div class="sticky-list">
+    <div class="ritual reveal" data-ritual-step="1">
+      <p class="eyebrow">Ao entardecer</p>
+      <h3>A suíte já está pronta</h3>
+      <p>Check-in tranquilo, sem filas — a suíte escolhida preparada antes de vocês chegarem.</p>
+    </div>
+    <div class="ritual reveal" data-ritual-step="2">
+      <p class="eyebrow">Ao anoitecer</p>
+      <h3>Ofurô à luz de velas</h3>
+      <p>Hidromassagem para casal ou ofurô cromoterápico individual, dentro da própria suíte.</p>
+    </div>
+    <div class="ritual reveal" data-ritual-step="3">
+      <p class="eyebrow">Depois do jantar</p>
+      <h3>Fondue sem sair do quarto</h3>
+      <p>Servido na suíte, para quem não quer trocar o pijama pela recepção.</p>
+    </div>
+    <div class="ritual reveal" data-ritual-step="4">
+      <p class="eyebrow">De manhã</p>
+      <h3>Café colonial, sem pressa</h3>
+      <p>Mesa farta, servida com calma — o único horário marcado do dia.</p>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+(function(){
+  var steps = document.querySelectorAll('[data-ritual-step]');
+  var imgs = document.querySelectorAll('[data-ritual-img]');
+  if(!steps.length || !imgs.length) return;
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var step = entry.target.getAttribute('data-ritual-step');
+        imgs.forEach(function(img){
+          img.classList.toggle('is-active', img.getAttribute('data-ritual-img') === step);
+        });
+      }
+    });
+  }, { threshold: 0.55 });
+  steps.forEach(function(step){ observer.observe(step); });
+})();
+</script>
+
+<section class="quote-night">
+  <div class="glow-orb"></div>
+  <span class="quote-mark">"</span>
+  <p class="reveal">A água encontra o seu caminho devagar. Nós aprendemos isso com ela.</p>
+</section>
+
+<section class="packages-night" id="pacotes">
+  <div class="pkg-head reveal">
+    <p class="eyebrow">Pacotes</p>
+    <h2>Combinações para desacelerar</h2>
+    <p>Cada pacote reúne diária, banheira, café da manhã e um mimo especial — para chegar sem se preocupar com mais nada.</p>
+  </div>
+  <div class="pkg-grid">
+    {pacotesHome.map((x) => (
+      <div class="pkg-card reveal">
+        <div class="pkg-thumb"><img src={img(x.entry.cardFoto) || img(x.entry.fotoHero)} alt={x.entry.fotoAlt} loading="lazy" /></div>
+        <div class="pkg-body">
+          <p class="eyebrow">{x.entry.cardEtiqueta || x.entry.etiqueta}</p>
+          <h3>{x.entry.titulo}</h3>
+          <ul>
+            {(x.entry.cardItens.length ? x.entry.cardItens : (x.entry.inclui[0]?.itens ?? []).map((it) => it.texto)).slice(0, 4).map((t) => <li>{t}</li>)}
+          </ul>
+          <a class="link-glow" href={`/pacotes/${x.slug}`}>Ver pacote <span class="arrow">→</span></a>
+          {' '}<a class="link-glow" href={wa(`Olá! Quero saber mais sobre o pacote ${x.entry.titulo}.`)} target="_blank" rel="noopener">Consultar <span class="arrow">→</span></a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="honeymoon-cta" id="lua-de-mel">
+  <div class="hc-card reveal">
+    <div class="hc-photo" style="background-image:url('/fotos-hero/lua-de-mel-casal-home-v2.webp'); background-position: center 36%;"></div>
+    <div class="glow-orb"></div>
+    <div class="hc-card-inner">
+      <p class="eyebrow">Lua de mel</p>
+      <h2>Comecem a história de vocês onde o rio começa a dele</h2>
+      <p>Suíte preparada, fondue à luz de velas e ofurô cromoterápico para dois — a Nascentes recebe recém-casados desde a fundação da pousada.</p>
+      <a class="cta-glow" href="/lua-de-mel">Planejar a lua de mel</a>
+    </div>
+  </div>
+</section>
+
+<section class="location-night" id="localizacao">
+  <div class="loc-grid">
+    <div class="loc-media reveal">
+      <img src="/fotos-site/202608-pousada-nascentes-brotas-fachada-mini-577x350.webp" alt="Fachada da Pousada das Nascentes à noite">
+      <div class="loc-pin"></div>
+    </div>
+    <div class="loc-info reveal">
+      <p class="eyebrow">Como chegar</p>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.6rem); font-weight:500; margin-top:14px;">No coração do Patrimônio de São Sebastião da Serra</h2>
+      <dl>
+        <dt>Endereço</dt>
+        <dd>Avenida Antonio Mariano do Prado, 260 — Patrimônio de São Sebastião da Serra, Brotas - SP, 17380-000</dd>
+        <dt>Telefone</dt>
+        <dd>(14) 3653-6133 · (14) 99179-7722</dd>
+        <dt>Nas proximidades</dt>
+        <dd>Cachoeira das Três Quedas a 800m</dd>
+      </dl>
+      <a class="link-glow" style="margin-top:30px;" href="https://api.whatsapp.com/send?phone=5514991797722&text=Olá!" target="_blank" rel="noopener">Falar no WhatsApp <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="trust-badge">
+  <div class="glow-orb"></div>
+  <div class="trust-badge-inner reveal">
+    <div class="trust-badge-icon">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="4.2"/><path d="M9.1 11.7L7 20.5l5-2.6 5 2.6-2.1-8.8"/></svg>
+    </div>
+    <p class="eyebrow">Reconhecimento</p>
+    <h2>Travellers&rsquo; Choice 2026</h2>
+    <p>Eleita pelo TripAdvisor uma das pousadas mais bem avaliadas por quem se hospeda aqui — um selo que é reflexo direto do carinho de cada hóspede que passa pela Nascentes.</p>
+    <a class="link-glow" href="https://www.tripadvisor.com.br/Hotel_Review-g793338-d2529742-Reviews-Pousada_das_Nascentes-Brotas_State_of_Sao_Paulo.html" target="_blank" rel="noopener">Ver no TripAdvisor <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!--
+  DEPOIMENTOS — como editar:
+  Troque o texto dentro de cada <blockquote> pelo comentário real do hóspede
+  (copie de um print do TripAdvisor, Google ou Booking) e o nome em <span class="name">.
+  Pode trocar "TripAdvisor" pela origem certa (Google, Booking...) em <span class="source">.
+  Se tiver menos ou mais de 3 depoimentos, é só apagar ou duplicar um bloco <div class="testimonial-card">...</div> inteiro.
+-->
+<section class="testimonials">
+  <div class="testimonials-head reveal">
+    <p class="eyebrow">Depoimentos</p>
+    <h2>O que nossos hóspedes dizem</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+      </div>
+      <blockquote>Nossa estadia foi maravilhosa, final de semana top, equipe atenciosos, jantar para a comemoração dos namorados uma delícia, tudo pensando para a ocasião, a decoração tudo perfeito. Agradeço a gerência e toda equipe, todos profissionais.</blockquote>
+      <div class="who">
+        <span class="name">Rovilson M.</span>
+        <span class="source">TripAdvisor</span>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+      </div>
+      <blockquote>A pousada é muito boa, o quarto espaçoso, banheiro também, a hidro então maravilhosa, café da manhã muito bem servido. Voltaria com certeza.</blockquote>
+      <div class="who">
+        <span class="name">Gabriela P.</span>
+        <span class="source">TripAdvisor</span>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 17l-6.2 3.4 1.6-6.8L2.2 9l6.9-.7z"/></svg>
+      </div>
+      <blockquote>Ótima hospedagem. Local bem cuidado, limpo, organizado! Atendimento excelente! Adoramos a estadia.</blockquote>
+      <div class="who">
+        <span class="name">Léia A.</span>
+        <span class="source">TripAdvisor</span>
+      </div>
+    </div>
+  </div>
+  <div class="testimonials-more reveal">
+    <a class="link-glow" href="https://www.tripadvisor.com.br/Hotel_Review-g793338-d2529742-Reviews-Pousada_das_Nascentes-Brotas_State_of_Sao_Paulo.html" target="_blank" rel="noopener">Ver todas as avaliações <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="photo" style="background-image:url('/fotos-hero/foto-05.webp');"></div>
+  <div class="final-cta-inner reveal">
+    <p class="eyebrow">Prontos para viver isso?</p>
+    <h2>Falta só um passo<br><span class="accent">para você estar aqui</span></h2>
+    <p class="sub">Fale com a gente pelo WhatsApp. A gente verifica a disponibilidade, tira todas as dúvidas e garante que sua estadia vai ser exatamente o que você imaginou.</p>
+    <div class="actions">
+      <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20Pousada%20das%20Nascentes." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+<FooterHome />
+</Layout>

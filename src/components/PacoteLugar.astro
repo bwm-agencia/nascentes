@@ -1,0 +1,15 @@
+---
+const { legenda = 'Servido nas manhãs da estadia' } = Astro.props;
+---
+<section class="lp-place">
+  <div class="suite-section-head reveal">
+    <p class="eyebrow">Sem precisar sair da pousada</p>
+    <h2>Tudo o que vocês precisam já está aqui</h2>
+    <p>Piscina, sauna, café da manhã caprichado, TV via internet, ar-condicionado e frigobar em todas as suítes.</p>
+  </div>
+  <div class="lp-place-grid">
+    <figure class="reveal"><img src="/fotos-experiencia/piscina-jardim/foto-01.webp" alt="Piscina cercada de mata na Pousada das Nascentes" loading="lazy"><figcaption><strong>Piscina no meio do verde</strong><span>Para passar a tarde inteira sem olhar o relógio</span></figcaption></figure>
+    <figure class="reveal"><img src="/fotos-experiencia/sauna/foto-04.webp" alt="Sauna e piscina iluminadas à noite" loading="lazy"><figcaption><strong>Sauna ao anoitecer</strong><span>O jeito certo de fechar o dia</span></figcaption></figure>
+    <figure class="reveal"><img src="/fotos-hero/ritual-04-cafe-colonial.webp" alt="Mesa de café da manhã colonial" loading="lazy"><figcaption><strong>Café da manhã acolhedor</strong><span>{legenda}</span></figcaption></figure>
+  </div>
+</section>

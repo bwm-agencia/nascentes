@@ -1,0 +1,110 @@
+titulo: Consciência Negra
+publicado: true
+destaque: false
+ordem: 7
+redirecionar:
+  discriminant: nenhum
+  value: null
+palavraChave: consciência negra
+palavrasSecundarias: []
+metaTitulo: Pacote Consciência Negra em Brotas
+metaDescricao: Pacote para o feriado da Consciência Negra em Brotas, de 20 a 22/11, com suíte temática e café da manhã completo. Reserve pelo WhatsApp.
+semIndexar: false
+fotoFoco: 55
+fotoHero: /uploads/pacotes/consciencia-negra-hero.webp
+fotoAlt: Casal na cama da suíte temática
+etiqueta: Feriado da Consciência Negra
+tituloAntes: Um fim de semana prolongado
+tituloDestaque: no meio da mata
+chamada: Sexta de feriado, sábado e domingo para trocar a rotina pelo silêncio do interior, com suíte temática e café da manhã esperando por vocês.
+dias:
+- semana: Sex
+  dia: '20'
+  mes: nov
+  feriado: true
+- semana: Sáb
+  dia: '21'
+  mes: nov
+  feriado: false
+- semana: Dom
+  dia: '22'
+  mes: nov
+  feriado: false
+precoValor: 20 a 22/11
+precoTermos: feriado prolongado, com café da manhã
+mensagemWhatsapp: 'Olá! Quero reservar o pacote do *Feriado da Consciência Negra* (20 a 22/11). Meu nome é '
+opcoes: []
+incluiTitulo: O feriado inteiro, sem correria
+incluiTexto: O que está incluído no pacote do feriado.
+inclui:
+- titulo: A estadia
+  itens:
+  - texto: De 20 a 22/11
+    detalhe: ''
+  - texto: Suítes temáticas com hidromassagem
+    detalhe: ''
+  - texto: Suítes com ofurô cromoterápico (individual)
+    detalhe: ''
+  - texto: Café da manhã completo
+    detalhe: ''
+- titulo: Na pousada
+  itens:
+  - texto: Piscina e sauna à disposição
+    detalhe: ''
+  - texto: Ar-condicionado, frigobar e TV via internet
+    detalhe: em todas as suítes
+- titulo: Para vir em mais pessoas
+  itens:
+  - texto: Suítes duplas, triplas e quádruplas
+    detalhe: consulte a disponibilidade
+precoResumo: feriado da Consciência Negra
+resumo:
+- rotulo: Datas
+  valor: 20 a 22/11
+- rotulo: Suíte
+  valor: Hidromassagem ou ofurô
+- rotulo: Café da manhã
+  valor: Incluso
+- rotulo: Valores
+  valor: Consulte no WhatsApp
+validade: ''
+legendaCafe: Servido todas as manhãs da estadia
+brotas:
+  etiqueta: Brotas no feriado
+  titulo: Aventura de dia, hidromassagem à noite
+  texto: 'Rafting, tirolesa, cavalgada, trilhas e banho de cachoeira. A pousada fica a poucos minutos de:'
+  citacao: Ou deixe a agenda de lado e passe o feriado entre a piscina, a sauna e a suíte. Feriado também é para isso.
+  foto: /uploads/pacotes/consciencia-negra-brotas.webp
+  fotoAlt: Área externa da pousada
+extras:
+  titulo: Torne a noite ainda mais especial
+  texto: Pétalas, flores, balões de coração, fondue e massagem. É só combinar com a gente antes da chegada.
+  itens:
+  - ambientacao
+  - fondue
+  - massagem
+faq:
+- pergunta: Qual é o valor do pacote?
+  resposta: As tarifas variam conforme a suíte e o número de pessoas. Chame a gente no WhatsApp para receber o valor atualizado, que está sujeito a alterações sem aviso prévio.
+- pergunta: Quais são as datas?
+  resposta: O pacote vai de 20 a 22 de novembro. Para chegar antes ou ficar mais, chame a gente no WhatsApp.
+- pergunta: Dá para vir com mais pessoas?
+  resposta: Dá. Temos suítes temáticas duplas, triplas e quádruplas, com hidromassagem ou ofurô. Consulte a disponibilidade.
+- pergunta: Qual a diferença entre hidromassagem e ofurô?
+  resposta: São 14 suítes com banheira de hidromassagem para o casal e 4 suítes com ofurô cromoterápico individual. As duas opções estão incluídas no pacote, é só escolher o clima que combina mais com vocês.
+- pergunta: A massagem está incluída?
+  resposta: Não, mas a pousada tem sala de massagem, a partir de R$ 120 por pessoa. É só pedir na reserva.
+- pergunta: Posso levar meu pet?
+  resposta: A pousada é pet friendly para animais de pequeno porte. Avise na reserva para prepararmos tudo.
+- pergunta: Como garanto a reserva?
+  resposta: Todo o processo é feito pelo WhatsApp, direto com a nossa equipe. Vocês escolhem as datas e a gente confirma a disponibilidade na hora.
+ctaFoto: /uploads/pacotes/consciencia-negra-cta.webp
+ctaEtiqueta: Feriados lotam rápido
+ctaTitulo: Garanta a sua suíte
+ctaDestaque: antes que acabem as vagas
+ctaTexto: Escolham a suíte, chamem no WhatsApp e a gente confirma a disponibilidade na hora.
+cardItens:
+- Suítes com Hidromassagem
+- Suítes com Ofurô Cromoterápico
+- Café da manhã completo
+cardEtiqueta: De 20 a 22/11

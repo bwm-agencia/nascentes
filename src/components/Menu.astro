@@ -1,0 +1,37 @@
+---
+import { whatsappUrl } from '../config/site';
+
+interface Props {
+  active?: string;
+  logoHref?: string;
+}
+const { active = '', logoHref = '/' } = Astro.props;
+
+const links = [
+  { href: '/pacotes', label: 'Pacotes' },
+  { href: '/suites', label: 'Suítes' },
+  { href: '/experiencia', label: 'A experiência' },
+  { href: '/cafe-da-manha', label: 'Café da manhã' },
+  { href: '/lua-de-mel', label: 'Lua de mel' },
+  { href: '/blog', label: 'Guia de Brotas' },
+  { href: '/localizacao', label: 'Localização' },
+];
+---
+<header class="topbar">
+  <a href={logoHref}><img class="logo-vertical" src="/logo/logo-vertical.png" alt="Pousada das Nascentes"><img class="logo-horizontal" src="/logo/logo-horizontal.png" alt="Pousada das Nascentes"></a>
+  <div class="topbar-right">
+    <ul class="nav-links">
+      {links.map((l) => (
+        <li><a href={l.href} style={active === l.href ? 'color:var(--amber-soft);' : undefined}>{l.label}</a></li>
+      ))}
+    </ul>
+    <a class="cta-glow cta-glow--small" href={whatsappUrl} target="_blank" rel="noopener">Reservar</a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="fullnav">
+  {links.map((l) => <a href={l.href}>{l.label}</a>)}
+  <a class="cta-glow" href={whatsappUrl} target="_blank" rel="noopener">Reservar</a>
+</nav>

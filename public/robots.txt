@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_temp/
+
+Sitemap: https://www.pousadadasnascentes.com.br/sitemap.xml

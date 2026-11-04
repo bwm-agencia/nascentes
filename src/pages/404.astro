@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/404.css';
+---
+<Layout title={"Página não encontrada — Pousada das Nascentes"} headExtra={"<meta name=\"robots\" content=\"noindex\">"} script="/js/404.js">
+<Menu logoHref="/" />
+
+<section class="nf">
+  <div class="photo" role="img" aria-label="Jardim da Pousada das Nascentes"></div>
+  <div class="glow-orb"></div>
+  <div class="inner">
+    <p class="code">404</p>
+    <h1>Esse caminho não leva até a pousada</h1>
+    <p class="lead">A página que você procura mudou de lugar ou não existe mais. Mas fica tranquilo, daqui até as suítes é rapidinho.</p>
+    <div class="actions">
+      <a class="cta-glow" href="/">Voltar para o início</a>
+      <a class="link-glow" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Estava%20no%20site%20e%20n%C3%A3o%20encontrei%20a%20p%C3%A1gina%20que%20procurava.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener">Falar no WhatsApp <span class="arrow">→</span></a>
+    </div>
+    <p class="label">Talvez você estivesse procurando</p>
+    <div class="shortcuts">
+      <a href="/suites">Suítes temáticas</a>
+      <a href="/pacotes">Pacotes</a>
+      <a href="/lua-de-mel">Lua de mel</a>
+      <a href="/cafe-da-manha">Café da manhã</a>
+      <a href="/experiencia">A experiência</a>
+      <a href="/localizacao">Localização</a>
+    </div>
+  </div>
+</section>
+<Footer />
+</Layout>

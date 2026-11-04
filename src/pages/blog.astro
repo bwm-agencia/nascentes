@@ -1,0 +1,230 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/blog.css';
+import { listPosts, img } from '../lib/content';
+const novos = await listPosts();
+const slugCat = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+---
+<Layout title={"Guia de Brotas — Dicas, roteiros e novidades | Pousada das Nascentes"} headExtra={"<meta name=\"description\" content=\"Dicas de Brotas, cachoeiras, gastronomia, roteiros a dois e novidades da Pousada das Nascentes.\">"} script="/js/blog.js">
+<Menu active="/blog" />
+
+<section class="bl-hero">
+  <div class="glow-orb"></div>
+  <div class="inner">
+    <p class="eyebrow">Guia de Brotas</p>
+    <h1>Novidades e dicas <em>de Brotas</em></h1>
+    <p class="lead">Roteiros, cachoeiras, gastronomia, novidades da pousada e ideias para viagens a dois na Capital da Aventura.</p>
+    <div class="bl-filter" role="group" aria-label="Filtrar por categoria"><button type="button" data-f="all" aria-pressed="true">Todos</button><button type="button" data-f="destaques-de-brotas" aria-pressed="false">Destaques de Brotas</button><button type="button" data-f="gastronomia" aria-pressed="false">Gastronomia</button><button type="button" data-f="novidades-da-pousada" aria-pressed="false">Novidades da Pousada</button><button type="button" data-f="pacotes-e-feriados" aria-pressed="false">Pacotes e Feriados</button><button type="button" data-f="romance-e-lua-de-mel" aria-pressed="false">Romance e Lua de Mel</button><button type="button" data-f="turismo-de-aventura-e-ecoturismo" aria-pressed="false">Turismo de Aventura e Ecoturismo</button></div>
+  </div>
+</section>
+<section class="bl-list">
+  <div class="bl-grid" id="bl-grid">
+    {novos.map((n, i) => (
+      <a class={`bl-card reveal${i === 0 ? ' featured' : ''}`} href={`/blog/${n.slug}`} data-cat={slugCat(n.entry.categoria)}>
+        <div class="thumb"><img src={img(n.entry.foto)} alt={n.entry.titulo} loading="lazy" /></div>
+        <div class="body"><div class="bl-meta"><span class="cat">{n.entry.categoria}</span></div><h2>{n.entry.titulo}</h2><p>{n.entry.resumo}</p><span class="more">Ler artigo →</span></div>
+      </a>
+    ))}
+    <a class={`bl-card reveal${novos.length ? '' : ' featured'}`} href="/blog/descubra-os-encantos-de-brotas-na-baixa-temporada" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/fotos-site/202204-parque-dos-saltos.webp" alt="Descubra os encantos de Brotas na baixa temporada" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Descubra os encantos de Brotas na baixa temporada</h2><p>Na baixa temporada, Brotas é toda sua. E na Pousada das Nascentes, você vive essa experiência com charme, conforto e tudo o que importa: paz, natureza e alma renovada!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/festival-brotas-gourmet" data-cat="gastronomia">
+      <div class="thumb"><img src="/fotos-site/201907-brotas-gourmet-2022.webp" alt="Festival Brotas Gourmet" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Gastronomia</span></div><h2>Festival Brotas Gourmet</h2><p>Mais uma grande edição desse festival gastronômico que encantou a toda população e turistas, com muitas receitas deliciosas e boa música, confira.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/massagem-na-pousada-das-nascentes" data-cat="pacotes-e-feriados">
+      <div class="thumb"><img src="/fotos-site/202110-massagem-na-pousada-das-nascentes-brotas.webp" alt="Massagem na Pousada das Nascentes" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Pacotes e Feriados</span></div><h2>Massagem na Pousada das Nascentes</h2><p>Aqui você encontra a oportunidade de rejuvenescer, tudo isso em uma verdadeira corrente de energia vital através de massagens relaxantes.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/degustacao-cafe" data-cat="gastronomia">
+      <div class="thumb"><img src="/fotos-site/202402-cafe-sao-francisco-do-gramado.webp" alt="Descubra os segredos do café na Pousada das Nascentes em Brotas!" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Gastronomia</span></div><h2>Descubra os segredos do café na Pousada das Nascentes em Brotas!</h2><p>Para os verdadeiros apreciadores de café, há momentos que são verdadeiros presentes para os sentidos.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/sauna-vidro-integrada-piscina" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/fotos-site/202306-sauna-vidro-integrada-pousada-das-nascentes-5.webp" alt="Sauna de Vidro integrada com a Piscina" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Sauna de Vidro integrada com a Piscina</h2><p>Oferecemos uma novidade para nossos hóspedes que procuram momentos de relaxamento: uma sauna integrada com nossa piscina que pode atingir até 50º!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/temporada-de-outono-inverno" data-cat="pacotes-e-feriados">
+      <div class="thumb"><img src="/fotos-site/201905-inverno-em-brotas.webp" alt="O charme de Brotas na temporada de outono/inverno" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Pacotes e Feriados</span></div><h2>O charme de Brotas na temporada de outono/inverno</h2><p>Com as estações mais charmosas do ano se aproximando, Brotas começa a ganhar destaque, já imaginou uma viagem a dois para desfrutar deste clima?</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/viagem-a-dois-acima-de-60-pode-ser-apaixonante" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/fotos-site/202010-pousada-das-nascentes-88.webp" alt="Viagem a dois acima de 60 pode ser apaixonante" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Viagem a dois acima de 60 pode ser apaixonante</h2><p>Que tal começar a pensar em viagens e resignificá-las? Está na hora de investir em viagens a dois e fazer descobertas juntos.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/pousada-das-nascentes-preferida-casais" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/fotos-site/201507-brotas-pousada-das-nascentes-11-4.webp" alt="Pousada das Nascentes a preferida dos casais" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Pousada das Nascentes a preferida dos casais</h2><p>Para que o sucesso de uma viagem em casal atinja os 100% é necessário a preocupação com um importante detalhe, a hospedagem!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/fim-de-semana-perfeito-brotas-casais" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/fotos-site/201507-brotas-pousada-das-nascentes-26.webp" alt="Um fim de semana perfeito em Brotas para os casais" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Um fim de semana perfeito em Brotas para os casais</h2><p>Que tal arrumar as malas, pegar o carro e partir para Brotas em busca de uma viagem no fim de semana perfeita? Comece a planejar hoje mesmo!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/cachoeiras-em-brotas" data-cat="turismo-de-aventura-e-ecoturismo">
+      <div class="thumb"><img src="/fotos-site/201508-cachoeira-cassorova-brotas-21-876x400.webp" alt="Cachoeiras em Brotas – uma excelente dica de passeio" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Turismo de Aventura e Ecoturismo</span></div><h2>Cachoeiras em Brotas – uma excelente dica de passeio</h2><p>Apresentamos aqui algumas dicas para você conhecer as mais belas cachoeiras em Brotas. Essas são algumas de muitas que encantam dia após dia.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/o-melhor-carnaval-do-interior-paulista" data-cat="pacotes-e-feriados">
+      <div class="thumb"><img src="/fotos-site/201601-forca-na-peruca.webp" alt="Carnaval com festa, aventura e romance" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Pacotes e Feriados</span></div><h2>Carnaval com festa, aventura e romance</h2><p>Saiba o que acontece em Brotas nos dias da folia e como aproveitar o Carnaval com festa, aventura e romance.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/aniversario-de-sao-paulo-aproveite-o-25-de-janeiro-aqui" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/fotos-site/201808-blog-por-onde-andamos-em-brotas-9.webp" alt="Aniversário de São Paulo – Aproveite o 25 de Janeiro aqui" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Aniversário de São Paulo – Aproveite o 25 de Janeiro aqui</h2><p>Deseja um clima mais ameno para curtir o feriado do Aniversário da cidade de São Paulo? Então que tal pegar estrada e vir curtir a natureza de Brotas?</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/por-que-viajar-para-o-interior-de-sp" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/fotos-site/201804-pousada-em-brotas-17.webp" alt="Por que viajar para o interior de SP?" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Por que viajar para o interior de SP?</h2><p>Nada como uma viagem para Brotas para conhecer as belezas naturais que o interior de SP pode nos oferecer. Comece a arrumar as malas!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/ferias-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/fotos-site/201508-dicas-de-viagem-brotas-serra.webp" alt="Férias de Janeiro em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Férias de Janeiro em Brotas</h2><p>As férias em Brotas reservam dias incríveis para os casais, que além de descansar em nossa Pousada com todo o aconchego e qualidade, confira.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/feriado-da-consciencia-negra-em-brotas" data-cat="pacotes-e-feriados">
+      <div class="thumb"><img src="/fotos-site/201909-click-in-brotas-tadeu-fassel-7.webp" alt="Feriado da Consciência Negra em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Pacotes e Feriados</span></div><h2>Feriado da Consciência Negra em Brotas</h2><p>Se sua cidade aderiu ao feriado, escolha o interior de SP como destino. Escolha Brotas para curtir o Feriado da Consciência Negra!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/festas-de-final-de-ano-na-pousada-das-nascentes" data-cat="pacotes-e-feriados">
+      <div class="thumb"><img src="/fotos-site/201611-festas-de-final-de-ano.webp" alt="Festas de Final de Ano na Pousada das Nascentes" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Pacotes e Feriados</span></div><h2>Festas de Final de Ano na Pousada das Nascentes</h2><p>Reúna toda a família para festejar, contar boas histórias e confraternizar em Brotas nas festas de final de ano.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/primavera-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/fotos-site/201602-brotas-cassorova.webp" alt="Primavera em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Primavera em Brotas</h2><p>A Primavera chegou! E você pode aproveitar a estação das flores para viajar e curtir alguns dias em meio à natureza de Brotas!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/sugestoes-para-um-fim-de-semana-a-dois" data-cat="pacotes-e-feriados">
+      <div class="thumb"><img src="/fotos-site/201508-fim-de-semana-a-dois-em-brotas.webp" alt="Sugestões para um fim de semana a dois" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Pacotes e Feriados</span></div><h2>Sugestões para um fim de semana a dois</h2><p>Aproveite nossas dicas para um fim de semana a dois em clima de romance. Variadas opções para descanso e diversão em meio à natureza, confira.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/2-dias-em-brotas-saiba-o-que-fazer" data-cat="turismo-de-aventura-e-ecoturismo">
+      <div class="thumb"><img src="/fotos-site/201804-2-dias-em-brotas-saiba-o-que-fazer-pousada-das-nascentes.webp" alt="2 dias em Brotas: saiba o que fazer!" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Turismo de Aventura e Ecoturismo</span></div><h2>2 dias em Brotas: saiba o que fazer!</h2><p>Oferecemos aqui algumas dicas para você conhecer belíssimos lugares e atividades em apenas 2 dias em Brotas.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/aniversario-de-casamento" data-cat="romance-e-lua-de-mel">
+      <div class="thumb"><img src="/fotos-site/201508-segunda-lua-de-mel-em-brotas.webp" alt="Aniversário de casamento? A Pousada das Nascentes é o seu lugar" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div><h2>Aniversário de casamento? A Pousada das Nascentes é o seu lugar</h2><p>Está chegando o seu aniversário de casamento e você está procurando um lugar gostoso com atmosfera romântica? Conheça a Pousada das Nascentes!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/uma-viagem-romantica" data-cat="romance-e-lua-de-mel">
+      <div class="thumb"><img src="/fotos-site/201509-ferias-brotas-romantica.webp" alt="Férias – Uma viagem romântica para Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div><h2>Férias – Uma viagem romântica para Brotas</h2><p>Você sabia que uma viagem romântica pode aproximar ainda mais o casal? Aproveite algumas dicas que a Pousada das Nascentes oferece.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/cafe-da-manha-perfeito-em-brotas" data-cat="gastronomia">
+      <div class="thumb"><img src="/fotos-site/201804-cafe-da-manha-pousada-das-nascentes-brotas-sp.webp" alt="Café da manhã perfeito em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Gastronomia</span></div><h2>Café da manhã perfeito em Brotas</h2><p>Frutas frescas, sucos naturais, pão, leite, café expresso e todas aquelas delícias a qual temos direito, venha desfrutar!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/o-que-fazer-pertinho-da-pousada" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/fotos-site/201804-o-que-fazer-bem-pertinho-da-pousada-das-nascentes-brotas-sp-2.webp" alt="Saiba o que fazer bem pertinho da Pousada das Nascentes" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Saiba o que fazer bem pertinho da Pousada das Nascentes</h2><p>Há muitas atividades, locais de gastronomia e ecoturismo para você conhecer bem pertinho da pousada. Então comece a planejar sua viagem desde já!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/restaurantes-em-brotas-para-um-jantar-romantico" data-cat="gastronomia">
+      <div class="thumb"><img src="/fotos-site/201804-restaurantes-em-brotas-para-um-jantar-romantico-brotas.webp" alt="Restaurantes em Brotas para um jantar romântico" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Gastronomia</span></div><h2>Restaurantes em Brotas para um jantar romântico</h2><p>Os casais apaixonados que procuram um jantar romântico, encontram aqui excelentes alternativas, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/jantar-romantico" data-cat="gastronomia">
+      <div class="thumb"><img src="/fotos-site/201507-jantar-romantico-pousada-das-nascentes1.webp" alt="Jantar Romântico em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Gastronomia</span></div><h2>Jantar Romântico em Brotas</h2><p>Um momento a dois, para aproximar o casal e estreitar as relações. Sua viagem para Brotas promete momentos inesquecíveis.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/hidromassagem-e-ofuro-o-diferencial-da-pousada-das-nascentes" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/fotos-site/201507-pousada-brotas-simba-safari-7.webp" alt="Hidromassagem e Ofurô, o diferencial da Pousada das Nascentes" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Hidromassagem e Ofurô, o diferencial da Pousada das Nascentes</h2><p>Em quartos especialmente decorados, oferecemos opções mais que especiais para momentos de relaxamento em banheiras de hidromassagem e ofurô.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/noite-romantica" data-cat="romance-e-lua-de-mel">
+      <div class="thumb"><img src="/fotos-site/201508-casais-noite-romantica.webp" alt="Motivos para curtir uma noite romântica" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div><h2>Motivos para curtir uma noite romântica</h2><p>Imagine visitar Brotas e descansar em uma pousada, onde além de curtir uma noite romântica, tudo é do bom e do melhor? Veja o que nós oferecemos.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/janeiro-o-que-fazer-em-brotas" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/202010-pousada-das-nascentes-56-1.webp" alt="Descanso merecido em janeiro: O que fazer em Brotas?" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Descanso merecido em janeiro: O que fazer em Brotas?</h2><p>Para quem está buscando por bons momentos com diversão, descanso, relaxamento e até aventura, Brotas pode ser o destino ideal, confira!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/3-lugares-para-visitar-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201507-parque-jacare-1024x681.webp" alt="Brotas além das águas: veja 3 lugares para visitar na cidade e se encantar" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Brotas além das águas: veja 3 lugares para visitar na cidade e se encantar</h2><p>Em sua próxima viagem inclua esses locais em seu roteiro e aproveite essa experiência cultural e deliciosa que Brotas proporciona, é incrível.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/pousada-das-nascentes-romance-natureza-e-aventura" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201507-brotas-pousada-das-nascentes-27-1.webp" alt="Pousada das Nascentes: romance, natureza e aventura" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Pousada das Nascentes: romance, natureza e aventura</h2><p>A dica de hoje é para os casais apaixonados e amantes da natureza e aventura e ressaltar os benefícios de uma viagem romântica.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/pousada-romantica-proxima-as-mais-belas-cachoeiras-de-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201508-cachoeiras-em-brotas-3-quedas.webp" alt="Pousada Romântica próxima as mais belas cachoeiras de Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Pousada Romântica próxima as mais belas cachoeiras de Brotas</h2><p>Confira as dicas para conhecer Brotas, guardiã de belas cachoeiras, rios e natureza abundante que a tornam um destino com muitas emoções e romance!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/inverno-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201905-inverno-em-brotas.webp" alt="Inverno em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Inverno em Brotas</h2><p>Esquente os dias de frio de inverno aqui na Pousada das Nascentes em Brotas. Dias inesquecíveis e românticos esperam por você!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/hotel-que-aceita-cachorro" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201508-hotel-que-aceita-cachorro-pousada-das-nascentes.webp" alt="Procurando por Hotel que aceita cachorro? Viaje para Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Procurando por Hotel que aceita cachorro? Viaje para Brotas</h2><p>Traga seus melhores amigos para Brotas, aqui na Pousada das Nascentes, veja como.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/banho-de-cachoeira-em-brotas" data-cat="turismo-de-aventura-e-ecoturismo">
+      <div class="thumb"><img src="/blog-fotos/201508-banho-cachoeiras-em-brotas1.webp" alt="Banho de cachoeira em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Turismo de Aventura e Ecoturismo</span></div><h2>Banho de cachoeira em Brotas</h2><p>Os dias de sol e calor são um convite a curtir um banho de cachoeira em Brotas, e agora chegou a sua vez de aproveitar para se refrescar, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/pousada-para-casais-em-brotas" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201710-nascentes-inverno-2019-topo-pagina.webp" alt="Pousada para casais em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Pousada para casais em Brotas</h2><p>Conheça a Pousada das Nascentes e se surpreenda com cada detalhe e todos os diferenciais para uma viagem perfeita.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/aventura-o-ano-todo-em-brotas" data-cat="turismo-de-aventura-e-ecoturismo">
+      <div class="thumb"><img src="/blog-fotos/201508-atividades-casais-em-brotas.webp" alt="Aventura o ano todo em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Turismo de Aventura e Ecoturismo</span></div><h2>Aventura o ano todo em Brotas</h2><p>Aqui em Brotas temos aventura o ano todo, independente de estações e temperatura, o importante é estar em meio à natureza!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/dia-dos-namorados-no-interior" data-cat="romance-e-lua-de-mel">
+      <div class="thumb"><img src="/blog-fotos/201509-rosas-violino.webp" alt="Dia dos Namorados no interior" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div><h2>Dia dos Namorados no interior</h2><p>Brotas é o cenário perfeito para passar um final de semana a dois muito especial. Venha curtir momentos de romance na Capital da Aventura!</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/dicas-de-viagem" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201508-dicas-para-viagem-brotas.webp" alt="Dicas de viagem Pousada das Nascentes" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Dicas de viagem Pousada das Nascentes</h2><p>Além de servirmos com qualidade excelência nossos clientes, preparamos algumas dicas de viagem, para que o seu final de semana seja perfeito.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/atividades-casais-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201508-dicas-atividades-casais-brotas-pousada-das-nascentes.webp" alt="Dicas de atividades para casais em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Dicas de atividades para casais em Brotas</h2><p>A Pousada das Nascentes sugere dicas de atividades para casais. Aqui em Brotas esse é o espírito, sair da rotina e esquecer as preocupações.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/pacote-de-viagem-para-casal" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201803-pacote-de-viagem-para-casal.webp" alt="Pacote de viagem para casal" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Pacote de viagem para casal</h2><p>Está à procura de um pacote de viagem para casal? Saiba que Brotas e a Pousada das Nascentes oferecem as melhores condições em pacotes a dois.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/pousadas-romanticas" data-cat="romance-e-lua-de-mel">
+      <div class="thumb"><img src="/blog-fotos/201508-pousadas-romanticas-pousada-das-nascentes-brotas.webp" alt="Está em busca de Pousadas Românticas?" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div><h2>Está em busca de Pousadas Românticas?</h2><p>Nas pousadas românticas nada atrapalha o momento do casal. Em nossas suítes planejamos o que há de melhor aos nossos hóspedes, veja cada detalhe.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/lugares-mais-bonitos-do-brasil" data-cat="turismo-de-aventura-e-ecoturismo">
+      <div class="thumb"><img src="/blog-fotos/201507-brotas-rio-jacare1.webp" alt="Lugares mais bonitos do Brasil: Conheça Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Turismo de Aventura e Ecoturismo</span></div><h2>Lugares mais bonitos do Brasil: Conheça Brotas</h2><p>Não restam dúvidas de que Brotas é um dos lugares mais bonitos do Brasil. Clique aqui e conheça um pouco mais sobre nossas belezas naturais.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/brotas-uma-viagem-charmosa" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201707-brotas-uma-viagem-charmosa.webp" alt="Brotas: uma viagem charmosa" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Brotas: uma viagem charmosa</h2><p>Em Brotas, uma viagem charmosa é uma excelente pedida em um final de semana diferente do trivial para casais apaixonados, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/5-lugares-romanticos-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201508-fim-de-semana-a-dois-em-brotas.webp" alt="5 Lugares românticos em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>5 Lugares românticos em Brotas</h2><p>A Pousada das Nascentes preparou algumas dicas para vocês. Escolhemos 5 lugares românticos em Brotas para se apreciar, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/cervejaria-hzb" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201510-cerveja-hzb.webp" alt="Cervejaria HZB e Pousada das Nascentes, união de sabores e sensações" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Cervejaria HZB e Pousada das Nascentes, união de sabores e sensações</h2><p>Aqui na Pousada das Nascentes, você encontra os produtos da Cervejaria HZB para saborear nos momentos de lazer ao lado de quem você mais ama.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/ofuro-cromoterapico" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201507-pousada-brotas-orquidea-terra-3-300x200.webp" alt="Ofurô Cromoterápico na Pousada das Nascentes" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Ofurô Cromoterápico na Pousada das Nascentes</h2><p>Um Ofurô Cromoterápico pode ser um algo a mais para você descansar com qualidade, e nós oferecemos essa opção com condições incríveis, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/aniversario-de-namoro" data-cat="romance-e-lua-de-mel">
+      <div class="thumb"><img src="/blog-fotos/201508-aniversario-de-namoro.webp" alt="Venha comemorar seu aniversário de namoro" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div><h2>Venha comemorar seu aniversário de namoro</h2><p>Muitos casais escolhem a Pousada das Nascentes para passar o seu aniversário de namoro pela atmosfera de romance que nós temos, conheça mais.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/motivos-para-uma-segunda-lua-de-mel" data-cat="romance-e-lua-de-mel">
+      <div class="thumb"><img src="/blog-fotos/201508-segunda-lua-de-mel-em-brotas.webp" alt="Motivos para uma segunda lua de mel" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div><h2>Motivos para uma segunda lua de mel</h2><p>A segunda lua de mel é como uma injeção de boas vibrações e sensações, e a Pousada das Nascentes é o destino ideal para essa ocasião.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/cantinho-decor" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201508-cantinho-decor-pousada-das-nascentes-brotas1.webp" alt="Cantinho Decor" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Cantinho Decor</h2><p>A Pousada das Nascentes oferece o Cantinho Decor como mais uma opção de compra. Leve para casa um pedacinho de Brotas e também de nossa pousada.</p><span class="more">Ler artigo →</span></div>
+    </a>
+  </div>
+  <p class="bl-empty" id="bl-empty" hidden>Nenhum artigo nesta categoria por enquanto.</p>
+</section>
+<Footer />
+</Layout>

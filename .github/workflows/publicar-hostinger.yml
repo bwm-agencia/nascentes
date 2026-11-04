@@ -1,0 +1,45 @@
+# Publicação do site na Hostinger
+# A cada alteração na branch main (inclusive as feitas pelo painel), o GitHub
+# gera o site (npm run build) e grava o resultado na branch "hostinger".
+# A Hostinger (Implantação a partir do Git) lê essa branch e atualiza o site.
+name: Publicar para Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar-hostinger
+  cancel-in-progress: true
+
+jobs:
+  build-e-publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Gerar o site
+        run: npm run build
+
+      - name: Gravar o resultado na branch hostinger
+        run: |
+          cd dist
+          test -f index.html || { echo "dist sem index.html"; exit 1; }
+          git init -q -b hostinger
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Site gerado de ${GITHUB_SHA::7}"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git push -f origin hostinger

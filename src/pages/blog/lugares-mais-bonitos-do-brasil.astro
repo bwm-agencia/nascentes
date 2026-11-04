@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Menu from '../../components/Menu.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/blog.css';
+const body = "<h2>Naturalmente Divertida, cidade é conhecida nacionalmente como A Capital da Aventura</h2>\n<p><img src=\"/blog-fotos/201507-rafting-corporativo-300x200.webp\" alt=\"rafting-corporativo\" loading=\"lazy\">Procurando um dos <strong>lugares mais bonitos do Brasil? </strong>A <a href=\"/\">Pousada das Nascentes</a> convida você a conhecer Brotas, a cidade Naturalmente Divertida que oferece inúmeras opções para os visitantes ávidos por paz e tranquilidade, ou agitação e muita diversão! Recentemente recebemos a notícia que em 2012 ficamos novamente ente os cinco melhores destinos de viagem, concorrendo com grandes potências turística do país. Também não é para menos, quem já conheceu Brotas sabe do que estamos falando, um lugar espetacular com uma população acolhedora e a possibilidade de conhecer e praticar inúmeras atividades de ecoturismo. A Pousada das Nascentes está presente nesse cenário incrível localizada no Bairro Patrimônio, um dos locais de maior beleza, comprovada recentemente em uma enquete formulada pelo <a href=\"http://www.brotasonline.com.br/\" target=\"_blank\" rel=\"noopener\">Portal Brotas Online</a> para descobrirmos qual eram as 7 Maravilhas de Brotas. Nosso Bairro representou a cidade com três locais incríveis, veja <a href=\"http://www.brotasonline.com.br/conheca-as-7-maravilhas-de-brotas/\" target=\"_blank\" rel=\"noopener\">aqui</a>. Não resta dúvidas que Brotas é um dos<strong> lugares mais bonitos do Brasil</strong>, então o que você está esperando? Não perca tempo e conheça o que há de melhor em alegria e diversão em terras nacionais.</p>\n<h2>Cachoeiras de Brotas entre os lugares mais bonitos do Brasil</h2>\n<p><img src=\"/blog-fotos/201508-cachoeira-cassorova-brotas.webp\" alt=\"cachoeira-cassorova-brotas\" loading=\"lazy\">Engana-se quem acha que apenas o Rafting atrai visitantes para esse que é um dos <strong>lugares mais bonitos do Brasil.</strong> As inúmeras opções de ecoturismo fazem toda a diferença para que a nossa cidade faça parte desse cenário turístico nacional. O que podemos listar de diferencial é essa gama de esportes e locais de natureza exuberante, como o Rio Jacaré Pepira, Areia que Canta, os vales, os pontos turísticos como a Estação ferroviária entre outros. Mas um dos grandes diferenciais de Brotas são as cachoeiras. Essas quedas d’água fazem a alegria dos visitantes que procuram diversão sadia, entretenimento com o que não é habitual. As pessoas cada vez mais se preocupam coma qualidade de vida, com essa carga de stress e trabalho que acabam degradando a saúde corporal e mental do ser humano. Sendo assim, tomar um banho de cachoeira é uma atividade revigorante, já que repor as energias necessárias para tocar nossa vida adiante passa por esse grande detalhe, valorizar o que de melhor temos: a Natureza! Brotas surge então como um dos <strong>lugares mais bonitos do Brasil, </strong>que propicia tudo de bom e do melhor para seus visitantes.</p>\n<h2>Uma suíte temática ideal</h2>\n<figure><img src=\"/blog-fotos/201508-pousada-brotas-terra.webp\" alt=\"pousada-brotas-terra\" loading=\"lazy\"></figure>\n\n<p>A Pousada das Nascentes oferece aos hóspedes que viajam para um dos <strong>lugares mais bonitos do Brasil </strong>uma hospedagem diferenciada. Não é qualquer coisa, é algo inesquecível, ideal para você. Confira <a href=\"/suites\">aqui</a> todas as opções em suítes temáticas para uma viagem tranquila com momentos de alegria, diversão e muito conforto. Entre em contato e saiba mais sobre as nossas condições. Você está em Brotas, e para manter esse altíssimo nível, uma pousada à altura dessas belezas naturais incríveis. Estamos esperando!</p>";
+---
+<Layout title={"Lugares mais bonitos do Brasil: Conheça Brotas"} headExtra={"<meta name=\"description\" content=\"Não restam dúvidas de que Brotas é um dos lugares mais bonitos do Brasil. Clique aqui e conheça um pouco mais sobre nossas belezas naturais.\">\n<meta property=\"og:image\" content=\"/blog-fotos/201507-brotas-rio-jacare1.webp\">\n<meta property=\"article:published_time\" content=\"2019-01-15\">"} script="/js/blog.js">
+<Menu active="/blog" />
+
+<section class="ar-hero">
+  <div class="photo" style="background-image:url('/blog-fotos/201507-brotas-rio-jacare1.webp');" role="img" aria-label={"Lugares mais bonitos do Brasil: Conheça Brotas"}></div>
+  <div class="inner">
+    <a class="back" href="/blog">← Voltar para o Guia de Brotas</a>
+    <div class="bl-meta"><span class="cat">Turismo de Aventura e Ecoturismo</span></div>
+    <h1>Lugares mais bonitos do Brasil: Conheça Brotas</h1>
+  </div>
+</section>
+<article class="ar-body">
+  <div class="content">
+<Fragment set:html={body} />
+  </div>
+  <div class="ar-cta reveal">
+    <div><p class="eyebrow">Pousada das Nascentes</p><h2>Vem viver Brotas com a gente</h2><p>Suítes temáticas com hidromassagem ou ofurô, no Circuito das Cachoeiras.</p></div>
+    <div class="btns"><a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Vim%20pelo%20Guia%20de%20Brotas%20e%20gostaria%20de%20consultar%20valores%20e%20disponibilidade." target="_blank" rel="noopener">Reservar no WhatsApp</a></div>
+  </div>
+</article>
+<section class="ar-more">
+  <div class="suite-section-head reveal"><p class="eyebrow">Continue lendo</p><h2>Outras novidades</h2></div>
+  <div class="bl-grid">
+    <a class="bl-card reveal" href="/blog/brotas-uma-viagem-charmosa" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201707-brotas-uma-viagem-charmosa.webp" alt="Brotas: uma viagem charmosa" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Brotas: uma viagem charmosa</h2><p>Em Brotas, uma viagem charmosa é uma excelente pedida em um final de semana diferente do trivial para casais apaixonados, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/5-lugares-romanticos-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201508-fim-de-semana-a-dois-em-brotas.webp" alt="5 Lugares românticos em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>5 Lugares românticos em Brotas</h2><p>A Pousada das Nascentes preparou algumas dicas para vocês. Escolhemos 5 lugares românticos em Brotas para se apreciar, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/cervejaria-hzb" data-cat="novidades-da-pousada">
+      <div class="thumb"><img src="/blog-fotos/201510-cerveja-hzb.webp" alt="Cervejaria HZB e Pousada das Nascentes, união de sabores e sensações" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Novidades da Pousada</span></div><h2>Cervejaria HZB e Pousada das Nascentes, união de sabores e sensações</h2><p>Aqui na Pousada das Nascentes, você encontra os produtos da Cervejaria HZB para saborear nos momentos de lazer ao lado de quem você mais ama.</p><span class="more">Ler artigo →</span></div>
+    </a>
+  </div>
+</section>
+<Footer />
+</Layout>

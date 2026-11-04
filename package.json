@@ -1,0 +1,28 @@
+{
+  "name": "pousada-das-nascentes",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/optimize-uploads.mjs && node scripts/seo-check.mjs && astro build && node scripts/append-redirects-htaccess.mjs",
+    "preview": "astro preview",
+    "dev:admin": "ADMIN=1 astro dev",
+    "build:admin": "ADMIN=1 node scripts/optimize-uploads.mjs && ADMIN=1 astro build",
+    "seo:check": "node scripts/seo-check.mjs"
+  },
+  "dependencies": {
+    "@astrojs/react": "^7.1.0",
+    "@astrojs/vercel": "^11.0.18",
+    "@keystatic/astro": "^6.0.0",
+    "@keystatic/core": "^0.6.9",
+    "astro": "^7.4.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource-variable/playfair-display": "^5.3.0",
+    "sharp": "^0.35.5"
+  }
+}

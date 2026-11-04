@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Menu from '../../components/Menu.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/blog.css';
+const body = "<h2>Encontre na Pousada das Nascentes um refúgio ideal</h2>\n<p><img src=\"/blog-fotos/201507-pousada-brotas-fogo-4-300x200.webp\" alt=\"pousada-brotas-fogo-4\" loading=\"lazy\">Muitos casais procuram <strong>pousadas românticas</strong> para afastar aquele clima de correria e agitação que aumenta a cada dia. Nesse cenário a <a href=\"/\">Pousada das Nascentes</a> acaba se sobressaindo naturalmente, afinal, temos o que há de melhor para os namorados, esposos e esposas e porque não os noivos. Essa privacidade e personalização que oferecemos a esse público específico, atrai cada dia mais e mais pessoas que procuram um fim de semana tranquilo a dois em Brotas, que agrega muito valor para sua cultura e história de vida. Se você está lendo isso agora, é pelo mesmo motivo de milhares de pessoas cansadas do trânsito, do stress e das preocupações do dia a dia que acabam dificultando e atrapalhando a vida em casal. Então não perca tempo, se está procurando por <strong>pousadas românticas</strong> acabou de encontrar a perfeita: a Pousada das Nascentes.</p>\n<h2>Nas pousadas românticas nada atrapalha os momento do casal</h2>\n<p><img src=\"/blog-fotos/201507-pousada-brotas-indiano-3-300x200.webp\" alt=\"pousada-brotas-indiano-3\" loading=\"lazy\">Quem nunca chegou em casa e escutou uma reclamação: “você não tem tempo para mim”, ou então, “você só pensa no trabalho”. O stress atrapalha e muito a vida amorosa, <a href=\"http://www.relacionamentos.org/trabalho/o-que-deve-ser-feito-quando-o-estresse-do-trabalho-comeca-a-atrapalhar-na-vida-amorosa\" target=\"_blank\" rel=\"noopener\">aqui</a> você confere uma matéria muito interessante que explica bem os problemas e o que fazer quando esses fatores começam a influenciar na vida do casal. Homens e mulheres cada vez mais se queixam do pouco tempo que possuem para estar juntos, dificultando cada vez mais aquela afinidade que só se consegue com o passar dos tempos. Nas <strong>pousadas românticas </strong>os casais buscam recuperar todo esse tempo que ficou perdido por conta de compromissos inadiáveis. Na Pousada das Nascentes existe a possibilidade de preparar uma suíte com o que o parceiro ou a parceira mais gosta. Uma hidromassagem, cesta de chocolates com bombons, pétalas de rosa decorando o ambiente para que o clima de romantismo prevaleça. Somos especializados em transformar momentos em casal em recordações inesquecíveis.</p>\n<h2>Conheça um pouco dos nossos diferenciais</h2>\n<figure><img src=\"/blog-fotos/201508-pousada-brotas-terra.webp\" alt=\"pousada-brotas-terra\" loading=\"lazy\"></figure>\n\n<p>Como dissemos acima, nas <strong>pousadas </strong><strong>românticas </strong>nada atrapalha o momento do casal. Em nossas suítes planejamos o que há de melhor aos nossos hóspedes, para que sintam-se à vontade e aproveitem o que há de melhor. Nas suítes <a href=\"/suites/savana\">Savana</a>, <a href=\"/suites/safari\">Safari I</a> e <a href=\"/suites/safari-ii\">II</a>, <a href=\"/suites/romantica\">Romântica</a>, <a href=\"/suites/maria-bonita\">Maria Bonita</a>, <a href=\"/suites/amarula\">Amarula</a> e <a href=\"/suites/indiana\">Indiana</a> preparamos um clima diferenciado, com pétalas de rosas, mantas e almofadas temáticas de cada suíte, sendo um clima romântico em cada canto. Detalhes e mimos que somente são encontrados aqui, na Pousada das Nascentes. Faça uma <a href=\"/pacotes\">consulta de valores</a> e prepare o que há de melhor para esquentar a relação a dois. Estamos esperando!</p>";
+---
+<Layout title={"Está em busca de Pousadas Românticas?"} headExtra={"<meta name=\"description\" content=\"Nas pousadas românticas nada atrapalha o momento do casal. Em nossas suítes planejamos o que há de melhor aos nossos hóspedes, veja cada detalhe.\">\n<meta property=\"og:image\" content=\"/blog-fotos/201508-pousadas-romanticas-pousada-das-nascentes-brotas.webp\">\n<meta property=\"article:published_time\" content=\"2019-01-20\">"} script="/js/blog.js">
+<Menu active="/blog" />
+
+<section class="ar-hero">
+  <div class="photo" style="background-image:url('/blog-fotos/201508-pousadas-romanticas-pousada-das-nascentes-brotas.webp');" role="img" aria-label={"Está em busca de Pousadas Românticas?"}></div>
+  <div class="inner">
+    <a class="back" href="/blog">← Voltar para o Guia de Brotas</a>
+    <div class="bl-meta"><span class="cat">Romance e Lua de Mel</span></div>
+    <h1>Está em busca de Pousadas Românticas?</h1>
+  </div>
+</section>
+<article class="ar-body">
+  <div class="content">
+<Fragment set:html={body} />
+  </div>
+  <div class="ar-cta reveal">
+    <div><p class="eyebrow">Pousada das Nascentes</p><h2>Vem viver Brotas com a gente</h2><p>Suítes temáticas com hidromassagem ou ofurô, no Circuito das Cachoeiras.</p></div>
+    <div class="btns"><a class="cta-glow cta-glow--small" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Vim%20pelo%20Guia%20de%20Brotas%20e%20gostaria%20de%20consultar%20valores%20e%20disponibilidade." target="_blank" rel="noopener">Reservar no WhatsApp</a></div>
+  </div>
+</article>
+<section class="ar-more">
+  <div class="suite-section-head reveal"><p class="eyebrow">Continue lendo</p><h2>Outras novidades</h2></div>
+  <div class="bl-grid">
+    <a class="bl-card reveal" href="/blog/lugares-mais-bonitos-do-brasil" data-cat="turismo-de-aventura-e-ecoturismo">
+      <div class="thumb"><img src="/blog-fotos/201507-brotas-rio-jacare1.webp" alt="Lugares mais bonitos do Brasil: Conheça Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Turismo de Aventura e Ecoturismo</span></div><h2>Lugares mais bonitos do Brasil: Conheça Brotas</h2><p>Não restam dúvidas de que Brotas é um dos lugares mais bonitos do Brasil. Clique aqui e conheça um pouco mais sobre nossas belezas naturais.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/brotas-uma-viagem-charmosa" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201707-brotas-uma-viagem-charmosa.webp" alt="Brotas: uma viagem charmosa" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>Brotas: uma viagem charmosa</h2><p>Em Brotas, uma viagem charmosa é uma excelente pedida em um final de semana diferente do trivial para casais apaixonados, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+    <a class="bl-card reveal" href="/blog/5-lugares-romanticos-em-brotas" data-cat="destaques-de-brotas">
+      <div class="thumb"><img src="/blog-fotos/201508-fim-de-semana-a-dois-em-brotas.webp" alt="5 Lugares românticos em Brotas" loading="lazy"></div>
+      <div class="body"><div class="bl-meta"><span class="cat">Destaques de Brotas</span></div><h2>5 Lugares românticos em Brotas</h2><p>A Pousada das Nascentes preparou algumas dicas para vocês. Escolhemos 5 lugares românticos em Brotas para se apreciar, veja.</p><span class="more">Ler artigo →</span></div>
+    </a>
+  </div>
+</section>
+<Footer />
+</Layout>

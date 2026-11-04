@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../components/Menu.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/pacotes.css';
+import { listPacotes, img, wa } from '../lib/content';
+const novos = await listPacotes();
+const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
+---
+<Layout title={"Pacotes para Brotas — Pousada das Nascentes"} script="/js/pacotes.js">
+<Menu active="/pacotes" /><section class="subhero" id="top">
+  <div class="subhero-photo" style="background-image:url('/fotos-casais/topo-pacotes.webp'); background-position:center 62%;"></div>
+  <div class="subhero-copy">
+    <p class="eyebrow reveal in">Pacotes para Brotas</p>
+    <h1 class="reveal in">Escolha o <em style="font-style:italic;color:var(--amber-soft);">roteiro</em><br>perfeito para vocês</h1>
+    <p class="reveal in">Combinações completas de suíte, café da manhã e mimos especiais — para quem já sabe a data, e para quem só precisa de um empurrãozinho para decidir.</p>
+  </div>
+</section>
+
+<section class="suite-section" style="background:var(--wine);">
+  <div class="suite-section-head reveal">
+    <p class="eyebrow">Pacotes românticos</p>
+    <h2>Uma combinação perfeita para o seu momento</h2>
+    <p>Preparamos excelentes alternativas para curtir Brotas — do jeito de sempre ou em datas especiais. Fale com a gente e complete seu pacote com opcionais.</p>
+  </div>
+  <div class="package-grid">
+    {novos.map((n) => (
+      <div class={`package-card reveal${n.entry.destaque ? ' package-card--featured' : ''}`}>
+        <div class="photo" style={`background-image:url('${img(n.entry.cardFoto) || img(n.entry.fotoHero)}'); background-position:center 55%;`}></div>
+        <div class="body">
+          <p class="eyebrow">{n.entry.cardEtiqueta || n.entry.etiqueta}</p>
+          <h3><a href={`/pacotes/${n.slug}`}>{n.entry.titulo}</a></h3>
+          <ul>
+            {(n.entry.cardItens.length ? n.entry.cardItens : (n.entry.inclui[0]?.itens ?? []).map((it) => it.texto)).slice(0, 9).map((t) => <li><Fragment set:html={tick} />{t}</li>)}
+          </ul>
+          <div class="actions">
+            <a class="btn-book" href={wa(n.entry.mensagemWhatsapp)} target="_blank" rel="noopener">Reservar</a>
+            <a class="btn-details" href={`/pacotes/${n.slug}`}>Detalhes</a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="photo" style="background-image:url('/fotos-hero/foto-04.webp'); background-position:center 25%;"></div>
+  <div class="final-cta-inner reveal">
+    <p class="eyebrow">Pronta para escolher?</p>
+    <h2>Falta só um passo<br><span class="accent">para reservar o seu</span></h2>
+    <p class="sub">Fale com a gente pelo WhatsApp e garanta o pacote ideal — as datas especiais têm vagas limitadas.</p>
+    <div class="actions">
+      <a class="btn-whatsapp" href="https://api.whatsapp.com/send?phone=5514991797722&text=Ol%C3%A1%21%20Gostaria%20de%20saber%20qual%20pacote%20combina%20melhor%20com%20a%20nossa%20viagem." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.5c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3z"/></svg>Falar no WhatsApp</a>
+      <a class="btn-outline" href="/suites">Ver as suítes</a>
+    </div>
+  </div>
+</section>
+<Footer />
+<div class="suite-modal-overlay" id="suite-modal-overlay">
+  <div class="suite-modal">
+    <button class="suite-modal-close" type="button" aria-label="Fechar">&times;</button>
+    <div class="modal-img">
+      <img id="suite-modal-img" src="" alt="">
+    </div>
+    <div class="suite-modal-body">
+      <p class="amenity" id="suite-modal-amenity"></p>
+      <h3 id="suite-modal-name"></h3>
+      <span class="slogan" id="suite-modal-slogan"></span>
+      <p class="desc" id="suite-modal-desc"></p>
+      <a class="cta-glow" id="suite-modal-book" href="#" target="_blank" rel="noopener">Reservar no WhatsApp</a>
+    </div>
+  </div>
+</div>
+</Layout>
