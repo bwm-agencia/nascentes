@@ -114,6 +114,11 @@ const jsonld = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
 <meta property="og:image" content={image}>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B0607">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <Fragment set:html={extra} />
 {!noindex && <script type="application/ld+json" set:html={jsonld}></script>}
 <script is:inline>
