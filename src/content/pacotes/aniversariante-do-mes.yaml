@@ -19,7 +19,7 @@ tituloDestaque: alguns dias a mais
 chamada: Escutar os pássaros, respirar ar puro e comemorar com quem você mais ama, em suíte temática com hidromassagem e café da manhã completo.
 dias: []
 precoValor: 25% OFF
-precoTermos: até 25% de desconto para o aniversariante, no mês do aniversário
+precoTermos: até 25% de desconto somente para o aniversariante, no mês do aniversário, em pacotes acima de 2 diárias. Exceto feriados
 mensagemWhatsapp: 'Olá! Vi a promoção *Aniversariante do Mês* no site e quero reservar no mês do meu aniversário. Meu nome é '
 opcoes: []
 incluiTitulo: Um presente que dura alguns dias
@@ -37,7 +37,7 @@ inclui:
     detalhe: ''
   - texto: Piscina e sauna à disposição
     detalhe: ''
-precoResumo: desconto de até 25% para o aniversariante
+precoResumo: desconto de até 25% somente para o aniversariante, em pacotes acima de 2 diárias. Exceto feriados
 resumo:
 - rotulo: Quando
   valor: Mês do aniversário
@@ -47,7 +47,7 @@ resumo:
   valor: Com hidromassagem
 - rotulo: Não vale
   valor: Em feriados
-validade: ''
+validade: Exceto feriados
 legendaCafe: Servido todas as manhãs da estadia
 brotas:
   etiqueta: Aventura ou descanso
@@ -86,11 +86,11 @@ faq:
 - pergunta: Como recebo o desconto?
   resposta: Faça a reserva pelo WhatsApp, telefone ou e-mail e informe sua data de nascimento. A equipe aplica o desconto na hora.
 - pergunta: Quem tem direito?
-  resposta: O desconto vale para o aniversariante, em reservas feitas para o mês do aniversário.
+  resposta: O desconto vale somente para o aniversariante, em reservas feitas para o mês do aniversário, e não se estende aos demais hóspedes.
 - pergunta: Vale para qualquer suíte?
   resposta: A promoção vale para as 14 suítes temáticas com banheira de hidromassagem.
 - pergunta: Quantas diárias preciso reservar?
-  resposta: O desconto vale para pacotes acima de duas diárias.
+  resposta: O desconto vale para pacotes acima de duas diárias. Exceto feriados.
 - pergunta: Vale em feriados?
   resposta: Não. A promoção não é válida em feriados, que têm pacotes próprios.
 - pergunta: Posso levar meu pet?
@@ -103,7 +103,9 @@ ctaTitulo: Mais um ano de vida
 ctaDestaque: merece dias inesquecíveis
 ctaTexto: Chame no WhatsApp, informe sua data de nascimento e garanta até 25% OFF no mês do seu aniversário.
 cardItens:
-- 25% OFF para o aniversariante do mês
+- 25% OFF somente para o aniversariante do mês
+- Em pacotes acima de 2 diárias
+- Exceto feriados
 - Suítes com hidromassagem
 - Solicite via WhatsApp, telefone ou e-mail
 - Café da manhã completo
