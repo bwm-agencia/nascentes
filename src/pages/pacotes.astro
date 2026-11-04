@@ -4,7 +4,8 @@ import Menu from '../components/Menu.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/pacotes.css';
 import { listPacotes, img, wa } from '../lib/content';
-const novos = await listPacotes();
+const todos = await listPacotes();
+const novos = [...todos.filter((n) => n.entry.destaqueTopo), ...todos.filter((n) => !n.entry.destaqueTopo)];
 const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
 ---
 <Layout title={"Pacotes para Brotas — Pousada das Nascentes"} script="/js/pacotes.js">
@@ -25,11 +26,13 @@ const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
   </div>
   <div class="package-grid">
     {novos.map((n) => (
-      <div class={`package-card reveal${n.entry.destaque ? ' package-card--featured' : ''}`}>
+      <div class={`package-card reveal${n.entry.destaque ? ' package-card--featured' : ''}${n.entry.destaqueTopo ? ' package-card--topo' : ''}`}>
+        {n.entry.destaqueTopo && <span class="topo-selo">Em destaque · {n.entry.cardEtiqueta || n.entry.etiqueta}</span>}
         <div class="photo" style={`background-image:url('${img(n.entry.cardFoto) || img(n.entry.fotoHero)}'); background-position:center 55%;`}></div>
         <div class="body">
           <p class="eyebrow">{n.entry.cardEtiqueta || n.entry.etiqueta}</p>
           <h3><a href={`/pacotes/${n.slug}`}>{n.entry.titulo}</a></h3>
+          {n.entry.destaqueTopo && n.entry.chamada && <p class="topo-chamada">{n.entry.chamada}</p>}
           <ul>
             {(n.entry.cardItens.length ? n.entry.cardItens : (n.entry.inclui[0]?.itens ?? []).map((it) => it.texto)).slice(0, 9).map((t) => <li><Fragment set:html={tick} />{t}</li>)}
           </ul>

@@ -859,6 +859,31 @@ section{ position:relative; }
 .package-card .btn-book:hover{ transform:translateY(-2px); box-shadow: 0 10px 22px rgba(232,168,76,.3); }
 .package-card .btn-details{ border:1px solid rgba(243,237,226,0.25); color:var(--mist); }
 .package-card .btn-details:hover{ border-color:var(--amber); background: rgba(232,168,76,.08); }
+/* Pacote fixado no topo (feriados e campanhas) */
+.package-card{ position:relative; }
+.package-card--topo{
+  grid-column:1 / -1; flex-direction:row; border-color:rgba(232,168,76,0.7);
+  background:linear-gradient(135deg, rgba(232,168,76,0.10), var(--panel) 55%);
+  box-shadow:0 0 0 1px rgba(232,168,76,0.3), 0 26px 70px -24px rgba(232,168,76,0.5);
+}
+.package-card--topo .photo{ flex:1 1 48%; aspect-ratio:auto; min-height:360px; }
+.package-card--topo .body{ flex:1 1 52%; padding:44px 40px; justify-content:center; }
+.package-card--topo h3{ font-size:2.1rem; margin-bottom:12px; }
+.package-card--topo .topo-chamada{ margin:0 0 18px; color:var(--smoke); font-size:1rem; line-height:1.6; max-width:48ch; }
+.package-card--topo ul li{ font-size:0.95rem; }
+.package-card--topo .eyebrow{ display:none; }
+.topo-selo{
+  position:absolute; top:18px; left:18px; z-index:2; padding:9px 16px; border-radius:999px;
+  background:linear-gradient(135deg, var(--amber), var(--ember)); color:var(--ink);
+  font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+@media (max-width:900px){
+  .package-card--topo{ flex-direction:column; }
+  .package-card--topo .photo{ flex:none; aspect-ratio:16/10; min-height:0; }
+  .package-card--topo .body{ padding:30px 24px 32px; }
+  .package-card--topo h3{ font-size:1.7rem; }
+}
 @media (max-width:900px){ .package-grid{ grid-template-columns:1fr; } }
 @media (min-width:1101px) and (max-width:1340px){ .nav-links{ gap:18px; } .nav-links a{ font-size:0.72rem; letter-spacing:0.06em; } .topbar-right{ gap:16px; } }
 @media (max-width:1100px){ .nav-links, .topbar-right .cta-glow{ display:none; } .menu-btn{ display:block; } }

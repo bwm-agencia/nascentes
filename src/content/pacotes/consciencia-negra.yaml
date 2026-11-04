@@ -1,6 +1,7 @@
 titulo: Consciência Negra
 publicado: true
 destaque: false
+destaqueTopo: true
 ordem: 7
 redirecionar:
   discriminant: nenhum

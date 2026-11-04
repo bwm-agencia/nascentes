@@ -88,6 +88,7 @@ export default config({
         titulo: fields.slug({ name: { label: 'Nome do pacote', description: 'Ex.: Pacote Feriado de Natal. Vira o endereço da página.', validation: { isRequired: true } } }),
         publicado: fields.checkbox({ label: 'Publicado no site', description: 'Desmarque para esconder o pacote sem apagá-lo.', defaultValue: true }),
         destaque: fields.checkbox({ label: 'Mostrar em destaque na lista de pacotes', defaultValue: false }),
+        destaqueTopo: fields.checkbox({ label: 'Fixar no topo da lista, em destaque grande', description: 'O pacote aparece acima dos demais, em um cartão largo com selo. Use para feriados e campanhas da vez. Vale para vários, mas funciona melhor com um ou dois.', defaultValue: false }),
         redirecionar: redirecionar('pacotes'),
         mostrarNaHome: fields.checkbox({ label: 'Mostrar na página inicial', description: 'A página inicial mostra até 3 pacotes marcados, na ordem da lista. A chamada usa a foto, a etiqueta e os itens do card da lista.', defaultValue: false }),
         ...seoFields,
