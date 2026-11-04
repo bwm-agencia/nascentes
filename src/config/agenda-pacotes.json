@@ -1,0 +1,6 @@
+[
+  { "a_partir_de": "2026-11-23", "pacote": "consciencia-negra", "publicado": false, "redirecionar": "/pacotes", "obs": "Consciência Negra terminou em 22/11" },
+  { "a_partir_de": "2026-11-23", "pacote": "refugio-primavera", "mostrarNaHome": true, "obs": "ocupa a vaga na home" },
+  { "a_partir_de": "2026-12-28", "pacote": "natal-2026", "publicado": false, "redirecionar": "/pacotes", "obs": "Natal terminou em 27/12" },
+  { "a_partir_de": "2027-01-04", "pacote": "reveillon-2027", "publicado": false, "redirecionar": "/pacotes", "obs": "Réveillon terminou em 03/01" }
+]

@@ -1,0 +1,36 @@
+# Agenda dos pacotes: todo dia, pouco depois da meia-noite (Brasília), aplica as datas de
+# src/config/agenda-pacotes.json (despublicar pacote que terminou, trocar o que aparece na home).
+# Se algo mudou, grava na main e dispara a publicação do site.
+name: Agenda dos pacotes
+
+on:
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  agenda:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Aplicar a agenda
+        run: node scripts/aplicar-agenda-pacotes.mjs
+      - name: Gravar e publicar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "$(git status --porcelain src/content)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add src/content
+            git commit -q -m "Agenda dos pacotes: atualização automática"
+            git push -q origin HEAD:main
+            gh workflow run publicar-hostinger.yml --ref main
+          fi
