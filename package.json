@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/optimize-uploads.mjs && node scripts/gen-og-blog.mjs && node scripts/seo-check.mjs && astro build && node scripts/append-redirects-htaccess.mjs",
+    "build": "node scripts/optimize-uploads.mjs && node scripts/gen-og-blog.mjs && node scripts/seo-check.mjs && astro build && node scripts/otimizar-html.mjs && node scripts/append-redirects-htaccess.mjs",
     "preview": "astro preview",
     "dev:admin": "ADMIN=1 astro dev",
     "build:admin": "ADMIN=1 node scripts/optimize-uploads.mjs && ADMIN=1 astro build",

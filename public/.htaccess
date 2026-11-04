@@ -1,4 +1,23 @@
 # Gerado a partir do mapa de redirects (vercel.json + sitemap antigo). Hostinger / Apache.
+# Velocidade: compressão e cache no navegador (PageSpeed)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml application/rss+xml image/svg+xml
+</IfModule>
+<IfModule mod_headers.c>
+  # arquivos com hash no nome (CSS/JS/fontes gerados pelo build): 1 ano
+  <FilesMatch "^[^/]+\.[A-Za-z0-9_-]{8}\.(css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # fotos, ícones e fontes: 30 dias
+  <FilesMatch "\.(webp|jpe?g|png|gif|svg|ico|woff2|mp4)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  # scripts e estilos sem hash: 1 dia
+  <FilesMatch "\.(js|css)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+</IfModule>
+
 RewriteEngine On
 
 # -1) endereço sem www -> com www (um único endereço para o Google)
