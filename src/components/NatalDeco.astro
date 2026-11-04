@@ -1,0 +1,14 @@
+---
+// Decoração de Natal para fotos de card: tom quente, pisca-pisca e flocos. Só decorativa.
+import '../styles/natal.css';
+const N = 5, pts = 50;
+const fio = Array.from({ length: pts + 1 }, (_, i) => { const x = (i / pts) * 100; return `${x.toFixed(2)},${(7 + 8 * Math.abs(Math.sin((x / 100) * Math.PI * N))).toFixed(2)}`; }).join(' ');
+const luzes = Array.from({ length: N * 3 + 1 }, (_, i) => { const x = (i / (N * 3)) * 100; return { x, y: 7 + 8 * Math.abs(Math.sin((x / 100) * Math.PI * N)), c: ['r', 'a', 'g', 'w'][i % 4], d: ((i * 37) % 23) / 10 }; });
+const flocos = Array.from({ length: 16 }, (_, i) => ({ x: (i * 41 + 7) % 100, s: 2 + ((i * 7) % 3), t: 8 + ((i * 13) % 8), d: -((i * 17) % 12) }));
+---
+<span class="xm-tint" aria-hidden="true"></span>
+<span class="xm-snow" aria-hidden="true">{flocos.map((f) => <i style={`left:${f.x}%;width:${f.s}px;height:${f.s}px;animation-duration:${f.t}s;animation-delay:${f.d}s`}></i>)}</span>
+<span class="xm-lights" aria-hidden="true">
+  <svg viewBox="0 0 100 30" preserveAspectRatio="none"><polyline points={fio} fill="none" stroke="rgba(20,12,8,.85)" stroke-width="1.4" vector-effect="non-scaling-stroke" /></svg>
+  {luzes.map((l) => <b class={`xm-bulb ${l.c}`} style={`left:${l.x.toFixed(2)}%;top:${l.y.toFixed(1)}px;animation-delay:${l.d}s`}></b>)}
+</span>

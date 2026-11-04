@@ -1,0 +1,13 @@
+/* Decoração de Natal nas fotos dos cards (pacotes e home) */
+.xm-host{ position:relative; overflow:hidden; }
+.xm-tint{ position:absolute; inset:0; z-index:1; pointer-events:none; background:radial-gradient(ellipse at 75% 30%, rgba(255,196,92,.30), transparent 60%), linear-gradient(180deg, rgba(120,18,24,.24), rgba(232,168,76,.10)); mix-blend-mode:soft-light; }
+.xm-lights{ position:absolute; z-index:2; left:0; right:0; top:0; height:30px; pointer-events:none; display:block; }
+.xm-lights svg{ position:absolute; inset:0; width:100%; height:100%; }
+.xm-bulb{ position:absolute; width:7px; height:10px; margin-left:-3.5px; border-radius:50% 50% 55% 55%; animation:xmTwinkle 2.6s ease-in-out infinite; box-shadow:0 0 8px 2px currentColor; }
+.xm-bulb.r{ background:#ff5a4f; color:#ff5a4f; } .xm-bulb.a{ background:#ffc86b; color:#ffc86b; }
+.xm-bulb.g{ background:#7fd69a; color:#7fd69a; } .xm-bulb.w{ background:#fff3d6; color:#fff3d6; }
+.xm-snow{ position:absolute; inset:0; z-index:2; overflow:hidden; pointer-events:none; display:block; }
+.xm-snow i{ position:absolute; top:-8px; border-radius:50%; background:rgba(255,248,230,.85); box-shadow:0 0 5px rgba(255,236,190,.8); animation:xmFall linear infinite; }
+@keyframes xmTwinkle{ 0%,100%{ opacity:1; } 50%{ opacity:.35; } }
+@keyframes xmFall{ from{ transform:translate3d(0,-8px,0); opacity:0; } 10%{ opacity:1; } to{ transform:translate3d(18px,420px,0); opacity:.2; } }
+@media (prefers-reduced-motion:reduce){ .xm-bulb, .xm-snow i{ animation:none; } .xm-snow{ display:none; } }

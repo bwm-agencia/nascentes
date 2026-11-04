@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Menu from '../components/Menu.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/pacotes.css';
+import NatalDeco from '../components/NatalDeco.astro';
 import { listPacotes, img, wa } from '../lib/content';
 const todos = await listPacotes();
 const novos = [...todos.filter((n) => n.entry.destaqueTopo), ...todos.filter((n) => !n.entry.destaqueTopo)];
@@ -28,7 +29,7 @@ const tick = '<svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
     {novos.map((n) => (
       <div class={`package-card reveal${n.entry.destaque ? ' package-card--featured' : ''}${n.entry.destaqueTopo ? ' package-card--topo' : ''}`}>
         {n.entry.destaqueTopo && <span class="topo-selo">Em destaque · {n.entry.cardEtiqueta || n.entry.etiqueta}</span>}
-        <div class="photo" style={`background-image:url('${img(n.entry.cardFoto) || img(n.entry.fotoHero)}'); background-position:center 55%;`}></div>
+        <div class={`photo${n.entry.temaNatal ? ' xm-host' : ''}`} style={`background-image:url('${img(n.entry.cardFoto) || img(n.entry.fotoHero)}'); background-position:center 55%;`}>{n.entry.temaNatal && <NatalDeco />}</div>
         <div class="body">
           <p class="eyebrow">{n.entry.cardEtiqueta || n.entry.etiqueta}</p>
           <h3><a href={`/pacotes/${n.slug}`}>{n.entry.titulo}</a></h3>
