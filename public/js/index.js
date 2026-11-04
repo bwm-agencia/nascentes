@@ -77,6 +77,10 @@
     if(!ci||!co){ msg.textContent=!ci?'Escolha a data de entrada para continuar.':'Escolha a data de saída para continuar.'; msg.hidden=false; open(!ci?'in':'out'); return; }
     const n=nights();
     const text=`Olá! Gostaria de verificar a disponibilidade para:\n\n• Check-in: ${longF(ci)}\n• Check-out: ${longF(co)}\n• ${n} ${n>1?'noites':'noite'}\n\nPodem me ajudar?`;
+    // Medição: este botão abre o WhatsApp por script (não é um link), então avisa o GTM e o Pixel aqui
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'whatsapp_click',page_type:'home',item_name:'',button_location:'disponibilidade',link_text:'Continuar',nights:n});
+    if(typeof window.fbq==='function') window.fbq('track','Contact');
     window.open('https://api.whatsapp.com/send?phone=5514991797722&text='+encodeURIComponent(text),'_blank','noopener');
   });
   labels();
