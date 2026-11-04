@@ -9,16 +9,20 @@ redirecionar:
 palavraChave: consciência negra
 palavrasSecundarias: []
 metaTitulo: Pacote Consciência Negra em Brotas
-metaDescricao: Pacote para o feriado da Consciência Negra em Brotas, de 20 a 22/11, com suíte temática e café da manhã completo. Reserve pelo WhatsApp.
+metaDescricao: Pacote para o feriado da Consciência Negra em Brotas, de 19 a 22/11, com suíte temática e café da manhã completo. Reserve pelo WhatsApp.
 semIndexar: false
 fotoFoco: 55
 fotoHero: /uploads/pacotes/consciencia-negra-hero.webp
 fotoAlt: Casal na cama da suíte temática
 etiqueta: Feriado da Consciência Negra
-tituloAntes: Um fim de semana prolongado
+tituloAntes: Quatro dias de feriado
 tituloDestaque: no meio da mata
-chamada: Sexta de feriado, sábado e domingo para trocar a rotina pelo silêncio do interior, com suíte temática e café da manhã esperando por vocês.
+chamada: Quinta, sexta de feriado, sábado e domingo para trocar a rotina pelo silêncio do interior, com suíte temática e café da manhã esperando por vocês.
 dias:
+- semana: Qui
+  dia: '19'
+  mes: nov
+  feriado: false
 - semana: Sex
   dia: '20'
   mes: nov
@@ -31,16 +35,16 @@ dias:
   dia: '22'
   mes: nov
   feriado: false
-precoValor: 20 a 22/11
+precoValor: 19 a 22/11
 precoTermos: feriado prolongado, com café da manhã
-mensagemWhatsapp: 'Olá! Quero reservar o pacote do *Feriado da Consciência Negra* (20 a 22/11). Meu nome é '
+mensagemWhatsapp: 'Olá! Quero reservar o pacote do *Feriado da Consciência Negra* (19 a 22/11). Meu nome é '
 opcoes: []
 incluiTitulo: O feriado inteiro, sem correria
 incluiTexto: O que está incluído no pacote do feriado.
 inclui:
 - titulo: A estadia
   itens:
-  - texto: De 20 a 22/11
+  - texto: De 19 a 22/11
     detalhe: ''
   - texto: Suítes temáticas com hidromassagem
     detalhe: ''
@@ -61,7 +65,7 @@ inclui:
 precoResumo: feriado da Consciência Negra
 resumo:
 - rotulo: Datas
-  valor: 20 a 22/11
+  valor: 19 a 22/11
 - rotulo: Suíte
   valor: Hidromassagem ou ofurô
 - rotulo: Café da manhã
@@ -88,7 +92,7 @@ faq:
 - pergunta: Qual é o valor do pacote?
   resposta: As tarifas variam conforme a suíte e o número de pessoas. Chame a gente no WhatsApp para receber o valor atualizado, que está sujeito a alterações sem aviso prévio.
 - pergunta: Quais são as datas?
-  resposta: O pacote vai de 20 a 22 de novembro. Para chegar antes ou ficar mais, chame a gente no WhatsApp.
+  resposta: O pacote vai de 19 a 22 de novembro. Para chegar antes ou ficar mais, chame a gente no WhatsApp.
 - pergunta: Dá para vir com mais pessoas?
   resposta: Dá. Temos suítes temáticas duplas, triplas e quádruplas, com hidromassagem ou ofurô. Consulte a disponibilidade.
 - pergunta: Qual a diferença entre hidromassagem e ofurô?
@@ -108,4 +112,4 @@ cardItens:
 - Suítes com Hidromassagem
 - Suítes com Ofurô Cromoterápico
 - Café da manhã completo
-cardEtiqueta: De 20 a 22/11
+cardEtiqueta: De 19 a 22/11
