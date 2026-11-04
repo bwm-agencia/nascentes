@@ -1,7 +1,7 @@
 titulo: Refúgio Primavera
 publicado: true
 destaque: true
-mostrarNaHome: true
+mostrarNaHome: false
 ordem: 1
 redirecionar:
   discriminant: nenhum

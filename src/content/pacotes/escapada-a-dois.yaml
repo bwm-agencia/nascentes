@@ -1,7 +1,7 @@
 titulo: Escapada a dois
 publicado: true
 destaque: false
-mostrarNaHome: true
+mostrarNaHome: false
 ordem: 2
 redirecionar:
   discriminant: nenhum

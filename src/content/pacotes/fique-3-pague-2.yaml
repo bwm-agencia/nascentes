@@ -1,7 +1,7 @@
 titulo: Fique 3, pague 2
 publicado: true
 destaque: false
-mostrarNaHome: true
+mostrarNaHome: false
 ordem: 3
 redirecionar:
   discriminant: nenhum
