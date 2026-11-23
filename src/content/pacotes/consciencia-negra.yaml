@@ -1,11 +1,11 @@
 titulo: Consciência Negra
-publicado: true
+publicado: false
 destaque: false
 mostrarNaHome: true
 destaqueTopo: true
 ordem: 1
 redirecionar:
-  discriminant: nenhum
+  discriminant: /pacotes
   value: null
 palavraChave: consciência negra
 palavrasSecundarias: []
